@@ -143,6 +143,8 @@ export const Backlog = () => {
                       currentVocal.pause();
                       currentVocal.currentTime = 0;
                     }
+                    // 卸载 vocal-play perform，避免其 blockingAuto 阻塞自动播放
+                    WebGAL.gameplay.performController.unmountPerform('vocal-play', true);
                     // 获取到播放 backlog 语音的元素
                     const backlog_audio_element: any = document.getElementById(currentAudioId);
                     if (backlog_audio_element) {
