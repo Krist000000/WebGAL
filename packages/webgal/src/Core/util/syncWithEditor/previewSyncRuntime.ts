@@ -1,6 +1,7 @@
 import {
   createEventEnvelope,
   createRequestEnvelope,
+  createRequestErrorEnvelope,
   createResponseEnvelope,
   EDITOR_PREVIEW_PROTOCOL_V1_SUBPROTOCOL,
   isPreviewCommandType,
@@ -13,6 +14,7 @@ import type {
   PreviewCommandResponsePayloadByType,
   PreviewCommandType,
   PreviewQueryType,
+  PreviewRequestErrorCode,
   PreviewRequestType,
   ProtocolEnvelope,
   RunSceneContentPayload,
@@ -60,6 +62,13 @@ interface RegisterPreviewLogContext {
 type PreviewRequestEnvelope = Extract<ProtocolEnvelope, { kind: 'request'; type: PreviewRequestType }>;
 type PreviewQueryEnvelope = Extract<PreviewRequestEnvelope, { type: PreviewQueryType }>;
 type PreviewQueryHandler = (envelope: PreviewQueryEnvelope) => void;
+type RawRequestEnvelope = {
+  kind: 'request';
+  type: string;
+  requestId: string;
+};
+
+const UNSUPPORTED_REQUEST_MESSAGE = '当前预览运行时不支持该请求类型';
 
 export const startPreviewSyncRuntime = () => {
   if (previewSyncRuntimeStarted) {
@@ -93,6 +102,22 @@ export const startPreviewSyncRuntime = () => {
   let transport!: PreviewSyncTransport;
 
   const createRequestId = () => `req-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+
+  const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === 'object' && value !== null;
+
+  const isRawRequestEnvelope = (value: unknown): value is RawRequestEnvelope =>
+    isRecord(value) &&
+    value.kind === 'request' &&
+    typeof value.type === 'string' &&
+    typeof value.requestId === 'string';
+
+  const sendRequestError = (
+    request: Pick<RawRequestEnvelope, 'type' | 'requestId'>,
+    code: PreviewRequestErrorCode,
+    message?: string,
+  ) => {
+    transport.send(createRequestErrorEnvelope(request.type, request.requestId, code, message));
+  };
 
   const resetRegistrationState = () => {
     registered = false;
@@ -346,6 +371,7 @@ export const startPreviewSyncRuntime = () => {
 
     if (!isPreviewCommandType(envelope.type)) {
       logger.warn(`收到未支持的编辑器同步 V1 请求：${envelope.type}`);
+      sendRequestError(envelope, 'unsupported-request-type', UNSUPPORTED_REQUEST_MESSAGE);
       return;
     }
 
@@ -371,6 +397,7 @@ export const startPreviewSyncRuntime = () => {
     if (!isPreviewRequestEnvelope(envelope)) {
       if (envelope.kind === 'request') {
         logger.warn(`收到未支持的编辑器同步 V1 请求：${envelope.type}`);
+        sendRequestError(envelope, 'unsupported-request-type', UNSUPPORTED_REQUEST_MESSAGE);
       }
       return;
     }
@@ -379,6 +406,7 @@ export const startPreviewSyncRuntime = () => {
       respondToPreviewRequest(envelope);
     } catch (error) {
       logger.error(`执行编辑器同步 V1 请求失败：${envelope.type}`, error);
+      sendRequestError(envelope, 'internal-error', '预览运行时无法安全完成该请求');
     }
   };
 
@@ -386,6 +414,12 @@ export const startPreviewSyncRuntime = () => {
     try {
       const envelope = JSON.parse(String(rawData)) as unknown;
       if (!isProtocolEnvelope(envelope)) {
+        if (isRawRequestEnvelope(envelope)) {
+          logger.warn(`收到非法的编辑器同步 V1 请求：${envelope.type}`);
+          sendRequestError(envelope, 'bad-request', '请求 envelope 格式不合法');
+          return;
+        }
+
         logger.warn('收到无法识别的编辑器同步 V1 消息');
         return;
       }

@@ -176,7 +176,15 @@ export interface PreviewQueryResponsePayloadByType {
 
 export interface PreviewResponsePayloadByType extends PreviewCommandResponsePayloadByType, PreviewQueryResponsePayloadByType {}
 
-export type PreviewResponseType = PreviewRequestType
+export type PreviewResponseType = PreviewRequestType;
+
+export type PreviewRequestErrorCode = 'bad-request' | 'unsupported-request-type' | 'internal-error';
+
+const PREVIEW_REQUEST_ERROR_CODES = [
+  'bad-request',
+  'unsupported-request-type',
+  'internal-error',
+] as const satisfies readonly PreviewRequestErrorCode[];
 
 interface SessionResponsePayloadByType {
   'session.register-preview': EmptyObject;
@@ -204,6 +212,16 @@ export interface ResponseEnvelope<TPayload = unknown, TType extends string = str
   payload: TPayload;
 }
 
+export interface PreviewRequestErrorEnvelope<TType extends string = string> {
+  kind: 'error';
+  type: TType;
+  requestId: string;
+  error: {
+    code: PreviewRequestErrorCode;
+    message?: string;
+  };
+}
+
 type EventEnvelopeByType<TType extends keyof EventPayloadByType = keyof EventPayloadByType> = {
   [K in TType]: EventEnvelope<EventPayloadByType[K], K>;
 }[TType];
@@ -216,7 +234,11 @@ type ResponseEnvelopeByType<TType extends keyof ResponsePayloadByType = keyof Re
   [K in TType]: ResponseEnvelope<ResponsePayloadByType[K], K>;
 }[TType];
 
-export type ProtocolEnvelope = EventEnvelopeByType | RequestEnvelopeByType | ResponseEnvelopeByType;
+export type ProtocolEnvelope =
+  | EventEnvelopeByType
+  | RequestEnvelopeByType
+  | ResponseEnvelopeByType
+  | PreviewRequestErrorEnvelope;
 
 export function createEventEnvelope<TType extends keyof EventPayloadByType>(
   type: TType,
@@ -255,11 +277,33 @@ export function createResponseEnvelope<TType extends keyof ResponsePayloadByType
   };
 }
 
+export function createRequestErrorEnvelope<TType extends string>(
+  type: TType,
+  requestId: string,
+  code: PreviewRequestErrorCode,
+  message?: string,
+): PreviewRequestErrorEnvelope<TType> {
+  const error: PreviewRequestErrorEnvelope<TType>['error'] = { code };
+  if (message) {
+    error.message = message;
+  }
+
+  return {
+    kind: 'error',
+    type,
+    requestId,
+    error,
+  };
+}
+
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
 }
 
-function hasEnvelopeShape(value: unknown, kind: ProtocolEnvelope['kind']): value is Record<string, unknown> {
+function hasEnvelopeShape(
+  value: unknown,
+  kind: Exclude<ProtocolEnvelope['kind'], 'error'>,
+): value is Record<string, unknown> {
   return (
     isRecord(value) &&
     value.kind === kind &&
@@ -271,6 +315,10 @@ function hasEnvelopeShape(value: unknown, kind: ProtocolEnvelope['kind']): value
 
 function isMessageType<TType extends string>(value: unknown, acceptedTypes: readonly TType[]): value is TType {
   return typeof value === 'string' && acceptedTypes.includes(value as TType);
+}
+
+function isPreviewRequestErrorCode(value: unknown): value is PreviewRequestErrorCode {
+  return isMessageType(value, PREVIEW_REQUEST_ERROR_CODES);
 }
 
 function isEventEnvelope(value: unknown): value is EventEnvelope {
@@ -285,8 +333,25 @@ function isResponseEnvelope(value: unknown): value is ResponseEnvelope {
   return hasEnvelopeShape(value, 'response');
 }
 
+function isPreviewRequestErrorEnvelope(value: unknown): value is PreviewRequestErrorEnvelope {
+  return (
+    isRecord(value) &&
+    value.kind === 'error' &&
+    typeof value.type === 'string' &&
+    typeof value.requestId === 'string' &&
+    isRecord(value.error) &&
+    isPreviewRequestErrorCode(value.error.code) &&
+    (!('message' in value.error) || typeof value.error.message === 'string')
+  );
+}
+
 export function isProtocolEnvelope(value: unknown): value is ProtocolEnvelope {
-  return isEventEnvelope(value) || isRequestEnvelope(value) || isResponseEnvelope(value);
+  return (
+    isEventEnvelope(value) ||
+    isRequestEnvelope(value) ||
+    isResponseEnvelope(value) ||
+    isPreviewRequestErrorEnvelope(value)
+  );
 }
 
 export function isPreviewCommandType(value: unknown): value is PreviewCommandType {
@@ -298,7 +363,7 @@ export function isPreviewRequestType(value: unknown): value is PreviewRequestTyp
 }
 
 export function isPreviewResponseType(value: unknown): value is PreviewResponseType {
-  return isPreviewRequestType(value)
+  return isPreviewRequestType(value);
 }
 
 export function isHostEventType(value: unknown): value is HostEventType {
@@ -318,5 +383,5 @@ export function isPreviewRequestEnvelope(value: unknown): value is RequestEnvelo
 }
 
 export function isPreviewResponseEnvelope(value: unknown): value is ResponseEnvelopeByType<PreviewResponseType> {
-  return isResponseEnvelope(value) && isPreviewResponseType(value.type)
+  return isResponseEnvelope(value) && isPreviewResponseType(value.type);
 }
