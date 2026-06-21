@@ -8,7 +8,11 @@ import { stopFast } from '@/Core/controller/gamePlay/fastSkip';
 import { sceneParser } from '@/Core/parser/sceneParser';
 import { logger } from '@/Core/util/logger';
 import { assetSetter, fileType } from '@/Core/util/gameAssetsAccess/assetSetter';
-import { FastPreviewTimeoutPayload, SyncScenePayload } from '../../../../types/editorPreviewProtocol';
+import type {
+  FastPreviewTimeoutPayload,
+  SyncScenePayload,
+  SyncSceneSettleMode,
+} from '@/types/editorPreviewProtocol';
 import { applyPreviewDebugVariables } from './previewDebugVariables';
 
 export const FAST_PREVIEW_MAX_DURATION_MS = 500;
@@ -16,9 +20,23 @@ const FAST_PREVIEW_TIMEOUT_CHECK_INTERVAL = 100;
 
 export type FastPreviewTimeoutEmitter = (payload: FastPreviewTimeoutPayload) => void;
 
+export interface FastPreviewResult {
+  sceneName: string;
+  sentenceId: number;
+  isTimedOut: boolean;
+  stopReason: FastPreviewStopReason;
+}
+
+export type FastPreviewStopReason = 'target-reached' | 'timeout' | 'state-calculation-blocked' | 'no-progress';
+
+export interface PreviewSyncSceneCommandCallbacks {
+  onFastPreviewTimeout?: FastPreviewTimeoutEmitter;
+  onSettled?: (result: FastPreviewResult | null) => void;
+}
+
 export function executePreviewSyncSceneCommand(
-  { sceneName, sentenceId, debugVariables }: SyncScenePayload,
-  onFastPreviewTimeout?: FastPreviewTimeoutEmitter,
+  { sceneName, sentenceId, debugVariables, settleMode = 'normal' }: SyncScenePayload,
+  callbacks: PreviewSyncSceneCommandCallbacks = {},
 ): void {
   logger.warn('正在跳转到' + sceneName + ':' + sentenceId);
   WebGAL.gameplay.isFastPreview = false;
@@ -42,12 +60,20 @@ export function executePreviewSyncSceneCommand(
       applyPreviewDebugVariables(debugVariables);
       WebGAL.sceneManager.sceneData.currentScene = sceneParser(rawScene, sceneName, sceneUrl);
       const currentSceneName = WebGAL.sceneManager.sceneData.currentScene.sceneName;
-      void runFastPreview(sentenceId, currentSceneName, onFastPreviewTimeout);
+      void runFastPreview(sentenceId, currentSceneName, callbacks.onFastPreviewTimeout, settleMode)
+        .then((result) => {
+          callbacks.onSettled?.(result);
+        })
+        .catch((error) => {
+          logger.error('实时预览跳转错误', error);
+          callbacks.onSettled?.(null);
+        });
     })
     .catch((error) => {
       stopFast();
       WebGAL.gameplay.isFastPreview = false;
       logger.error('实时预览跳转错误', error);
+      callbacks.onSettled?.(null);
     });
 }
 
@@ -55,13 +81,15 @@ export async function runFastPreview(
   sentenceId: number,
   currentSceneName: string,
   onFastPreviewTimeout?: FastPreviewTimeoutEmitter,
-): Promise<void> {
+  settleMode: SyncSceneSettleMode = 'normal',
+): Promise<FastPreviewResult> {
   const fastPreviewStartTime = performance.now();
   const baseSceneStackDepth = WebGAL.sceneManager.sceneData.sceneStack.length;
   stopFast();
   WebGAL.gameplay.isFastPreview = true;
   let forwardCount = 0;
   let isTimedOut = false;
+  let stopReason: FastPreviewStopReason = 'target-reached';
   let timeoutElapsedMs = 0;
   let suspendedElapsedMs = 0;
 
@@ -85,6 +113,7 @@ export async function runFastPreview(
         const elapsedMs = performance.now() - fastPreviewStartTime - suspendedElapsedMs;
         if (elapsedMs > FAST_PREVIEW_MAX_DURATION_MS) {
           isTimedOut = true;
+          stopReason = 'timeout';
           timeoutElapsedMs = Math.round(elapsedMs);
           break;
         }
@@ -92,6 +121,7 @@ export async function runFastPreview(
 
       if (WebGAL.gameplay.performController.hasPendingBlockingStateCalculationPerform()) {
         logger.warn('实时预览在需要外部输入的语句前停止演算');
+        stopReason = 'state-calculation-blocked';
         break;
       }
 
@@ -101,11 +131,17 @@ export async function runFastPreview(
         !awaitedSceneWrite
       ) {
         logger.warn('实时预览跳转停止：本次 forward 没有推进语句指针');
+        stopReason = 'no-progress';
         break;
       }
     }
   } finally {
     WebGAL.gameplay.isFastPreview = false;
+  }
+
+  if (settleMode === 'immediate') {
+    WebGAL.gameplay.performController.discardUncommittedNonHoldPerforms(true);
+    WebGAL.gameplay.performController.clearNonHoldPerformsFromStageState();
   }
 
   commitForward();
@@ -132,6 +168,12 @@ export async function runFastPreview(
   }
 
   logger.info(`实时预览快进完成：快进 ${forwardedLineCount} 行，用时 ${fastPreviewElapsedMs}ms`);
+  return {
+    sceneName: WebGAL.sceneManager.sceneData.currentScene.sceneName,
+    sentenceId: WebGAL.sceneManager.sceneData.currentSentenceId,
+    isTimedOut,
+    stopReason,
+  };
 }
 
 function shouldContinueFastPreview(sentenceId: number, currentSceneName: string, baseSceneStackDepth: number): boolean {

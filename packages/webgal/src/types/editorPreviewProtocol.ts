@@ -15,7 +15,11 @@ export interface SyncScenePayload {
   sceneName: string;
   sentenceId: number;
   debugVariables?: DebugVariable[];
+  previewSyncRevision?: string;
+  settleMode?: SyncSceneSettleMode;
 }
+
+export type SyncSceneSettleMode = 'normal' | 'immediate';
 
 export interface RunSceneContentPayload {
   sceneContent: string;
@@ -29,12 +33,14 @@ export interface RunSnippetPayload {
 
 export type ReloadTemplatesPayload = EmptyObject;
 
+export type Transform = Partial<Omit<ITransform, 'position' | 'scale'>> & {
+  position?: Partial<ITransform['position']>;
+  scale?: Partial<ITransform['scale']>;
+};
+
 export interface SetEffectPayload {
   target: IEffect['target'];
-  transform?: Partial<Omit<ITransform, 'position' | 'scale'>> & {
-    position?: Partial<ITransform['position']>;
-    scale?: Partial<ITransform['scale']>;
-  };
+  transform?: Transform;
 }
 
 export type SetComponentVisibilityPayload = Partial<Record<keyof componentsVisibility, boolean>>;
@@ -50,6 +56,29 @@ export interface SetTextReadModePayload {
 export interface ReferenceBoxQueryPayload {
   target: string;
 }
+
+export type BaseTransformQueryPayload = EmptyObject;
+
+export interface BaseTransformQueryResultPayload {
+  baseTransform: Transform;
+}
+
+export interface TargetTransformQueryPayload {
+  target: string;
+  previewSyncRevision: string;
+}
+
+export type TargetTransformQueryResultPayload =
+  | {
+      status: 'ready';
+      transform: Transform;
+    }
+  | {
+      status: 'loading';
+    }
+  | {
+      status: 'unavailable';
+    };
 
 export interface ReferenceBox {
   originX: number;
@@ -100,12 +129,16 @@ const PREVIEW_COMMAND_TYPES = [
 
 export interface PreviewQueryPayloadByType {
   'preview.query.reference-box': ReferenceBoxQueryPayload;
+  'preview.query.base-transform': BaseTransformQueryPayload;
+  'preview.query.target-transform': TargetTransformQueryPayload;
 }
 
 export type PreviewQueryType = keyof PreviewQueryPayloadByType;
 
 const PREVIEW_QUERY_TYPES = [
   'preview.query.reference-box',
+  'preview.query.base-transform',
+  'preview.query.target-transform',
 ] as const satisfies readonly PreviewQueryType[];
 
 export interface PreviewRequestPayloadByType extends PreviewCommandPayloadByType, PreviewQueryPayloadByType {}
@@ -172,9 +205,13 @@ export interface PreviewCommandResponsePayloadByType extends Record<PreviewComma
 
 export interface PreviewQueryResponsePayloadByType {
   'preview.query.reference-box': ReferenceBoxQueryResultPayload;
+  'preview.query.base-transform': BaseTransformQueryResultPayload;
+  'preview.query.target-transform': TargetTransformQueryResultPayload;
 }
 
-export interface PreviewResponsePayloadByType extends PreviewCommandResponsePayloadByType, PreviewQueryResponsePayloadByType {}
+export interface PreviewResponsePayloadByType
+  extends PreviewCommandResponsePayloadByType,
+    PreviewQueryResponsePayloadByType {}
 
 export type PreviewResponseType = PreviewRequestType;
 
@@ -356,6 +393,10 @@ export function isProtocolEnvelope(value: unknown): value is ProtocolEnvelope {
 
 export function isPreviewCommandType(value: unknown): value is PreviewCommandType {
   return isMessageType(value, PREVIEW_COMMAND_TYPES);
+}
+
+export function isPreviewQueryType(value: unknown): value is PreviewQueryType {
+  return isMessageType(value, PREVIEW_QUERY_TYPES);
 }
 
 export function isPreviewRequestType(value: unknown): value is PreviewRequestType {

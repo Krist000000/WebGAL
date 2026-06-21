@@ -5,6 +5,7 @@ import {
   createResponseEnvelope,
   EDITOR_PREVIEW_PROTOCOL_V1_SUBPROTOCOL,
   isPreviewCommandType,
+  isPreviewQueryType,
   isPreviewRequestEnvelope,
   isProtocolEnvelope,
 } from '@/types/editorPreviewProtocol';
@@ -49,6 +50,11 @@ import { executePreviewSyncSceneCommand } from './runtime/previewSyncSceneComman
 import { setDebugTextReadMode } from '@/Core/Modules/readHistory';
 import { applyPreviewDebugVariables } from './runtime/previewDebugVariables';
 import { handleReferenceBoxQuery } from './runtime/handlers/referenceBoxQueryHandler';
+import {
+  canPublishTargetTransformBaselineSnapshot,
+  cloneBaseTransform,
+  createTargetTransformBaselineManager,
+} from './runtime/targetTransformBaseline';
 
 let previewSyncRuntimeStarted = false;
 type StageStateSnapshot = IStageState;
@@ -61,7 +67,6 @@ interface RegisterPreviewLogContext {
 
 type PreviewRequestEnvelope = Extract<ProtocolEnvelope, { kind: 'request'; type: PreviewRequestType }>;
 type PreviewQueryEnvelope = Extract<PreviewRequestEnvelope, { type: PreviewQueryType }>;
-type PreviewQueryHandler = (envelope: PreviewQueryEnvelope) => void;
 type RawRequestEnvelope = {
   kind: 'request';
   type: string;
@@ -98,6 +103,7 @@ export const startPreviewSyncRuntime = () => {
   let lastPublishedSentenceId: number | null = null;
   let lastPublishedStageState: StageStateSnapshot | null = null;
   const setEffectBaselines = new Map<string, ITransform>();
+  const targetTransformBaselines = createTargetTransformBaselineManager();
   const embeddedLaunchIdPromise = requestEmbeddedLaunchId();
   let transport!: PreviewSyncTransport;
 
@@ -128,6 +134,7 @@ export const startPreviewSyncRuntime = () => {
     lastPublishedSentenceId = null;
     lastPublishedStageState = null;
     setEffectBaselines.clear();
+    targetTransformBaselines.invalidateCurrentRevision();
   };
 
   const buildStageStateSnapshot = (stageState: StageStateSnapshot): StageSnapshotUpdatedPayload['stageState'] => {
@@ -218,11 +225,34 @@ export const startPreviewSyncRuntime = () => {
 
   const handleSyncScene = (payload: SyncScenePayload) => {
     setEffectBaselines.clear();
-    executePreviewSyncSceneCommand(payload, emitFastPreviewTimeout);
+    const { previewSyncRevision } = payload;
+    if (previewSyncRevision) {
+      targetTransformBaselines.acceptRevision(previewSyncRevision);
+    } else {
+      targetTransformBaselines.invalidateCurrentRevision();
+    }
+
+    executePreviewSyncSceneCommand(payload, {
+      onFastPreviewTimeout: emitFastPreviewTimeout,
+      onSettled: (result) => {
+        if (!previewSyncRevision) {
+          return;
+        }
+
+        const canPublishSnapshot = canPublishTargetTransformBaselineSnapshot(result, payload);
+        if (!canPublishSnapshot) {
+          targetTransformBaselines.failRevision(previewSyncRevision);
+          return;
+        }
+
+        targetTransformBaselines.publishSnapshot(previewSyncRevision, stageStateManager.getCalculationStageState());
+      },
+    });
   };
 
   const handleRunSnippet = (payload: RunSnippetPayload) => {
     setEffectBaselines.clear();
+    targetTransformBaselines.invalidateCurrentRevision();
     applyPreviewDebugVariables(payload.debugVariables);
     const scene = WebgalParser.parse(payload.snippet, 'temp.txt', 'temp.txt');
     (scene.sentenceList as unknown as ISentence[]).forEach((sentence) => {
@@ -256,6 +286,7 @@ export const startPreviewSyncRuntime = () => {
 
   const handleRunSceneContent = (payload: RunSceneContentPayload) => {
     setEffectBaselines.clear();
+    targetTransformBaselines.invalidateCurrentRevision();
     resetStage(true);
     applyPreviewDebugVariables(payload.debugVariables);
     WebGAL.sceneManager.sceneData.currentScene = sceneParser(payload.sceneContent, 'temp', './temp.txt');
@@ -342,14 +373,35 @@ export const startPreviewSyncRuntime = () => {
     },
   };
 
-  const previewQueryHandlers: Record<PreviewQueryType, PreviewQueryHandler> = {
-    'preview.query.reference-box': (envelope) => {
-      transport.send(handleReferenceBoxQuery(envelope, WebGAL.gameplay.pixiStage, isEmbeddedPreview));
-    },
+  const isPreviewQueryEnvelope = (envelope: PreviewRequestEnvelope): envelope is PreviewQueryEnvelope => {
+    return isPreviewQueryType(envelope.type);
   };
 
-  const isPreviewQueryEnvelope = (envelope: PreviewRequestEnvelope): envelope is PreviewQueryEnvelope => {
-    return envelope.type in previewQueryHandlers;
+  const handlePreviewQuery = (envelope: PreviewQueryEnvelope) => {
+    switch (envelope.type) {
+      case 'preview.query.reference-box':
+        transport.send(handleReferenceBoxQuery(envelope, WebGAL.gameplay.pixiStage, isEmbeddedPreview));
+        return;
+      case 'preview.query.base-transform':
+        transport.send(
+          createResponseEnvelope('preview.query.base-transform', envelope.requestId, {
+            baseTransform: cloneBaseTransform(),
+          }),
+        );
+        return;
+      case 'preview.query.target-transform':
+        transport.send(
+          createResponseEnvelope(
+            'preview.query.target-transform',
+            envelope.requestId,
+            targetTransformBaselines.queryTargetTransform(
+              envelope.payload.target,
+              envelope.payload.previewSyncRevision,
+            ),
+          ),
+        );
+        return;
+    }
   };
 
   const handlePreviewCommand = <TType extends PreviewCommandType>(
@@ -365,7 +417,7 @@ export const startPreviewSyncRuntime = () => {
 
   const respondToPreviewRequest = (envelope: PreviewRequestEnvelope) => {
     if (isPreviewQueryEnvelope(envelope)) {
-      previewQueryHandlers[envelope.type](envelope);
+      handlePreviewQuery(envelope);
       return;
     }
 
