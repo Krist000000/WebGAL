@@ -329,6 +329,7 @@ export const startPreviewSyncRuntime = () => {
   };
 
   const handleSetEffect = (payload: SetEffectPayload) => {
+    targetTransformBaselines.invalidatePendingRevision();
     const newTransform = mergeSetEffectPreviewTransform(getSetEffectBaseline(payload.target), payload.transform);
     WebGAL.gameplay.pixiStage?.removeAnimationByTargetKey(payload.target);
     stageStateManager.updateEffectAndCommit({
