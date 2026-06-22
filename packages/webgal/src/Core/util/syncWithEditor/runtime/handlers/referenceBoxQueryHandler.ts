@@ -1,9 +1,8 @@
-import {
-  createResponseEnvelope,
-  ReferenceBoxQueryPayload,
+import { createResponseEnvelope } from '@/types/editorPreviewProtocol';
+import type {
   ReferenceBoxQueryResultPayload,
-  RequestEnvelope,
-  ResponseEnvelope,
+  RequestEnvelopeByType,
+  ResponseEnvelopeByType,
 } from '@/types/editorPreviewProtocol';
 
 interface ReferenceBoxQueryStage {
@@ -11,10 +10,10 @@ interface ReferenceBoxQueryStage {
 }
 
 export function handleReferenceBoxQuery(
-  request: RequestEnvelope<ReferenceBoxQueryPayload, 'preview.query.reference-box'>,
+  request: RequestEnvelopeByType<'preview.query.reference-box'>,
   pixiStage: ReferenceBoxQueryStage | null | undefined,
   isSupported = true,
-): ResponseEnvelope<ReferenceBoxQueryResultPayload, 'preview.query.reference-box'> {
+): ResponseEnvelopeByType<'preview.query.reference-box'> {
   if (!isSupported) {
     return createResponseEnvelope('preview.query.reference-box', request.requestId, {
       target: request.payload.target,

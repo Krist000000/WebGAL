@@ -4,12 +4,13 @@ import {
   createRequestErrorEnvelope,
   createResponseEnvelope,
   EDITOR_PREVIEW_PROTOCOL_V1_SUBPROTOCOL,
+  isAnyProtocolEnvelope,
   isPreviewCommandType,
   isPreviewQueryType,
   isPreviewRequestEnvelope,
-  isProtocolEnvelope,
 } from '@/types/editorPreviewProtocol';
 import type {
+  AnyProtocolEnvelope,
   FastPreviewTimeoutPayload,
   PreviewCommandPayloadByType,
   PreviewCommandResponsePayloadByType,
@@ -17,7 +18,7 @@ import type {
   PreviewQueryType,
   PreviewRequestErrorCode,
   PreviewRequestType,
-  ProtocolEnvelope,
+  RequestEnvelopeByType,
   RunSceneContentPayload,
   RunSnippetPayload,
   SetComponentVisibilityPayload,
@@ -65,8 +66,8 @@ interface RegisterPreviewLogContext {
   embeddedLaunchId: string | undefined;
 }
 
-type PreviewRequestEnvelope = Extract<ProtocolEnvelope, { kind: 'request'; type: PreviewRequestType }>;
-type PreviewQueryEnvelope = Extract<PreviewRequestEnvelope, { type: PreviewQueryType }>;
+type PreviewRequestEnvelope = RequestEnvelopeByType<PreviewRequestType>;
+type PreviewQueryEnvelope = RequestEnvelopeByType<PreviewQueryType>;
 type RawRequestEnvelope = {
   kind: 'request';
   type: string;
@@ -122,7 +123,7 @@ export const startPreviewSyncRuntime = () => {
     code: PreviewRequestErrorCode,
     message?: string,
   ) => {
-    transport.send(createRequestErrorEnvelope(request.type, request.requestId, code, message));
+    transport.send(createRequestErrorEnvelope(request.type, request.requestId, message ? { code, message } : { code }));
   };
 
   const resetRegistrationState = () => {
@@ -431,7 +432,7 @@ export const startPreviewSyncRuntime = () => {
     transport.send(createResponseEnvelope(envelope.type, envelope.requestId, responsePayload));
   };
 
-  const handleProtocolEnvelope = (envelope: ProtocolEnvelope) => {
+  const handleProtocolEnvelope = (envelope: AnyProtocolEnvelope) => {
     if (envelope.kind === 'response' && envelope.type === 'session.register-preview') {
       if (pendingRegisterRequestId !== null && envelope.requestId === pendingRegisterRequestId) {
         finishRegisterPreview();
@@ -465,7 +466,7 @@ export const startPreviewSyncRuntime = () => {
   const handleRawMessage = (rawData: unknown) => {
     try {
       const envelope = JSON.parse(String(rawData)) as unknown;
-      if (!isProtocolEnvelope(envelope)) {
+      if (!isAnyProtocolEnvelope(envelope)) {
         if (isRawRequestEnvelope(envelope)) {
           logger.warn(`收到非法的编辑器同步 V1 请求：${envelope.type}`);
           sendRequestError(envelope, 'bad-request', '请求 envelope 格式不合法');

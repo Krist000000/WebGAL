@@ -1,15 +1,102 @@
-import type { IEffect, ITransform } from '@/Core/Modules/stage/stageInterface';
-import type { componentsVisibility } from '@/store/guiInterface';
-
 export const EDITOR_PREVIEW_PROTOCOL_V1_SUBPROTOCOL = 'webgal-editor-preview-sync.v1' as const;
 
+export const SESSION_REGISTER_PREVIEW_TYPE = 'session.register-preview' as const;
+
 type EmptyObject = Record<string, never>;
+type PayloadMap = Record<string, unknown>;
+
+function payload<TPayload>(): TPayload {
+  return undefined as TPayload;
+}
+
+function definePayloadMap<TMap extends PayloadMap>(map: TMap): Readonly<TMap> {
+  return Object.freeze(map);
+}
+
+function messageTypes<TMap extends PayloadMap>(map: TMap): readonly Extract<keyof TMap, string>[] {
+  return Object.freeze(Object.keys(map) as Extract<keyof TMap, string>[]);
+}
+
+export type JsonPrimitive = string | number | boolean | null;
+export type JsonValue = JsonPrimitive | JsonObject | JsonValue[];
+
+export interface JsonObject {
+  [key: string]: JsonValue;
+}
 
 export interface DebugVariable {
   key: string;
   value: string;
   isGlobal?: boolean;
 }
+
+export interface Point2D {
+  x?: number;
+  y?: number;
+}
+
+export interface Transform {
+  position?: Point2D;
+  scale?: Point2D;
+  rotation?: number;
+
+  alpha?: number;
+  blur?: number;
+
+  brightness?: number;
+  contrast?: number;
+  saturation?: number;
+  gamma?: number;
+  colorRed?: number;
+  colorGreen?: number;
+  colorBlue?: number;
+
+  bloom?: number;
+  bloomBrightness?: number;
+  bloomBlur?: number;
+  bloomThreshold?: number;
+
+  bevel?: number;
+  bevelThickness?: number;
+  bevelRotation?: number;
+  bevelSoftness?: number;
+  bevelRed?: number;
+  bevelGreen?: number;
+  bevelBlue?: number;
+
+  oldFilm?: number;
+  dotFilm?: number;
+  reflectionFilm?: number;
+  glitchFilm?: number;
+  rgbFilm?: number;
+  godrayFilm?: number;
+
+  shockwaveFilter?: number;
+  radiusAlphaFilter?: number;
+}
+
+export const COMPONENT_VISIBILITY_KEYS = [
+  'showStarter',
+  'showTitle',
+  'showMenuPanel',
+  'showTextBox',
+  'showControls',
+  'controlsVisibility',
+  'showBacklog',
+  'showExtra',
+  'showGlobalDialog',
+  'showPanicOverlay',
+  'isEnterGame',
+  'isShowLogo',
+  'enableAppreciationMode',
+  'fontOptimization',
+] as const;
+
+export type ComponentVisibilityKey = (typeof COMPONENT_VISIBILITY_KEYS)[number];
+
+export type SetComponentVisibilityPayload = Partial<Record<ComponentVisibilityKey, boolean>>;
+
+export type SyncSceneSettleMode = 'normal' | 'immediate';
 
 export interface SyncScenePayload {
   sceneName: string;
@@ -18,8 +105,6 @@ export interface SyncScenePayload {
   previewSyncRevision?: string;
   settleMode?: SyncSceneSettleMode;
 }
-
-export type SyncSceneSettleMode = 'normal' | 'immediate';
 
 export interface RunSceneContentPayload {
   sceneContent: string;
@@ -33,17 +118,10 @@ export interface RunSnippetPayload {
 
 export type ReloadTemplatesPayload = EmptyObject;
 
-export type Transform = Partial<Omit<ITransform, 'position' | 'scale'>> & {
-  position?: Partial<ITransform['position']>;
-  scale?: Partial<ITransform['scale']>;
-};
-
 export interface SetEffectPayload {
-  target: IEffect['target'];
+  target: string;
   transform?: Transform;
 }
-
-export type SetComponentVisibilityPayload = Partial<Record<keyof componentsVisibility, boolean>>;
 
 export interface SetFontOptimizationPayload {
   enabled: boolean;
@@ -59,26 +137,10 @@ export interface ReferenceBoxQueryPayload {
 
 export type BaseTransformQueryPayload = EmptyObject;
 
-export interface BaseTransformQueryResultPayload {
-  baseTransform: Transform;
-}
-
 export interface TargetTransformQueryPayload {
   target: string;
   previewSyncRevision: string;
 }
-
-export type TargetTransformQueryResultPayload =
-  | {
-      status: 'ready';
-      transform: Transform;
-    }
-  | {
-      status: 'loading';
-    }
-  | {
-      status: 'unavailable';
-    };
 
 export interface ReferenceBox {
   originX: number;
@@ -103,59 +165,59 @@ export type ReferenceBoxQueryResultPayload =
       reason?: string;
     };
 
-export interface PreviewCommandPayloadByType {
-  'preview.command.sync-scene': SyncScenePayload;
-  'preview.command.run-scene-content': RunSceneContentPayload;
-  'preview.command.run-snippet': RunSnippetPayload;
-  'preview.command.reload-templates': ReloadTemplatesPayload;
-  'preview.command.set-effect': SetEffectPayload;
-  'preview.command.set-component-visibility': SetComponentVisibilityPayload;
-  'preview.command.set-font-optimization': SetFontOptimizationPayload;
-  'preview.command.set-text-read-mode': SetTextReadModePayload;
+export interface BaseTransformQueryResultPayload {
+  baseTransform: Transform;
 }
 
-export type PreviewCommandType = keyof PreviewCommandPayloadByType;
+export type TargetTransformQueryResultPayload =
+  | {
+      status: 'ready';
+      transform: Transform;
+    }
+  | {
+      status: 'loading';
+    }
+  | {
+      status: 'unavailable';
+    };
 
-const PREVIEW_COMMAND_TYPES = [
-  'preview.command.sync-scene',
-  'preview.command.run-scene-content',
-  'preview.command.run-snippet',
-  'preview.command.reload-templates',
-  'preview.command.set-effect',
-  'preview.command.set-component-visibility',
-  'preview.command.set-font-optimization',
-  'preview.command.set-text-read-mode',
-] as const satisfies readonly PreviewCommandType[];
+export const PREVIEW_COMMAND_PAYLOADS = definePayloadMap({
+  'preview.command.sync-scene': payload<SyncScenePayload>(),
+  'preview.command.run-scene-content': payload<RunSceneContentPayload>(),
+  'preview.command.run-snippet': payload<RunSnippetPayload>(),
+  'preview.command.reload-templates': payload<ReloadTemplatesPayload>(),
+  'preview.command.set-effect': payload<SetEffectPayload>(),
+  'preview.command.set-component-visibility': payload<SetComponentVisibilityPayload>(),
+  'preview.command.set-font-optimization': payload<SetFontOptimizationPayload>(),
+  'preview.command.set-text-read-mode': payload<SetTextReadModePayload>(),
+});
 
-export interface PreviewQueryPayloadByType {
-  'preview.query.reference-box': ReferenceBoxQueryPayload;
-  'preview.query.base-transform': BaseTransformQueryPayload;
-  'preview.query.target-transform': TargetTransformQueryPayload;
-}
+export type PreviewCommandPayloadByType = typeof PREVIEW_COMMAND_PAYLOADS;
 
-export type PreviewQueryType = keyof PreviewQueryPayloadByType;
+export type PreviewCommandType = keyof PreviewCommandPayloadByType & string;
 
-const PREVIEW_QUERY_TYPES = [
-  'preview.query.reference-box',
-  'preview.query.base-transform',
-  'preview.query.target-transform',
-] as const satisfies readonly PreviewQueryType[];
+export const PREVIEW_COMMAND_TYPES = messageTypes(PREVIEW_COMMAND_PAYLOADS);
 
-export interface PreviewRequestPayloadByType extends PreviewCommandPayloadByType, PreviewQueryPayloadByType {}
+export const PREVIEW_QUERY_PAYLOADS = definePayloadMap({
+  'preview.query.reference-box': payload<ReferenceBoxQueryPayload>(),
+  'preview.query.base-transform': payload<BaseTransformQueryPayload>(),
+  'preview.query.target-transform': payload<TargetTransformQueryPayload>(),
+});
+
+export type PreviewQueryPayloadByType = typeof PREVIEW_QUERY_PAYLOADS;
+
+export type PreviewQueryType = keyof PreviewQueryPayloadByType & string;
+
+export const PREVIEW_QUERY_TYPES = messageTypes(PREVIEW_QUERY_PAYLOADS);
+
+export type PreviewRequestPayloadByType = PreviewCommandPayloadByType & PreviewQueryPayloadByType;
 
 export type PreviewRequestType = keyof PreviewRequestPayloadByType;
 
-const PREVIEW_REQUEST_TYPES = [
+export const PREVIEW_REQUEST_TYPES = [
   ...PREVIEW_COMMAND_TYPES,
   ...PREVIEW_QUERY_TYPES,
 ] as const satisfies readonly PreviewRequestType[];
-
-type JsonPrimitive = string | number | boolean | null;
-type JsonValue = JsonPrimitive | JsonObject | JsonValue[];
-
-interface JsonObject {
-  [key: string]: JsonValue;
-}
 
 export interface PreviewReadyUpdatedPayload {
   ready: boolean;
@@ -176,58 +238,85 @@ export interface FastPreviewTimeoutPayload {
   maxDurationMs: number;
 }
 
-interface EventPayloadByType {
-  'preview.ready.updated': PreviewReadyUpdatedPayload;
-  'stage.snapshot.updated': StageSnapshotUpdatedPayload;
-  'preview.event.fast-preview-timeout': FastPreviewTimeoutPayload;
-}
+export const HOST_EVENT_PAYLOADS = definePayloadMap({
+  'preview.ready.updated': payload<PreviewReadyUpdatedPayload>(),
+  'stage.snapshot.updated': payload<StageSnapshotUpdatedPayload>(),
+  'preview.event.fast-preview-timeout': payload<FastPreviewTimeoutPayload>(),
+});
 
-export type HostEventType = keyof EventPayloadByType;
+export type EventPayloadByType = typeof HOST_EVENT_PAYLOADS;
 
-const HOST_EVENT_TYPES = [
-  'preview.ready.updated',
-  'stage.snapshot.updated',
-  'preview.event.fast-preview-timeout',
-] as const satisfies readonly HostEventType[];
+export type HostEventType = keyof EventPayloadByType & string;
+
+export const HOST_EVENT_TYPES = messageTypes(HOST_EVENT_PAYLOADS);
 
 export interface RegisterPreviewRequestPayload {
   gameId?: string;
   embeddedLaunchId?: string;
 }
 
-interface SessionRequestPayloadByType {
-  'session.register-preview': RegisterPreviewRequestPayload;
-}
+export const SESSION_REQUEST_PAYLOADS = definePayloadMap({
+  [SESSION_REGISTER_PREVIEW_TYPE]: payload<RegisterPreviewRequestPayload>(),
+});
 
-interface RequestPayloadByType extends SessionRequestPayloadByType, PreviewRequestPayloadByType {}
+export type SessionRequestPayloadByType = typeof SESSION_REQUEST_PAYLOADS;
 
-export interface PreviewCommandResponsePayloadByType extends Record<PreviewCommandType, EmptyObject> {}
+export type SessionRequestType = keyof SessionRequestPayloadByType & string;
 
-export interface PreviewQueryResponsePayloadByType {
-  'preview.query.reference-box': ReferenceBoxQueryResultPayload;
-  'preview.query.base-transform': BaseTransformQueryResultPayload;
-  'preview.query.target-transform': TargetTransformQueryResultPayload;
-}
+export const SESSION_REQUEST_TYPES = messageTypes(SESSION_REQUEST_PAYLOADS);
 
-export interface PreviewResponsePayloadByType
-  extends PreviewCommandResponsePayloadByType,
-    PreviewQueryResponsePayloadByType {}
+export type RequestPayloadByType = SessionRequestPayloadByType & PreviewRequestPayloadByType;
+
+export type RequestType = keyof RequestPayloadByType;
+
+export const REQUEST_TYPES = [
+  ...SESSION_REQUEST_TYPES,
+  ...PREVIEW_REQUEST_TYPES,
+] as const satisfies readonly RequestType[];
+
+export type PreviewCommandResponsePayloadByType = Record<PreviewCommandType, EmptyObject>;
+
+export const PREVIEW_QUERY_RESPONSE_PAYLOADS = definePayloadMap({
+  'preview.query.reference-box': payload<ReferenceBoxQueryResultPayload>(),
+  'preview.query.base-transform': payload<BaseTransformQueryResultPayload>(),
+  'preview.query.target-transform': payload<TargetTransformQueryResultPayload>(),
+});
+
+export type PreviewQueryResponsePayloadByType = typeof PREVIEW_QUERY_RESPONSE_PAYLOADS;
+
+export type PreviewResponsePayloadByType = PreviewCommandResponsePayloadByType & PreviewQueryResponsePayloadByType;
 
 export type PreviewResponseType = PreviewRequestType;
 
-export type PreviewRequestErrorCode = 'bad-request' | 'unsupported-request-type' | 'internal-error';
+export const PREVIEW_RESPONSE_TYPES = PREVIEW_REQUEST_TYPES satisfies readonly PreviewResponseType[];
 
-const PREVIEW_REQUEST_ERROR_CODES = [
-  'bad-request',
-  'unsupported-request-type',
-  'internal-error',
-] as const satisfies readonly PreviewRequestErrorCode[];
+export const SESSION_RESPONSE_PAYLOADS = definePayloadMap({
+  [SESSION_REGISTER_PREVIEW_TYPE]: payload<EmptyObject>(),
+});
 
-interface SessionResponsePayloadByType {
-  'session.register-preview': EmptyObject;
+export type SessionResponsePayloadByType = typeof SESSION_RESPONSE_PAYLOADS;
+
+export type SessionResponseType = keyof SessionResponsePayloadByType & string;
+
+export const SESSION_RESPONSE_TYPES = messageTypes(SESSION_RESPONSE_PAYLOADS);
+
+export type ResponsePayloadByType = SessionResponsePayloadByType & PreviewResponsePayloadByType;
+
+export type ResponseType = keyof ResponsePayloadByType;
+
+export const RESPONSE_TYPES = [
+  ...SESSION_RESPONSE_TYPES,
+  ...PREVIEW_RESPONSE_TYPES,
+] as const satisfies readonly ResponseType[];
+
+export const PREVIEW_REQUEST_ERROR_CODES = ['bad-request', 'unsupported-request-type', 'internal-error'] as const;
+
+export type PreviewRequestErrorCode = (typeof PREVIEW_REQUEST_ERROR_CODES)[number];
+
+export interface PreviewRequestError {
+  code: PreviewRequestErrorCode;
+  message?: string;
 }
-
-interface ResponsePayloadByType extends SessionResponsePayloadByType, PreviewResponsePayloadByType {}
 
 export interface EventEnvelope<TPayload = unknown, TType extends string = string> {
   kind: 'event';
@@ -253,29 +342,34 @@ export interface PreviewRequestErrorEnvelope<TType extends string = string> {
   kind: 'error';
   type: TType;
   requestId: string;
-  error: {
-    code: PreviewRequestErrorCode;
-    message?: string;
-  };
+  error: PreviewRequestError;
 }
 
-type EventEnvelopeByType<TType extends keyof EventPayloadByType = keyof EventPayloadByType> = {
+export type AnyProtocolEnvelope = EventEnvelope | RequestEnvelope | ResponseEnvelope | PreviewRequestErrorEnvelope;
+
+export type EventEnvelopeByType<TType extends keyof EventPayloadByType = keyof EventPayloadByType> = {
   [K in TType]: EventEnvelope<EventPayloadByType[K], K>;
 }[TType];
 
-type RequestEnvelopeByType<TType extends keyof RequestPayloadByType = keyof RequestPayloadByType> = {
+export type RequestEnvelopeByType<TType extends keyof RequestPayloadByType = keyof RequestPayloadByType> = {
   [K in TType]: RequestEnvelope<RequestPayloadByType[K], K>;
 }[TType];
 
-type ResponseEnvelopeByType<TType extends keyof ResponsePayloadByType = keyof ResponsePayloadByType> = {
+export type ResponseEnvelopeByType<TType extends keyof ResponsePayloadByType = keyof ResponsePayloadByType> = {
   [K in TType]: ResponseEnvelope<ResponsePayloadByType[K], K>;
 }[TType];
 
-export type ProtocolEnvelope =
+export type PreviewRequestErrorEnvelopeByType<TType extends keyof RequestPayloadByType = keyof RequestPayloadByType> = {
+  [K in TType]: PreviewRequestErrorEnvelope<K>;
+}[TType];
+
+export type KnownProtocolEnvelope =
   | EventEnvelopeByType
   | RequestEnvelopeByType
   | ResponseEnvelopeByType
-  | PreviewRequestErrorEnvelope;
+  | PreviewRequestErrorEnvelopeByType;
+
+export type ProtocolEnvelope = KnownProtocolEnvelope;
 
 export function createEventEnvelope<TType extends keyof EventPayloadByType>(
   type: TType,
@@ -317,14 +411,8 @@ export function createResponseEnvelope<TType extends keyof ResponsePayloadByType
 export function createRequestErrorEnvelope<TType extends string>(
   type: TType,
   requestId: string,
-  code: PreviewRequestErrorCode,
-  message?: string,
+  error: PreviewRequestError,
 ): PreviewRequestErrorEnvelope<TType> {
-  const error: PreviewRequestErrorEnvelope<TType>['error'] = { code };
-  if (message) {
-    error.message = message;
-  }
-
   return {
     kind: 'error',
     type,
@@ -337,9 +425,9 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
 }
 
-function hasEnvelopeShape(
+function hasPayloadEnvelopeShape(
   value: unknown,
-  kind: Exclude<ProtocolEnvelope['kind'], 'error'>,
+  kind: 'event' | 'request' | 'response',
 ): value is Record<string, unknown> {
   return (
     isRecord(value) &&
@@ -354,41 +442,8 @@ function isMessageType<TType extends string>(value: unknown, acceptedTypes: read
   return typeof value === 'string' && acceptedTypes.includes(value as TType);
 }
 
-function isPreviewRequestErrorCode(value: unknown): value is PreviewRequestErrorCode {
-  return isMessageType(value, PREVIEW_REQUEST_ERROR_CODES);
-}
-
-function isEventEnvelope(value: unknown): value is EventEnvelope {
-  return hasEnvelopeShape(value, 'event');
-}
-
-function isRequestEnvelope(value: unknown): value is RequestEnvelope {
-  return hasEnvelopeShape(value, 'request');
-}
-
-function isResponseEnvelope(value: unknown): value is ResponseEnvelope {
-  return hasEnvelopeShape(value, 'response');
-}
-
-function isPreviewRequestErrorEnvelope(value: unknown): value is PreviewRequestErrorEnvelope {
-  return (
-    isRecord(value) &&
-    value.kind === 'error' &&
-    typeof value.type === 'string' &&
-    typeof value.requestId === 'string' &&
-    isRecord(value.error) &&
-    isPreviewRequestErrorCode(value.error.code) &&
-    (!('message' in value.error) || typeof value.error.message === 'string')
-  );
-}
-
-export function isProtocolEnvelope(value: unknown): value is ProtocolEnvelope {
-  return (
-    isEventEnvelope(value) ||
-    isRequestEnvelope(value) ||
-    isResponseEnvelope(value) ||
-    isPreviewRequestErrorEnvelope(value)
-  );
+export function isSessionRequestType(value: unknown): value is SessionRequestType {
+  return isMessageType(value, SESSION_REQUEST_TYPES);
 }
 
 export function isPreviewCommandType(value: unknown): value is PreviewCommandType {
@@ -403,16 +458,73 @@ export function isPreviewRequestType(value: unknown): value is PreviewRequestTyp
   return isMessageType(value, PREVIEW_REQUEST_TYPES);
 }
 
+export function isRequestType(value: unknown): value is RequestType {
+  return isMessageType(value, REQUEST_TYPES);
+}
+
 export function isPreviewResponseType(value: unknown): value is PreviewResponseType {
-  return isPreviewRequestType(value);
+  return isMessageType(value, PREVIEW_RESPONSE_TYPES);
+}
+
+export function isSessionResponseType(value: unknown): value is SessionResponseType {
+  return isMessageType(value, SESSION_RESPONSE_TYPES);
+}
+
+export function isResponseType(value: unknown): value is ResponseType {
+  return isMessageType(value, RESPONSE_TYPES);
 }
 
 export function isHostEventType(value: unknown): value is HostEventType {
   return isMessageType(value, HOST_EVENT_TYPES);
 }
 
+export function isPreviewRequestErrorCode(value: unknown): value is PreviewRequestErrorCode {
+  return isMessageType(value, PREVIEW_REQUEST_ERROR_CODES);
+}
+
+export function isEventEnvelope(value: unknown): value is EventEnvelope {
+  return hasPayloadEnvelopeShape(value, 'event');
+}
+
+export function isRequestEnvelope(value: unknown): value is RequestEnvelope {
+  return hasPayloadEnvelopeShape(value, 'request');
+}
+
+export function isResponseEnvelope(value: unknown): value is ResponseEnvelope {
+  return hasPayloadEnvelopeShape(value, 'response');
+}
+
+export function isPreviewRequestErrorEnvelope(value: unknown): value is PreviewRequestErrorEnvelope {
+  return (
+    isRecord(value) &&
+    value.kind === 'error' &&
+    typeof value.type === 'string' &&
+    typeof value.requestId === 'string' &&
+    isRecord(value.error) &&
+    isPreviewRequestErrorCode(value.error.code) &&
+    (!('message' in value.error) || typeof value.error.message === 'string')
+  );
+}
+
+export function isAnyProtocolEnvelope(value: unknown): value is AnyProtocolEnvelope {
+  return (
+    isEventEnvelope(value) ||
+    isRequestEnvelope(value) ||
+    isResponseEnvelope(value) ||
+    isPreviewRequestErrorEnvelope(value)
+  );
+}
+
 export function isHostEventEnvelope(value: unknown): value is EventEnvelopeByType<HostEventType> {
   return isEventEnvelope(value) && isHostEventType(value.type);
+}
+
+export function isKnownRequestEnvelope(value: unknown): value is RequestEnvelopeByType<RequestType> {
+  return isRequestEnvelope(value) && isRequestType(value.type);
+}
+
+export function isSessionRequestEnvelope(value: unknown): value is RequestEnvelopeByType<SessionRequestType> {
+  return isRequestEnvelope(value) && isSessionRequestType(value.type);
 }
 
 export function isPreviewCommandRequestEnvelope(value: unknown): value is RequestEnvelopeByType<PreviewCommandType> {
@@ -423,6 +535,25 @@ export function isPreviewRequestEnvelope(value: unknown): value is RequestEnvelo
   return isRequestEnvelope(value) && isPreviewRequestType(value.type);
 }
 
+export function isKnownResponseEnvelope(value: unknown): value is ResponseEnvelopeByType<ResponseType> {
+  return isResponseEnvelope(value) && isResponseType(value.type);
+}
+
 export function isPreviewResponseEnvelope(value: unknown): value is ResponseEnvelopeByType<PreviewResponseType> {
   return isResponseEnvelope(value) && isPreviewResponseType(value.type);
+}
+
+export function isKnownPreviewRequestErrorEnvelope(
+  value: unknown,
+): value is PreviewRequestErrorEnvelopeByType<PreviewRequestType> {
+  return isPreviewRequestErrorEnvelope(value) && isPreviewRequestType(value.type);
+}
+
+export function isKnownProtocolEnvelope(value: unknown): value is KnownProtocolEnvelope {
+  return (
+    isHostEventEnvelope(value) ||
+    isKnownRequestEnvelope(value) ||
+    isKnownResponseEnvelope(value) ||
+    (isPreviewRequestErrorEnvelope(value) && isRequestType(value.type))
+  );
 }
