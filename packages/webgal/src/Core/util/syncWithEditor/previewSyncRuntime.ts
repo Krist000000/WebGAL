@@ -390,7 +390,14 @@ export const startPreviewSyncRuntime = () => {
   const handlePreviewQuery = (envelope: PreviewQueryEnvelope) => {
     switch (envelope.type) {
       case 'preview.query.reference-box':
-        transport.send(handleReferenceBoxQuery(envelope, WebGAL.gameplay.pixiStage, isEmbeddedPreview));
+        void handleReferenceBoxQuery(envelope, WebGAL.gameplay.pixiStage, isEmbeddedPreview)
+          .then((response) => {
+            transport.send(response);
+          })
+          .catch((error) => {
+            logger.error(`执行编辑器同步 V1 请求失败：${envelope.type}`, error);
+            sendRequestError(envelope, 'internal-error', '预览运行时无法安全完成该请求');
+          });
         return;
       case 'preview.query.base-transform':
         transport.send(
