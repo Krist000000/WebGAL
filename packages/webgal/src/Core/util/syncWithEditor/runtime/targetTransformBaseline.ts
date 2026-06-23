@@ -2,7 +2,7 @@ import cloneDeep from 'lodash/cloneDeep';
 import { STAGE_KEYS } from '@/Core/constants';
 import { baseTransform } from '@/Core/Modules/stage/stageInterface';
 import type { IStageState, ITransform } from '@/Core/Modules/stage/stageInterface';
-import type { TargetTransformQueryResultPayload } from '@/types/editorPreviewProtocol';
+import type { TransformBaselineQueryResultPayload } from '@/types/editorPreviewProtocol';
 import type { FastPreviewResult } from './previewSyncSceneCommand';
 
 const FIXED_TARGETS = new Set<string>([
@@ -20,6 +20,7 @@ type BaselineRevisionState =
   | {
       status: 'pending';
       revision: string;
+      snapshot?: TargetTransformBaselineSnapshot;
     }
   | {
       status: 'ready';
@@ -36,27 +37,28 @@ interface TargetTransformBaselineSnapshot {
   transformsByTarget: Map<string, ITransform>;
 }
 
-interface TargetTransformBaselinePublishTarget {
+interface TargetTransformBaselineSyncTarget {
   sceneName: string;
   sentenceId: number;
 }
 
 interface TargetTransformBaselineManager {
   acceptRevision: (revision: string) => void;
-  publishSnapshot: (revision: string, stageState: IStageState) => void;
+  captureSnapshot: (revision: string, stageState: IStageState) => void;
+  publishCapturedSnapshot: (revision: string) => boolean;
   failRevision: (revision: string) => void;
   invalidatePendingRevision: () => void;
   invalidateCurrentRevision: () => void;
-  queryTargetTransform: (target: string, revision: string) => TargetTransformQueryResultPayload;
+  queryTransformBaseline: (target: string, revision: string) => TransformBaselineQueryResultPayload;
 }
 
 export function cloneBaseTransform(): ITransform {
   return cloneDeep(baseTransform);
 }
 
-export function canPublishTargetTransformBaselineSnapshot(
+export function isTargetTransformBaselineSyncSettled(
   result: FastPreviewResult | null,
-  target: TargetTransformBaselinePublishTarget,
+  target: TargetTransformBaselineSyncTarget,
 ): boolean {
   return (
     result !== null &&
@@ -86,16 +88,29 @@ export function createTargetTransformBaselineManager(): TargetTransformBaselineM
       };
     },
 
-    publishSnapshot(revision, stageState) {
+    captureSnapshot(revision, stageState) {
       if (!isPendingRevision(revision)) {
         return;
       }
 
       revisionState = {
-        status: 'ready',
+        status: 'pending',
         revision,
         snapshot: createSnapshot(stageState),
       };
+    },
+
+    publishCapturedSnapshot(revision) {
+      if (revisionState.status !== 'pending' || revisionState.revision !== revision || !revisionState.snapshot) {
+        return false;
+      }
+
+      revisionState = {
+        status: 'ready',
+        revision,
+        snapshot: revisionState.snapshot,
+      };
+      return true;
     },
 
     failRevision(revision) {
@@ -131,7 +146,7 @@ export function createTargetTransformBaselineManager(): TargetTransformBaselineM
       };
     },
 
-    queryTargetTransform(target, revision) {
+    queryTransformBaseline(target, revision) {
       if (!isLatestRevision(revision)) {
         return {
           status: 'unavailable',
@@ -176,7 +191,7 @@ function createSnapshot(stageState: IStageState): TargetTransformBaselineSnapsho
   };
 }
 
-function querySnapshot(snapshot: TargetTransformBaselineSnapshot, target: string): TargetTransformQueryResultPayload {
+function querySnapshot(snapshot: TargetTransformBaselineSnapshot, target: string): TransformBaselineQueryResultPayload {
   if (!snapshot.knownTargets.has(target)) {
     return {
       status: 'unavailable',

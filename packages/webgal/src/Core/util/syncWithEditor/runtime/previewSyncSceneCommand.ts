@@ -8,11 +8,7 @@ import { stopFast } from '@/Core/controller/gamePlay/fastSkip';
 import { sceneParser } from '@/Core/parser/sceneParser';
 import { logger } from '@/Core/util/logger';
 import { assetSetter, fileType } from '@/Core/util/gameAssetsAccess/assetSetter';
-import type {
-  FastPreviewTimeoutPayload,
-  SyncScenePayload,
-  SyncSceneSettleMode,
-} from '@/types/editorPreviewProtocol';
+import type { FastPreviewTimeoutPayload, SyncScenePayload, SyncSceneSettleMode } from '@/types/editorPreviewProtocol';
 import { applyPreviewDebugVariables } from './previewDebugVariables';
 
 export const FAST_PREVIEW_MAX_DURATION_MS = 500;
@@ -31,7 +27,12 @@ export type FastPreviewStopReason = 'target-reached' | 'timeout' | 'state-calcul
 
 export interface PreviewSyncSceneCommandCallbacks {
   onFastPreviewTimeout?: FastPreviewTimeoutEmitter;
+  onBeforeTargetScriptExecute?: () => void;
   onSettled?: (result: FastPreviewResult | null) => void;
+}
+
+interface RunFastPreviewOptions {
+  onBeforeTargetScriptExecute?: () => void;
 }
 
 export function executePreviewSyncSceneCommand(
@@ -60,7 +61,9 @@ export function executePreviewSyncSceneCommand(
       applyPreviewDebugVariables(debugVariables);
       WebGAL.sceneManager.sceneData.currentScene = sceneParser(rawScene, sceneName, sceneUrl);
       const currentSceneName = WebGAL.sceneManager.sceneData.currentScene.sceneName;
-      void runFastPreview(sentenceId, currentSceneName, callbacks.onFastPreviewTimeout, settleMode)
+      void runFastPreview(sentenceId, currentSceneName, callbacks.onFastPreviewTimeout, settleMode, {
+        onBeforeTargetScriptExecute: callbacks.onBeforeTargetScriptExecute,
+      })
         .then((result) => {
           callbacks.onSettled?.(result);
         })
@@ -82,6 +85,7 @@ export async function runFastPreview(
   currentSceneName: string,
   onFastPreviewTimeout?: FastPreviewTimeoutEmitter,
   settleMode: SyncSceneSettleMode = 'normal',
+  options: RunFastPreviewOptions = {},
 ): Promise<FastPreviewResult> {
   const fastPreviewStartTime = performance.now();
   const baseSceneStackDepth = WebGAL.sceneManager.sceneData.sceneStack.length;
@@ -92,13 +96,40 @@ export async function runFastPreview(
   let stopReason: FastPreviewStopReason = 'target-reached';
   let timeoutElapsedMs = 0;
   let suspendedElapsedMs = 0;
+  let didRunBeforeTargetScriptExecute = false;
+
+  const runBeforeTargetScriptExecute = (sceneName: string, nextSentenceId: number) => {
+    if (
+      settleMode !== 'immediate' ||
+      !options.onBeforeTargetScriptExecute ||
+      didRunBeforeTargetScriptExecute ||
+      sceneName !== currentSceneName ||
+      nextSentenceId !== sentenceId - 1
+    ) {
+      return;
+    }
+
+    WebGAL.gameplay.performController.discardUncommittedNonHoldPerforms(true);
+    WebGAL.gameplay.performController.clearNonHoldPerformsFromStageState();
+    options.onBeforeTargetScriptExecute?.();
+    didRunBeforeTargetScriptExecute = true;
+  };
 
   try {
     while (shouldContinueFastPreview(sentenceId, currentSceneName, baseSceneStackDepth)) {
       const prevSentenceId = WebGAL.sceneManager.sceneData.currentSentenceId;
       const prevSceneName = WebGAL.sceneManager.sceneData.currentScene.sceneName;
-      const isForwarded = forward();
+      const isForwarded = forward({
+        scriptExecution: {
+          beforeSentenceExecute: ({ sceneName, sentenceId }) => {
+            // sync-scene 的 sentenceId 是目标语句执行后的停止指针，目标编辑语句是 sentenceId - 1。
+            runBeforeTargetScriptExecute(sceneName, sentenceId);
+          },
+        },
+      });
       forwardCount++;
+      const postForwardSceneName = WebGAL.sceneManager.sceneData.currentScene.sceneName;
+      const postForwardSentenceId = WebGAL.sceneManager.sceneData.currentSentenceId;
       const sceneWriteWaitStart = performance.now();
       const awaitedSceneWrite = await waitForPendingSceneWrite();
       if (awaitedSceneWrite) {
@@ -125,11 +156,7 @@ export async function runFastPreview(
         break;
       }
 
-      if (
-        WebGAL.sceneManager.sceneData.currentSentenceId === prevSentenceId &&
-        WebGAL.sceneManager.sceneData.currentScene.sceneName === prevSceneName &&
-        !awaitedSceneWrite
-      ) {
+      if (postForwardSentenceId === prevSentenceId && postForwardSceneName === prevSceneName && !awaitedSceneWrite) {
         logger.warn('实时预览跳转停止：本次 forward 没有推进语句指针');
         stopReason = 'no-progress';
         break;

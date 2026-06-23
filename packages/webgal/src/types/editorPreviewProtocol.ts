@@ -102,7 +102,7 @@ export interface SyncScenePayload {
   sceneName: string;
   sentenceId: number;
   debugVariables?: DebugVariable[];
-  previewSyncRevision?: string;
+  transformBaselineRevision?: string;
   settleMode?: SyncSceneSettleMode;
 }
 
@@ -137,9 +137,9 @@ export interface ReferenceBoxQueryPayload {
 
 export type BaseTransformQueryPayload = EmptyObject;
 
-export interface TargetTransformQueryPayload {
+export interface TransformBaselineQueryPayload {
   target: string;
-  previewSyncRevision: string;
+  transformBaselineRevision: string;
 }
 
 export interface ReferenceBox {
@@ -169,7 +169,7 @@ export interface BaseTransformQueryResultPayload {
   baseTransform: Transform;
 }
 
-export type TargetTransformQueryResultPayload =
+export type TransformBaselineQueryResultPayload =
   | {
       status: 'ready';
       transform: Transform;
@@ -201,7 +201,7 @@ export const PREVIEW_COMMAND_TYPES = messageTypes(PREVIEW_COMMAND_PAYLOADS);
 export const PREVIEW_QUERY_PAYLOADS = definePayloadMap({
   'preview.query.reference-box': payload<ReferenceBoxQueryPayload>(),
   'preview.query.base-transform': payload<BaseTransformQueryPayload>(),
-  'preview.query.target-transform': payload<TargetTransformQueryPayload>(),
+  'preview.query.transform-baseline': payload<TransformBaselineQueryPayload>(),
 });
 
 export type PreviewQueryPayloadByType = typeof PREVIEW_QUERY_PAYLOADS;
@@ -279,7 +279,7 @@ export type PreviewCommandResponsePayloadByType = Record<PreviewCommandType, Emp
 export const PREVIEW_QUERY_RESPONSE_PAYLOADS = definePayloadMap({
   'preview.query.reference-box': payload<ReferenceBoxQueryResultPayload>(),
   'preview.query.base-transform': payload<BaseTransformQueryResultPayload>(),
-  'preview.query.target-transform': payload<TargetTransformQueryResultPayload>(),
+  'preview.query.transform-baseline': payload<TransformBaselineQueryResultPayload>(),
 });
 
 export type PreviewQueryResponsePayloadByType = typeof PREVIEW_QUERY_RESPONSE_PAYLOADS;

@@ -52,9 +52,9 @@ import { setDebugTextReadMode } from '@/Core/Modules/readHistory';
 import { applyPreviewDebugVariables } from './runtime/previewDebugVariables';
 import { handleReferenceBoxQuery } from './runtime/handlers/referenceBoxQueryHandler';
 import {
-  canPublishTargetTransformBaselineSnapshot,
   cloneBaseTransform,
   createTargetTransformBaselineManager,
+  isTargetTransformBaselineSyncSettled,
 } from './runtime/targetTransformBaseline';
 
 let previewSyncRuntimeStarted = false;
@@ -226,27 +226,34 @@ export const startPreviewSyncRuntime = () => {
 
   const handleSyncScene = (payload: SyncScenePayload) => {
     setEffectBaselines.clear();
-    const { previewSyncRevision } = payload;
-    if (previewSyncRevision) {
-      targetTransformBaselines.acceptRevision(previewSyncRevision);
+    const { transformBaselineRevision } = payload;
+    if (transformBaselineRevision) {
+      targetTransformBaselines.acceptRevision(transformBaselineRevision);
     } else {
       targetTransformBaselines.invalidateCurrentRevision();
     }
 
     executePreviewSyncSceneCommand(payload, {
       onFastPreviewTimeout: emitFastPreviewTimeout,
+      onBeforeTargetScriptExecute: () => {
+        if (!transformBaselineRevision) {
+          return;
+        }
+
+        targetTransformBaselines.captureSnapshot(
+          transformBaselineRevision,
+          stageStateManager.getCalculationStageState(),
+        );
+      },
       onSettled: (result) => {
-        if (!previewSyncRevision) {
+        if (!transformBaselineRevision) {
           return;
         }
 
-        const canPublishSnapshot = canPublishTargetTransformBaselineSnapshot(result, payload);
-        if (!canPublishSnapshot) {
-          targetTransformBaselines.failRevision(previewSyncRevision);
-          return;
+        const isSyncSettled = isTargetTransformBaselineSyncSettled(result, payload);
+        if (!isSyncSettled || !targetTransformBaselines.publishCapturedSnapshot(transformBaselineRevision)) {
+          targetTransformBaselines.failRevision(transformBaselineRevision);
         }
-
-        targetTransformBaselines.publishSnapshot(previewSyncRevision, stageStateManager.getCalculationStageState());
       },
     });
   };
@@ -391,14 +398,14 @@ export const startPreviewSyncRuntime = () => {
           }),
         );
         return;
-      case 'preview.query.target-transform':
+      case 'preview.query.transform-baseline':
         transport.send(
           createResponseEnvelope(
-            'preview.query.target-transform',
+            'preview.query.transform-baseline',
             envelope.requestId,
-            targetTransformBaselines.queryTargetTransform(
+            targetTransformBaselines.queryTransformBaseline(
               envelope.payload.target,
-              envelope.payload.previewSyncRevision,
+              envelope.payload.transformBaselineRevision,
             ),
           ),
         );

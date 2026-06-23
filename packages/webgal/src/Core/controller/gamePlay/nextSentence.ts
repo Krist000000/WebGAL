@@ -1,4 +1,4 @@
-import { scriptExecutor } from './scriptExecutor';
+import { scriptExecutor, type ScriptExecutionOptions } from './scriptExecutor';
 import { logger } from '../../util/logger';
 import { webgalStore } from '@/store/store';
 
@@ -32,7 +32,11 @@ export const preForward = () => {
 /**
  * 执行一条语句或由 -next 连接的语句序列，只修改演算状态并收集演出。
  */
-export const forward = () => {
+export interface ForwardOptions {
+  scriptExecution?: ScriptExecutionOptions;
+}
+
+export const forward = (options: ForwardOptions = {}) => {
   if (WebGAL.sceneManager.lockSceneWrite) {
     logger.warn('forward 被场景切换阻塞！');
     return false;
@@ -47,7 +51,7 @@ export const forward = () => {
   WebGAL.gameplay.performController.clearNonHoldPerformsFromStageState();
   WebGAL.gameplay.performController.beginCollectingPerforms();
   try {
-    scriptExecutor();
+    scriptExecutor(0, options.scriptExecution);
   } finally {
     WebGAL.gameplay.performController.endCollectingPerforms();
   }
