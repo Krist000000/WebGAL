@@ -37,11 +37,14 @@ interface ConnectorSegment {
   layerY: number;
 }
 
+type LockedNodeVisibility = 'all' | 'node' | 'none';
+
 export const Flowchart = () => {
   const t = useTrans('gaming.flowchart.');
   const { playSeClick, playSeEnter } = useSoundEffect();
   const dispatch = useDispatch();
   const GUIStore = useSelector((state: RootState) => state.GUI);
+  const lockedNodeVisibility = useSelector((state: RootState) => normalizeLockedNodeVisibility(state.userData.globalGameVar.Flowchart_Locked_Node_Visibility));
   const isOpen = GUIStore.showFlowchart;
   const [indexHide, setIndexHide] = useState(true);
   const [currentFlowchartId, setCurrentFlowchartId] = useState('');
@@ -49,7 +52,7 @@ export const Flowchart = () => {
   const timeRef = useRef<ReturnType<typeof setTimeout>>();
   const flowcharts = WebGAL.flowchartManager.getFlowcharts();
   const currentFlowchart = flowcharts.find((e) => e.id === currentFlowchartId) ?? flowcharts[0];
-  const layout = useMemo(() => layoutFlowchart(currentFlowchart), [currentFlowchart?.id, version]);
+  const layout = useMemo(() => layoutFlowchart(currentFlowchart, lockedNodeVisibility), [currentFlowchart?.id, lockedNodeVisibility, version]);
 
   useEffect(() => {
     const update = () => setVersion((v) => v + 1);
@@ -167,7 +170,7 @@ export const Flowchart = () => {
                   ))}
                 {layout.nodes.map((node) => {
                   const unlocked = WebGAL.flowchartManager.isUnlocked(currentFlowchart.id, node.id);
-                  const labelText = unlocked ? node.data?.label || node.id : t('locked');
+                  const labelText = unlocked || lockedNodeVisibility === 'all' ? node.data?.label || node.id : '';
                   return (
                     <g
                       key={node.id}
@@ -180,7 +183,7 @@ export const Flowchart = () => {
                       }}
                       onMouseEnter={unlocked ? playSeEnter : undefined}
                     >
-                      <title>{labelText}</title>
+                      <title>{labelText || t('locked')}</title>
                       <rect
                         className={`${styles.flowchart_node_rect} ${
                           unlocked ? styles.flowchart_node_rect_unlocked : styles.flowchart_node_rect_locked
@@ -206,11 +209,16 @@ export const Flowchart = () => {
   );
 };
 
-function layoutFlowchart(flowchart?: IFlowchart) {
+function layoutFlowchart(flowchart?: IFlowchart, lockedNodeVisibility: LockedNodeVisibility = 'node') {
   if (!flowchart) return { nodes: [] as LayoutNode[], edges: [] as LayoutEdge[], width: 0, height: 0 };
-  const nodeMap = new Map(flowchart.nodes.map((node) => [node.id, node]));
+  const flowchartNodes =
+    lockedNodeVisibility === 'none'
+      ? flowchart.nodes.filter((node) => WebGAL.flowchartManager.isUnlocked(flowchart.id, node.id))
+      : flowchart.nodes;
+  if (flowchartNodes.length === 0) return { nodes: [] as LayoutNode[], edges: [] as LayoutEdge[], width: 0, height: 0 };
+  const nodeMap = new Map(flowchartNodes.map((node) => [node.id, node]));
   const validEdges = flowchart.edges.filter((edge) => nodeMap.has(edge.source) && nodeMap.has(edge.target));
-  const incomingCount = new Map(flowchart.nodes.map((node) => [node.id, 0]));
+  const incomingCount = new Map(flowchartNodes.map((node) => [node.id, 0]));
   const adjacency = new Map<string, IFlowchartEdge[]>();
   const parentMap = new Map<string, string[]>();
   validEdges.forEach((edge) => {
@@ -218,10 +226,10 @@ function layoutFlowchart(flowchart?: IFlowchart) {
     adjacency.set(edge.source, [...(adjacency.get(edge.source) ?? []), edge]);
     parentMap.set(edge.target, [...(parentMap.get(edge.target) ?? []), edge.source]);
   });
-  const roots = flowchart.nodes.filter((node) => node.data?.isRoot || (incomingCount.get(node.id) ?? 0) === 0);
-  const queue = (roots.length ? roots : flowchart.nodes.slice(0, 1)).map((node) => node.id);
+  const roots = flowchartNodes.filter((node) => node.data?.isRoot || (incomingCount.get(node.id) ?? 0) === 0);
+  const queue = (roots.length ? roots : flowchartNodes.slice(0, 1)).map((node) => node.id);
   const restIncomingCount = new Map(incomingCount);
-  const depthMap = new Map(flowchart.nodes.map((node) => [node.id, 0]));
+  const depthMap = new Map(flowchartNodes.map((node) => [node.id, 0]));
   const visited = new Set<string>();
   while (queue.length > 0) {
     const sourceId = queue.shift()!;
@@ -234,18 +242,18 @@ function layoutFlowchart(flowchart?: IFlowchart) {
     });
   }
   const maxDepth = Math.max(0, ...depthMap.values());
-  flowchart.nodes
+  flowchartNodes
     .filter((node) => !visited.has(node.id))
     .forEach((node, index) => depthMap.set(node.id, Math.max(depthMap.get(node.id) ?? 0, maxDepth + index + 1)));
   const layerMap = new Map<number, IFlowchartNode[]>();
-  flowchart.nodes.forEach((node) => {
+  flowchartNodes.forEach((node) => {
     const depth = depthMap.get(node.id) ?? 0;
     layerMap.set(depth, [...(layerMap.get(depth) ?? []), node]);
   });
   const layers = [...layerMap.entries()]
     .sort(([a], [b]) => a - b)
     .map(([, layer]) => layer);
-  const nodeWidthMap = new Map(flowchart.nodes.map((node) => [node.id, getNodeWidth(node)]));
+  const nodeWidthMap = new Map(flowchartNodes.map((node) => [node.id, getNodeWidth(node, flowchart.id, lockedNodeVisibility)]));
   const layerWidths = layers.map((layer) => layer.reduce((sum, node) => sum + (nodeWidthMap.get(node.id) ?? NODE_MIN_WIDTH), 0) + (layer.length - 1) * NODE_GAP);
   const width = MARGIN_X * 2 + Math.max(NODE_MIN_WIDTH, ...layerWidths);
   const layoutNodeMap = new Map<string, LayoutNode>();
@@ -279,10 +287,15 @@ function layoutFlowchart(flowchart?: IFlowchart) {
   return { nodes, edges, width, height: MARGIN_Y * 2 + NODE_HEIGHT + (layers.length - 1) * ROW_GAP };
 }
 
-function getNodeWidth(node: IFlowchartNode) {
+function getNodeWidth(node: IFlowchartNode, flowchartId: string, lockedNodeVisibility: LockedNodeVisibility) {
+  if (lockedNodeVisibility === 'node' && !WebGAL.flowchartManager.isUnlocked(flowchartId, node.id)) return NODE_MIN_WIDTH;
   const label = node.data?.label || node.id;
   const textWidth = Array.from(label).reduce((sum, char) => sum + (char.charCodeAt(0) > 255 ? 24 : 14), 0);
   return Math.max(NODE_MIN_WIDTH, textWidth + 36);
+}
+
+function normalizeLockedNodeVisibility(value: unknown): LockedNodeVisibility {
+  return value === 'all' || value === 'none' ? value : 'node';
 }
 
 function getConnectorSegments(edges: LayoutEdge[], flowchartId: string): ConnectorSegment[] {
