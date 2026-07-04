@@ -8,7 +8,7 @@
 
 #### 新功能
 
-新增流程图功能。启用 Enable_flowchart 并配置 game/flowchart.json 后，玩家可以在菜单或底部控制栏查看已解锁的剧情节点，并跳转回已解锁的场景。
+新增流程图功能。玩家可以在菜单或底部控制栏查看已解锁的剧情节点，并跳转回已解锁的场景。
 
 流程图支持多条线路、节点解锁记录和未解锁节点显示控制，重置游戏数据时会一并清理流程图进度。
 
@@ -49,7 +49,7 @@
 
 #### New Features
 
-Added the flowchart feature. After enabling Enable_flowchart and configuring game/flowchart.json, players can view unlocked story nodes from the menu or bottom control panel and jump back to unlocked scenes.
+Added the flowchart feature. Players can view unlocked story nodes from the menu or bottom control panel and jump back to unlocked scenes.
 
 Flowcharts support multiple routes, node unlock progress, and locked-node visibility controls; resetting game data now also clears flowchart progress.
 
@@ -90,7 +90,7 @@ Fixed resource preloading possibly processing the same resource repeatedly or in
 
 #### 新機能
 
-フローチャート機能を追加しました。Enable_flowchart を有効にして game/flowchart.json を設定すると、プレイヤーはメニューまたは下部コントロールから解放済みのストーリーノードを確認し、解放済みのシーンへ戻れるようになります。
+フローチャート機能を追加しました。プレイヤーはメニューまたは下部コントロールから解放済みのストーリーノードを確認し、解放済みのシーンへ戻れるようになります。
 
 フローチャートは複数ルート、ノード解放状態、未解放ノードの表示制御に対応しました。ゲームデータをリセットすると、フローチャートの進行状況も一緒に削除されます。
 
