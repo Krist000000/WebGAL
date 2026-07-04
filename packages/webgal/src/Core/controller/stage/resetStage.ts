@@ -30,7 +30,7 @@ export const resetStage = (resetBacklog: boolean, resetSceneAndVar = true, optio
   const initSceneDataCopy = cloneDeep(initState);
   const currentVars = stageStateManager.getCalculationStageState().GameVar;
   if (commitStageState) {
-    stageStateManager.resetAllStageState(initSceneDataCopy);
+    stageStateManager.resetAllStageState(initSceneDataCopy, { skipAnimation: true });
   } else {
     stageStateManager.resetCalculationStageState(initSceneDataCopy);
   }
