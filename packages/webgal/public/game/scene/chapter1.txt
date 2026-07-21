@@ -1,58 +1,750 @@
 ; ============================================================
 ; chapter1.txt — 第一章 · 逆流而上（1804 夏–秋）
-; 视角：士兵线（奥德韦 / 威拉德）+ 刘易斯
+; 视角：共通（奥德韦 / 威拉德 / 刘易斯 / 克拉克）
+; 共通线第二块。建立三好感变量，埋历史锚点。
+; 目标字数：约 19,000 中文字符。
 ; ============================================================
 changeBg:bg_missouri.png;
 changeFigure:none -next;
-:密苏里河并不温柔。它把船往回推，把人往泥里按。;
+:1804 年 5 月 14 日，圣路易斯的风里全是河水的腥气。;
+:龙骨船「探险号」缓缓离港。两艘皮罗格独木舟一左一右，像忠实的影子。;
+:密苏里河不温柔。它把船往回推，把人往泥里按。;
 
+:码头上站满了人。妻子们攥着帕子，孩子追着船跑，被父亲一把抱起又放下。;
 changeFigure:fig_ordway.png -left -next;
-奥德韦:（写日记）五月二十日。逆水行舟，一日不过十里。弟兄们的手都起了茧。;
-奥德韦:刘易斯队长每天蹲在岸边，往一个小本子上记植物的名字。他说那是给共和国的税。;
+奥德韦:（写日记）五月十四日。我们走了。圣路易斯在身后，越变越小。;
+奥德韦:有人哭，有人笑，有人假装没看见。我把这些，都替他们记着。;
 
-changeFigure:fig_lewis.png -right -next;
-刘易斯:（抬头）奥德韦，把今天的河道记准。国会要的不是故事，是地图。;
-
-:八月的某一天，军需官弗洛伊德捂着肚子倒下了。;
-:阑尾炎。没有药，没有医生，只有河风吹了一整夜。;
-changeFigure:fig_ordway.png -left -next;
-奥德韦:（笔迹发抖）八月二十日。弗洛伊德走了。全队唯一的长眠者。;
-奥德韦:我们把他埋在悬崖上，面朝河流。他说过，想看着队伍往西去。;
-
-:河到了分岔口。两条水道，一条宽阔，一条隐蔽。克拉克的草图在这里画了个问号。;
-changeFigure:fig_clark.png -right -next;
-克拉克:测绘解谜来了——主河道看着稳，可上游的印第安人说过，支流才抄近路。;
-choose:走宽阔的主河道（稳妥，但绕远）:ch1_main|走隐蔽的支流（冒险，可能抄近）:ch1_branch;
-
-label:ch1_main;
-setVar:mapping=mapping+5;
-克拉克:（松口气）稳妥。绕点路，总比困死在浅滩强。;
-jumpLabel:ch1_after;
-
-label:ch1_branch;
-setVar:mapping=mapping+15;
-克拉克:（兴奋）抄近了！这处弯道，我要记进地图——日后叫它「克拉克岔口」。;
-jumpLabel:ch1_after;
-
-label:ch1_after;
-:九月的风里，第一次遇见苏族的人。他们骑在马上，远远地看着这支「带女人的队伍」。;
+changeFigure:fig_willard.png -right -next;
+威拉德:（扒着船帮）奥德韦，你说这河，真的能通到太平洋吗？;
+奥德韦:（笑）队长说能，那就是能。咱只管把桨划到底。;
+威拉德:（缩脖子）可太平洋……是不是也这么凉？我有点后悔吃那碗玉米糊了。;
 
 changeFigure:fig_lewis.png -left -next;
+刘易斯:（蹲在岸边，往小本子记）逆水行舟，一日不过十里。;
+刘易斯:国会要的不是故事，是地图。把今天的河道记准，奥德韦。;
+刘易斯:（抬头望天）云往西走。风却往东顶。这河，生来就爱跟人拧着。;
+
+:头几日，河面还算宽。可桨手们的手，三天就起了茧。;
+:太阳把脊背晒脱了皮，河水又把盐渍逼回伤口里，杀得人直抽气。;
+:龙骨船的方帆兜不住逆风，大多数人只好下船，用篙撑、用纤拉。;
+
+changeFigure:fig_clark.png -right -next;
+克拉克:（卷着地图）梅里韦瑟，你看这弯道——河床在偷偷改道。;
+克拉克:我得每天重画。一张地图，画错了，后头的人就得死在错路上。;
+刘易斯:那就每天重画。共和国买下的，不只是土地，还有它的形状。;
+
+:傍晚靠岸扎营。火堆亮起来，有人哼起家乡的调子，跑了好几个音。;
+:河对岸的草原上，野牛群像黑色的云，慢慢地，慢慢地移动。;
+:没人说话。所有人都看呆了——这片荒原，比信里写的要大得多。;
+
+; -------- 选择1：纪律与同伴（出发头一周） --------
+:出发的第七天，桨手里起了争执。两个年轻兵为抢一根好篙动了手。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（皱眉）队长，这两人又打起来了。再不管，船上的规矩就散了。;
+
+choose:按军纪严惩，立威整队:ch1_disc_lewis|脱下外套，跟他们一起撑篙:ch1_disc_sol|先听听他们累不累:ch1_disc_edge;
+
+label:ch1_disc_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（冷脸）军中无戏言。各打军棍，记进册子。下不为例。;
+刘易斯:纪律不是捆人的绳，是保命的墙。墙塌了，谁都活不成。;
+奥德韦:（敬礼）是。弟兄们，都看清了——队长的墙，谁也撞不动。;
+jumpLabel:ch1_after_disc;
+
+label:ch1_disc_sol;
+setVar:soldier_aff=soldier_aff+10;
+刘易斯:（解下外套）行了。把棍子放下，篙给我。;
+刘易斯:（跳下船帮）我也撑一日，看谁的茧比我的厚。来，一起。;
+威拉德:（咧嘴）队长下场了！弟兄们，加把劲，别让上尉比咱快！;
+jumpLabel:ch1_after_disc;
+
+label:ch1_disc_edge;
+setVar:edge_aff=edge_aff+10;
+刘易斯:（蹲下）手都破了，还抢什么篙。说吧，是怎么了。;
+桨手:（低头）就是……累。夜里梦见娘，醒来发现还在河里。;
+刘易斯:（拍肩）累就直说。撑篙换班，两拨轮。人是肉长的，不是木头。;
+jumpLabel:ch1_after_disc;
+
+label:ch1_after_disc;
+:那一夜，争执的人睡在火堆两边，谁也没再吭声。;
+:河声替他们把话都说完了。;
+
+; -------- 约克登场：克拉克的影子 --------
+changeFigure:fig_york.png -left -next;
+:克拉克身边有个沉默的巨人。他叫约克，是克拉克从肯塔基带出来的仆人。;
+约克:（扛着货箱，闷声）队长，这箱火药，我搬到船尾去。;
+克拉克:（笑）约克一人顶三个。没有他，这船到现在还装不满。;
+
+changeFigure:fig_willard.png -right -next;
+威拉德:（小声）奥德韦，约克……到底是弟兄，还是……;
+奥德韦:（低声）别问。在这条船上，他干的活比谁都多，却连名都归了克拉克。;
+
+:约克从不多话。他只在夜里，借着余火，把磨破的肩布重新缝好。;
+:有一次，威拉德撞见他在水边照自己的影，看了很久，又匆匆别开脸。;
+
+; -------- 选择2：你如何看约克 --------
+choose:把他当人，主动搭话:ch1_york_edge|与他并肩划桨，称兄道弟:ch1_york_sol|视他为克拉克得力的臂膀:ch1_york_lewis;
+
+label:ch1_york_edge;
+setVar:edge_aff=edge_aff+10;
+威拉德:（递水）约克，喝口。你肩膀都渗血了。;
+约克:（接过，怔了一下）……谢了，小兵。头回有人递我这个。;
+威拉德:咱都是一条船上的。血是红的，哪分谁是谁的。;
+jumpLabel:ch1_after_york;
+
+label:ch1_york_sol;
+setVar:soldier_aff=soldier_aff+10;
+刘易斯:约克，来，这班篙归咱俩。看看谁先把船顶过这道坎。;
+约克:（咧嘴）上尉，您可别哭。我劲儿大，您悠着点。;
+:两人一前一后，木篙点在石头上，船头竟真往上窜了一截。;
+jumpLabel:ch1_after_york;
+
+label:ch1_york_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:克拉克，约克是你的人，也是队伍的资产。他的力气得用在刀刃上。;
+克拉克:（点头）放心。约克心里有数，他从不掉链子。;
+约克:（低头）……是，队长。约克不掉链子。;
+jumpLabel:ch1_after_york;
+
+label:ch1_after_york;
+:密苏里的夏天，白昼长得出奇。太阳落得很慢，像舍不得这片荒原。;
+:夜里，萤火虫在芦苇间浮，像谁把星子揉碎了撒在河面。;
+
+; -------- 克拉克的隐衔 --------
+changeFigure:fig_clark.png -left -next;
+克拉克:（夜里，低声）梅里韦瑟，今天那兵叫我「少尉」。我差点应了。;
+刘易斯:（叹气）档案里你就是少尉。可在这条船上，你是我平等的搭档。;
+克拉克:我不要名分。只要回去时，地图上有我画的那一半。;
+刘易斯:（握拳）那一半，比谁封的衔都重。;
+
+; -------- 选择3：隐衔之秘，你站在哪边 --------
+choose:护住指挥的权威，对外不必澄清:ch1_rank_lewis|替克拉克不平，记下一笔:ch1_rank_edge|只当没听见，兄弟同心即可:ch1_rank_sol;
+
+label:ch1_rank_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（正色）命令从我们两人嘴里出来，就是一样的。对外不必澄清。;
+刘易斯:一支远征队，最怕的不是敌人，是自己的疑心。权威得立住。;
+克拉克:（笑）有你这句话，少尉不少尉的，我自己早忘了。;
+jumpLabel:ch1_after_rank;
+
+label:ch1_rank_edge;
+setVar:edge_aff=edge_aff+10;
+奥德韦:（在旁记下）克拉克上尉的军衔，档案写少尉。不公。;
+奥德韦:队长，等回去，我要在日记里替他说句公道话。;
+克拉克:（摇头）别为我惹事。可……谢谢你，奥德韦。;
+jumpLabel:ch1_after_rank;
+
+label:ch1_rank_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（插嘴）管他少尉上尉，克拉克队长画的图比谁都准！;
+克拉克:（大笑）这小子，倒会说话。来，分口烟丝给你。;
+刘易斯:（含笑）行。名分是纸上事，本事是河里练出来的。;
+jumpLabel:ch1_after_rank;
+
+label:ch1_after_rank;
+:七月的河面宽得像海。两岸的三角叶杨把影子投在水上，凉了半截暑气。;
+:一只苍鹭从芦苇里惊起，翅膀扇出一片水花，落在克拉克的笔记本上。;
+
+; -------- 草原与野牛 --------
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（举枪遥指）看那片黑云——野牛。今天的肉，有着落了。;
+克拉克:（眯眼）别惊了群。派两个人绕后，慢慢赶，一枪放倒领头的。;
+
+:枪响过后，一头壮牛倒在草里。队员们欢呼着围上去，刀光在夕阳里翻飞。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（记数）够吃三天。多余的肉，晒成条，路上当干粮。;
+威拉德:（舔嘴）我这辈子没闻过这么香的烟。;
+
+; -------- 选择4：猎物与分配 --------
+choose:按人头均分，人人有份:ch1_meat_sol|先紧着伤病与弱的人:ch1_meat_edge|留足给测绘与记录的口粮:ch1_meat_lewis;
+
+label:ch1_meat_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（切肉）每人一份，不多不少。撑篙的、掌舵的，都一样。;
+威拉德:（捧肉）队长公道！这肉我吃得香，也吃得稳。;
+jumpLabel:ch1_after_meat;
+
+label:ch1_meat_edge;
+setVar:edge_aff=edge_aff+10;
+刘易斯:（指）伤员先拿嫩的，那孩子牙没长齐，给他软的。;
+约克:（默默让出）我牙口好。这块给那个咳喘的老兵。;
+刘易斯:（看他一眼）约克，你这心，比河还宽。;
+jumpLabel:ch1_after_meat;
+
+label:ch1_meat_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:留下最好的后腿，腌了带走。标本和记录，要靠它撑到冬天。;
+克拉克:（点头）肉是力气，记录是功劳。两样都不能丢。;
+jumpLabel:ch1_after_meat;
+
+label:ch1_after_meat;
+:夜里的草原静得可怕。没有虫鸣，只有风，和远处狼的低吼。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（写）七月某夜。我第一次怕黑。可一回头，火堆边都是自家人。;
+奥德韦:（批）写得好。留着，回去给那些笑咱们疯了的人看。;
+
+; -------- 河上风暴 --------
+:七月末，天边堆起黑云。风一下子野了，把河水掀成白沫。;
+changeFigure:fig_clark.png -right -next;
+克拉克:（喊）不好！转锚，靠岸！这浪能掀翻皮罗格！;
+刘易斯:（勒绳）撑篙的跟我下船，把船拽进背风的汊！快！;
+
+:一道闪电劈下来，照亮所有人惨白的脸。船身剧烈一晃，货箱滚作一团。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（扑住日记）我的本子！没了它，队伍就瞎了眼！;
+威拉德:（被人浪掀倒）咳——灌了我一肚子浑水！;
+
+; -------- 选择5：风暴中的抉择 --------
+choose:下令弃货保船，纪律优先:ch1_storm_lewis|先救人，货可再捞:ch1_storm_edge|与弟兄同拽纤绳:ch1_storm_sol;
+
+label:ch1_storm_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（厉声）丢下多余的桶！保住船和图，其余随它去！;
+刘易斯:一条命换一桶粮，不值。可图没了，全队白走！;
+克拉克:（斩箱）听他的！箱子下水，保船！;
+jumpLabel:ch1_after_storm;
+
+label:ch1_storm_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（抱起落水者）先顾人！货沉了俺下去摸，人沉了救不回！;
+刘易斯:（咬牙）……救人！货箱推下去，人一个个捞上来！;
+威拉德:（咳着笑）约克，你这回是真酋长，救命的酋长！;
+jumpLabel:ch1_after_storm;
+
+label:ch1_storm_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（跳进浪里）弟兄们，跟我拽！纤绳不断，船就不断！;
+奥德韦:（攥绳）一、二、起！一、二、起！咱当兵的，命拴一根绳上！;
+:十来双手攥成一股，船竟真被拖进了背风的河汊。;
+jumpLabel:ch1_after_storm;
+
+label:ch1_after_storm;
+:风暴过去，云散成碎布。所有人瘫在泥里，喘着，又笑了。;
+changeFigure:fig_lewis.png -right -next;
+刘易斯:（拧着衣角的水）今日若散了，便没有明日了。我们赢了河一次。;
+克拉克:（拍肩）赢一次算一次。这河，记仇着呢。;
+
+; -------- 与沿途村落交易 --------
+:八月，船过一处村落。妇人们在岸边摆出玉米、瓜与晒干的莓。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（咽口水）奥德韦，咱的盐，能换他们一筐瓜不？;
+奥德韦:（犹豫）队长说，交易要公平，不能抢。可有人手痒。;
+
+; -------- 选择6：交易之道 --------
+choose:按价公平交换，立信:ch1_trade_lewis|多给些，结善缘:ch1_trade_edge|以势压人，少付多得:ch1_trade_sol;
+
+label:ch1_trade_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（比划分量）盐换瓜，一比一，公平。我们不占你们便宜。;
+刘易斯:今日的信，是明日的路。占一分，后头百里的门就关了。;
+jumpLabel:ch1_after_trade;
+
+label:ch1_trade_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（多放一把盐）弟兄们，多给点。她们抱着娃，比咱难。;
+威拉德:（笑）对，咱有肉，她们有瓜，凑一桌多好。;
+jumpLabel:ch1_after_trade;
+
+label:ch1_trade_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（举枪示意）少给点盐，多拿两瓜。咱有枪，她们不敢拦。;
+奥德韦:（皱眉，仍记下）队长定了。可这「不敢」，俺写进心里了。;
+jumpLabel:ch1_after_trade;
+
+label:ch1_after_trade;
+:村落的狗追着船吠了半里。妇人们收了盐，朝河心遥遥摆手。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）八月。交易一场，瓜甜，盐咸，人心却各有各的算。;
+
+; -------- 坏血病的影子 --------
+:八月中，有个兵刷牙时牙龈出了血，久久不止。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（皱眉）是坏血病的苗头。缺青菜，缺鲜物。得想招。;
+克拉克:（翻囊）还有点酸模草。每日煮水，人人分一口，当药喝。;
+
+; -------- 选择7：有限的药汤 --------
+choose:按册严分，病号优先:ch1_scur_lewis|见谁虚就给谁:ch1_scur_edge|人人一碗，不分彼此:ch1_scur_sol;
+
+label:ch1_scur_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（分勺）记册：病号两口，壮汉一口。药是弹药，得省着。;
+刘易斯:乱分，全队一起垮。秩序，也是一味药。;
+jumpLabel:ch1_after_scur;
+
+label:ch1_scur_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（指那兵）他牙龈肿得话都说不清，先紧着他。;
+刘易斯:（点头）就依你。约克，你这双眼，比医官还毒。;
+jumpLabel:ch1_after_scur;
+
+label:ch1_scur_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（端碗）都喝一口！谁也别逞能说「我铁打」。;
+克拉克:（笑）对，铁打的也得防锈。喝！;
+jumpLabel:ch1_after_scur;
+
+label:ch1_after_scur;
+:那股酸涩的草汤，成了每日的仪式。牙龈的血，慢慢止了。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（写）原来活命，有时就靠一口苦水。;
+
+; -------- 弗洛伊德病倒 --------
+:八月的某一天，军需官弗洛伊德捂着肚子，弯下了腰。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（变色）弗洛伊德！你怎么了，脸色白得像纸。;
+弗洛伊德:（颤）右下腹……像有把刀，在里头拧。一阵紧过一阵。;
+
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（蹲下查看）是阑尾炎，肚里的炎症。没有药，没有医生，只有河风。;
+克拉克:（攥拳）烧点热水，用能找到的草敷上。撑住，弗洛伊德，撑住。;
+
+:那一夜，船停在不肯走的浅滩。弗洛伊德在舱里翻来覆去，汗水浸透了木板。;
+changeFigure:fig_willard.png -right -next;
+威拉德:（小声）奥德韦，他会好起来吧？他可是咱的军需官啊。;
+奥德韦:（不语，只把他的手写进日记）……我但愿会。;
+
+; -------- 选择8：弗洛伊德的最后 --------
+choose:整夜陪他，握着他的手:ch1_floyd_edge|记下他的遗言与症状:ch1_floyd_lewis|以兄弟之礼守在舱外:ch1_floyd_sol;
+
+label:ch1_floyd_edge;
+setVar:edge_aff=edge_aff+10;
+刘易斯:（坐在他身边）弗洛伊德，我在这儿。你怕什么，就说。;
+弗洛伊德:（微弱）就是……想娘。想我走前，没来得及见她一面。;
+刘易斯:（握他的手）我替你记着。你的名字，一个字都不会少。;
+jumpLabel:ch1_after_floyd;
+
+label:ch1_floyd_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（就着火光记录）右下腹剧痛发热呕吐，疑为阑尾炎。记给后人。;
+刘易斯:（抬头，眼里有水光）痛归痛，病得记准。科学不认眼泪。;
+克拉克:（拍肩）梅里韦瑟，你比谁都硬，也比谁都软。;
+jumpLabel:ch1_after_floyd;
+
+label:ch1_floyd_sol;
+setVar:soldier_aff=soldier_aff+10;
+奥德韦:（守在舱口）弟兄们轮流守。谁也别睡，陪他这一程。;
+威拉德:（红了眼）弗洛伊德教过我打绳结。这结，我替他打一辈子。;
+奥德韦:（敬）军人送军人。我们都在。;
+jumpLabel:ch1_after_floyd;
+
+label:ch1_after_floyd;
+:八月二十日，天没亮，弗洛伊德走了。;
+:全队唯一的长眠者。没有药，没有医生，只有河风吹了一整夜。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（笔迹发抖）八月二十日。弗洛伊德去了。我们把他埋在悬崖上。;
+奥德韦:面朝河流。他说过，想看着队伍，一直往西去。;
+
+:土还新的时候，所有人都摘了帽。风把帽檐吹得啪啪响，像谁在鼓掌送行。;
+changeFigure:fig_lewis.png -right -next;
+刘易斯:（低声）从今天起，这支队伍少了一个名字。剩下的，一个都不能少。;
+
+; -------- 余波：家书与静默 --------
+:弗洛伊德走后，船上好些天没人开玩笑。连威拉德都把歌咽回了肚子。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（写）我给娘写封信，可这信，要明年才到得了家。;
+威拉德:娘，若我回不去，别怪河。这河，值得一个儿子走一趟。;
+
+changeFigure:fig_clark.png -right -next;
+克拉克:（拍他肩）写得好。等回去，我替你念给你娘听。;
+威拉德:（吸鼻）队长，你可得先活着，才念得成。;
+克拉克:（笑）那咱约好了。谁也不许先掉队。;
+
+; -------- 逆流继续，秋意渐起 --------
+:九月的风凉了。河岸的草黄了一截，又被风吹倒一截。;
+:龙骨船的日子，成了重复的劳作：撑篙、记录、扎营、守夜。;
+changeFigure:fig_clark.png -left -next;
+克拉克:（展图）梅里韦瑟，你看，这河像条不肯直走的蛇。;
+刘易斯:（笑）蛇有蛇的路。我们跟着它，把它画直就是了。;
+
+changeFigure:fig_willard.png -right -next;
+威拉德:（写）九月。我开始懂了，远方不是地点，是每天十里的累加。;
+奥德韦:（批）写得好。留着，回去给那些笑咱们疯了的人看。;
+
+; -------- 首次苏族遭遇 --------
+:九月的风里，第一次遇见苏族的人。他们骑在马上，远远看着这支队伍。;
+:为首的战士勒住马，目光落在船尾——那里，站着约克，也站着带枪的白人。;
+changeFigure:fig_lewis.png -left -next;
 刘易斯:（低声）记住规矩——先送礼，再开口。和平奖章、长烟斗，一样不能少。;
-choose:按礼仪赠奖章与烟斗:ch1_dip|直接表明来意，省去礼节:ch1_blunt;
+克拉克:（点头）别露怯，也别露凶。我们是客人，不是征服者。;
 
-label:ch1_dip;
-setVar:diplomacy=diplomacy+15;
-刘易斯:（递出奖章）这不是占领，是相识。;
-:苏族的老人接过烟斗，点了点头。河岸第一次有了笑意。;
-jumpLabel:ch1_end;
+:苏族的老人催马上前，用他们的话说了句什么。没人听得懂。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（低声）队长，他们眼神不善。怕是见过别处的白人。;
+刘易斯:（正色）那就更得把礼数做足。这一回，定下往后所有的路。;
 
-label:ch1_blunt;
-setVar:diplomacy=diplomacy-10;
-刘易斯:（皱眉）……话是说明白了，可他们的马转头就走。;
-:威拉德在日记里写：有些门，不敲门是进不去的。;
-jumpLabel:ch1_end;
+; -------- 选择9：苏族外交 --------
+choose:按礼仪赠奖章与烟斗，行足礼数:ch1_siou_lewis|真诚走近，学他们的招呼:ch1_siou_edge|亮出兵威，免得被小看:ch1_siou_sol;
 
-label:ch1_end;
-:秋深了。队伍在曼丹堡的影子下，准备过冬。;
+label:ch1_siou_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（双手递出奖章）这不是占领，是相识。收下，便是朋友。;
+刘易斯:（奉上烟斗）烟斗过手，火气就散。我们只要借路向西。;
+:苏族老人接过奖章，看了很久，终于点了点头。河岸第一次有了笑意。;
+克拉克:（松口气）礼数到了，门就开了。;
+jumpLabel:ch1_after_siou;
+
+label:ch1_siou_edge;
+setVar:edge_aff=edge_aff+10;
+威拉德:（学样抬手）喂——！我们没恶意，只想过去看看海！;
+约克:（上前半步）老人家，我也是别处来的黑皮肤。咱都是外乡人。;
+:老人盯着约克看了许久，竟笑了，抬手回了个同样的招呼。;
+刘易斯:（轻声）约克，你比我的奖章还会说话。;
+jumpLabel:ch1_after_siou;
+
+label:ch1_siou_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（举枪朝天）放一响，让他们瞧瞧咱的硬气，但不伤人。;
+克拉克:（朗声）我们不好惹，也不惹事。借条路，互不亏欠。;
+:马群退了半步，却没走。苏族人隔着河，把这群人记进了自己的谱。;
+奥德韦:（写）亮肌肉换来的，是敬畏，未必是信任。先记着。;
+jumpLabel:ch1_after_siou;
+
+label:ch1_after_siou;
+:苏族人后来常来交易。河岸的买卖声，混进了陌生又亲切的调子。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（写）原来「别人」不是怪物。他们也有娘，也有怕的事。;
+
+; -------- 第二位向导的争执 --------
+:十月初，一名随行的猎人主张抄近路，说认得一条干河谷。;
+changeFigure:fig_clark.png -right -next;
+克拉克:（皱眉）干河谷听着近，可秋天万一有暗流，船就搁死。;
+刘易斯:（沉吟）两种说法，都有人信。这回，听大伙儿的。;
+
+; -------- 选择10：听谁的 --------
+choose:信克拉克的图，稳走河道:ch1_path_lewis|信土著的近路:ch1_path_edge|听弟兄投票:ch1_path_sol;
+
+label:ch1_path_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:图是我俩画的，错不了。走河道，慢，但脚底下有数。;
+克拉克:（笑）还是你信我的笔。;
+jumpLabel:ch1_after_path;
+
+label:ch1_path_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（点头）那猎人说的是实话，他娘就是这带的人。;
+刘易斯:（想了想）行，近路就近路。错了，咱回头再骂。;
+jumpLabel:ch1_after_path;
+
+label:ch1_path_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（举手）投票！多数走哪，咱走哪！;
+奥德韦:（数手）十二条要近路，十四条要河道。那就河道。;
+jumpLabel:ch1_after_path;
+
+label:ch1_after_path;
+:船依着多数人的意思，拐回主河道。日头把帆影拉得老长。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）十月。一件小事，却让我觉出：这队伍，是人人的。;
+
+; -------- 夜渔与守夜 --------
+:十月的夜里，刘易斯带人下网夜渔。河水凉得扎手，却肥着一河的鱼。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（提灯）轻声。鱼怕响，也怕慌。这一网，是明早的汤。;
+威拉德:（搓手）队长，这凉水里，我手都快不是我的了。;
+刘易斯:（笑）手不是你的，可鱼进筐就是咱的。撑住。;
+
+; -------- 选择：夜渔时的心事 --------
+choose:把鱼先分给瘦弱的弟兄:ch1_fish_edge|记入账册，统一调度:ch1_fish_lewis|与大家同守同分:ch1_fish_sol;
+
+label:ch1_fish_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（挑小鱼）这尾给那个咳的兵，补补。大的留给大伙熬汤。;
+刘易斯:（点头）约克，你分的，比我的账还让人服。;
+jumpLabel:ch1_after_fish;
+
+label:ch1_fish_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（记数）入账：今夜渔获十二尾。明日按册分，病号优先。;
+奥德韦:（记）队长治军，连鱼都有名分。;
+jumpLabel:ch1_after_fish;
+
+label:ch1_fish_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（捞网）都别争！现捞现煮，谁守的夜，谁先喝一碗！;
+威拉德:（捧碗）热乎！这汤一下肚，手又回来找我了。;
+jumpLabel:ch1_after_fish;
+
+label:ch1_after_fish;
+:鱼汤的腥香飘出半里。连岸边的野狗都蹲下来，眼巴巴望着火。;
+changeFigure:fig_willard.png -right -next;
+威拉德:（写）原来一口热汤，能把一船的累，都化开。;
+
+; -------- 草原野火 --------
+:十月中，远处草原腾起一道火线，风卷着火，朝河岸扑来。;
+changeFigure:fig_clark.png -left -next;
+克拉克:（变色）野火！快把船推远，别让火星点了帆！;
+刘易斯:（指挥）挖隔离沟！湿泥泼上去，别让它咬到营地！;
+
+:火舌舔过天边，把夜烧成血红。所有人忙成一团，泥浆溅了满身。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（吼）沟成了！火过不来！弟兄们，退到船上！;
+
+; -------- 选择：野火中的取舍 --------
+choose:保住记录与地图优先:ch1_fire_lewis|先救人撤到船上:ch1_fire_edge|与弟兄共守营地:ch1_fire_sol;
+
+label:ch1_fire_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（抱匣）图匣先上船！没了它，这火白救！其余跟上！;
+克拉克:（推他）快去！营地去你的，人去我的！;
+jumpLabel:ch1_after_fire;
+
+label:ch1_fire_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（拽人）都上船！东西烧了再挣，人烧了没处找！;
+威拉德:（被拖上船）咳……约克，你这回又救我一命！;
+jumpLabel:ch1_after_fire;
+
+label:ch1_fire_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（挥锹）弟兄们，沟里蹲好！火来了咱一起顶！;
+奥德韦:（并肩）对！沟在人在，沟破人填！;
+jumpLabel:ch1_after_fire;
+
+label:ch1_after_fire;
+:火线最终越过营地，朝东去了。背后是焦土，眼前是安然的船。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（望火光）这荒原，美起来要命，狠起来也要命。;
+克拉克:（喘）好在，命还在。命在，火就烧不到咱的根。;
+
+; -------- 克拉克与地图的私语 --------
+:火后那夜，克拉克独自在船头描图。月光把他的红发镀成银。;
+changeFigure:fig_clark.png -right -next;
+克拉克:（低声）梅里韦瑟，你说，回去后，这图署谁的名？;
+刘易斯:（坐近）署「刘易斯与克拉克」。少尉不少尉，山河认得你。;
+克拉克:（笑，眼湿）就你嘴会哄人。可这话，我信。;
+
+; -------- 选择：图上署名的念头 --------
+choose:坚持两人并列署名:ch1_sign_lewis|替他不值，暗记一笔:ch1_sign_edge|名分小事，图准就行:ch1_sign_sol;
+
+label:ch1_sign_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（正色）回国我便上书总统，图是两人画的，名得两人写。;
+克拉克:（拍肩）有你这份心，少尉那点墨水，不算什么了。;
+jumpLabel:ch1_after_sign;
+
+label:ch1_sign_edge;
+setVar:edge_aff=edge_aff+10;
+奥德韦:（在旁）俺记下：克拉克之功，不在衔，在笔。后人会懂。;
+克拉克:（摇头又笑）你这兵，比我还记仇——记的是公道。;
+jumpLabel:ch1_after_sign;
+
+label:ch1_sign_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（插嘴）管署名谁先谁后，克拉克队长画的线，谁也抹不平！;
+克拉克:（大笑）这话中听！来，分你口烟丝，封你的嘴。;
+jumpLabel:ch1_after_sign;
+
+label:ch1_after_sign;
+:船继续逆水。风里多了寒意，提醒所有人：冬天，就在前头等着。;
+
+; -------- 河汊测绘抉择 --------
+:十月的河到了分岔口。两条水道，一条宽阔，一条藏在芦苇后头。;
+changeFigure:fig_clark.png -right -next;
+克拉克:（蹲地画草图）测绘解谜来了——主河道看着稳。;
+克拉克:可上游的印第安人说过，支流才抄近路，只是水浅，赌运气。;
+刘易斯:（沉吟）国会要准，也要快。两条路，得选一条。;
+
+; -------- 选择11：河汊取舍 --------
+choose:走宽阔主河道，求稳不求快:ch1_fork_lewis|信土著称，走隐蔽支流:ch1_fork_edge|哪条近走哪条，务实为先:ch1_fork_sol;
+
+label:ch1_fork_lewis;
+setVar:lewis_aff=lewis_aff+10;
+克拉克:（松口气）稳妥。绕点路，总比困死在浅滩强。;
+刘易斯:地图要经得起后人复勘。每一步都得站得住脚。;
+奥德韦:（记）主河道。慢，但不出错。队长的话，写进册子。;
+jumpLabel:ch1_after_fork;
+
+label:ch1_fork_edge;
+setVar:edge_aff=edge_aff+10;
+克拉克:（兴奋）抄近了！这处弯道，我要记进地图——日后叫它「克拉克岔口」。;
+刘易斯:（笑）信土著的嘴，胜过信纸上的旧图。这回，你赢了官僚。;
+威拉德:（欢呼）抄近路啦！弟兄们，加把劲，冬天前赶到堡！;
+jumpLabel:ch1_after_fork;
+
+label:ch1_fork_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（量水）支流浅，主河道远。算下来，近的省三天粮。;
+刘易斯:（点头）就按肚子来定。人活着，地图才有意义。走支流。;
+奥德韦:（笑）队长这话实在。咱当兵的，先顾活命。;
+jumpLabel:ch1_after_fork;
+
+label:ch1_after_fork;
+:秋深了。河风里有了刀味。远处的地平线上，隆起一片土屋的轮廓。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（远望）那是曼丹人的村子。今冬，我们就在那儿边上扎营。;
+克拉克:（搓手）总算有屋顶的念想了。这河，把我骨头都摇散了。;
+
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）十月末。望见曼丹堡。这一程，死了弗洛伊德，活下了所有人。;
+威拉德:（轻声）再往前，就是谁也没回来的地方了。我有点怕，也有点盼。;
+
+; -------- 河湾的槭树与乡愁 --------
+:十月底，船拐进一道静湾。岸上几棵槭树红得像烧着的云。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（跳上岸）奥德韦，这红叶子，像不像咱家乡那棵？;
+奥德韦:（怔）像。我娘就爱在那种树下晒辣椒。一晃，半年了。;
+
+changeFigure:fig_york.png -right -next;
+约克:（捡叶）肯塔基也有这样的树。可那儿，没人会让我捡了叶子当念想。;
+刘易斯:（远远看着）一片红叶，能让人软了心，也能让人硬了志。;
+
+; -------- 选择：乡愁怎么安放 --------
+choose:让大家写封家信，托人带:ch1_home_lewis|围火说想家，彼此撑着:ch1_home_edge|劝弟兄向前看，莫回头:ch1_home_sol;
+
+label:ch1_home_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（发纸）每人写一句，我托商队带回去。字不在多，心要到。;
+刘易斯:想家不丢人。把家记在纸上，路才走得更稳。;
+jumpLabel:ch1_after_home;
+
+label:ch1_home_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（先说）我想我娘。可她不认我了——我早是别人的「物件」。;
+威拉德:（揽他）这儿认你。这船，就是咱的娘。;
+jumpLabel:ch1_after_home;
+
+label:ch1_home_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（敲篙）想家可以，回头不行！往前看，家在圣路易斯等咱！;
+威拉德:（振作）对！回去那天，我娘准炖双份玉米糊！;
+jumpLabel:ch1_after_home;
+
+label:ch1_after_home;
+:那一夜，不少人就着红叶，写了短短一句。信叠成小方块，塞进刘易斯的匣。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）十月末。一片红叶，照见四十三颗想家的心。;
+奥德韦:可没有一个人，说要掉头。这队伍，算是铁了。;
+
+; -------- 浅滩搁船 --------
+:十月底，船底蹭上一道暗藏的沙洲，龙骨船猛地一顿，卡死了。;
+changeFigure:fig_clark.png -left -next;
+克拉克:（跳下水）都下来！推，一边挖沙一边推！潮要退了！;
+刘易斯:（卷裤）笨法子最管用。弟兄们，下水，别舍不得鞋！;
+
+:冰冷的泥没过膝盖。所有人喊着号子，船却像生了根。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（喘）这沙，吃船！再推不动，今夜就得睡泥里！;
+
+; -------- 选择：搁船时的劲往哪使 --------
+choose:下令卸货减重，先保船:ch1_ground_lewis|先护住体弱的人上岸:ch1_ground_edge|与弟兄同陷泥里推:ch1_ground_sol;
+
+label:ch1_ground_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（指向）先卸桶！船轻了，沙才吐它。秩序解围，不是蛮力。;
+克拉克:（搬箱）听他的！空船好推，满船沉底！;
+jumpLabel:ch1_after_ground;
+
+label:ch1_ground_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（背人）你脚崴了，我背你上滩。船咱慢慢弄。;
+威拉德:（被背）约克……这回，我真成你罩着的了。;
+jumpLabel:ch1_after_ground;
+
+label:ch1_ground_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（嘶吼）一、二、起！一、二、起！肩顶上去！;
+奥德韦:（咬牙）起——！动了！船动了！;
+jumpLabel:ch1_after_ground;
+
+label:ch1_after_ground;
+:船终于脱了沙，歪斜着靠岸。所有人瘫在泥里，笑得直不起腰。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（拧裤脚）这河，专挑人累的时候，给一道坎。;
+克拉克:（笑）坎过了，就是路。咱过的坎，还少吗？;
+
+; -------- 星夜与克拉克的地图 --------
+:脱困那夜，天晴得透。银河像一条倒挂的密苏里，横在头顶。;
+changeFigure:fig_clark.png -right -next;
+克拉克:（指星）梅里韦瑟，你看那颗。我娘说，那是走夜路人的灯。;
+刘易斯:（仰望）那就让它照着。前头的山，黑得很，得借光。;
+
+; -------- 选择：星下的约定 --------
+choose:约定回去共署其名:ch1_star_lewis|约定谁也不掉队:ch1_star_sol|约定替沉默者记一笔:ch1_star_edge;
+
+label:ch1_star_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（举杯清水）回去，图署两人。少尉的衔，山河替你讨。;
+克拉克:（碰杯）就这杯浑水，定下。咱的河，咱的名。;
+jumpLabel:ch1_after_star;
+
+label:ch1_star_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（凑来）加我一个！约定——一个不少，回圣路易斯！;
+克拉克:（揽他）好！一个不少。少谁，咱回头去捞！;
+jumpLabel:ch1_after_star;
+
+label:ch1_star_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（远远）也替俺们没名的，记一笔。星看得见，就行。;
+刘易斯:（点头）星看得见，我也看得见。约克，记下了。;
+jumpLabel:ch1_after_star;
+
+label:ch1_after_star;
+:星子不语，却把四个人的影子，投在泥地上，叠成了一处。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）十月底。星下有约。这队伍，从此不只靠绳拴着。;
+
+; -------- 河雾迷踪 --------
+:十月底的一场晨雾，把河吞得没了边。船在白里漂，分不清东西。;
+changeFigure:fig_clark.png -left -next;
+克拉克:（眯眼）辨不出岸。再走，怕要撞石头。得停下，等雾散。;
+刘易斯:（沉住气）慌不得。雾是河的呼吸，喘口气就过。;
+
+:有人在雾里哼起家乡的调，一个接一个，声浪把方向找了回来。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）雾里，歌比罗盘管用。人聚在一起，就不迷。;
+
+; -------- 选择：雾里的定力 --------
+choose:下令抛锚静候，以纪待变:ch1_fog_lewis|安抚众人，唱歌聚心:ch1_fog_edge|与弟兄拢船相靠:ch1_fog_sol;
+
+label:ch1_fog_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（令）抛锚，静候。雾散前，谁也不许乱动。纪律即方向。;
+克拉克:（赞）稳。慌里出错，静里出活。;
+jumpLabel:ch1_after_fog;
+
+label:ch1_fog_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（起头）俺唱个肯塔基的。都跟着，声儿连上，心就不散。;
+威拉德:（和声）唱！唱跑了调，雾也得笑散！;
+jumpLabel:ch1_after_fog;
+
+label:ch1_fog_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（喊）靠拢！船挨船，人挨人！雾再大，咱也是一团！;
+奥德韦:（划桨靠拢）是！挤一块，暖一块，啥雾都不怕！;
+jumpLabel:ch1_after_fog;
+
+label:ch1_after_fog;
+:日头爬高，雾像退潮般散了。河重新现出筋骨，船仍在道上。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（舒口气）看，河还在。它从不真把人丢下，只试人心慌不慌。;
+威拉德:（写）雾一场，歌一曲。原来人聚着，就迷不了。;
+
+; -------- 抵达前的最后选择：如何落地 --------
+:靠岸前，刘易斯把队伍聚拢，商量怎么跟曼丹人「落地」。;
+choose:先送礼示好，慢慢相处:ch1_land_lewis|以实力立威，再谈交情:ch1_land_sol|让约克与萨卡加维亚先接触:ch1_land_edge;
+
+label:ch1_land_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（分礼）奖章、布匹、烟斗，先送上。礼到了，话才进得去耳。;
+克拉克:（点头）外交是慢活。急不得。;
+jumpLabel:ch1_after_land;
+
+label:ch1_land_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（拍枪）先列队，枪擦亮，让他们知道咱不好惹，再坐下喝汤。;
+威拉德:（挺胸）对！咱是先礼后兵，不是任人捏的软柿子。;
+jumpLabel:ch1_after_land;
+
+label:ch1_land_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（指自己）让我先去？曼丹人见我这黑脸，倒不慌。;
+刘易斯:（笑）去吧。你这张脸，比我的礼单还管用。;
+jumpLabel:ch1_after_land;
+
+label:ch1_after_land;
+:龙骨船放慢了速度，朝那片土屋的影子靠去。;
+:共通的第一程，到此为止。可真正的未知，才刚刚在雪线后睁开眼。;
 changeScene:chapter2.txt;

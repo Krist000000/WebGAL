@@ -1,0 +1,595 @@
+; ============================================================
+; route_b_ch8.txt — 第八章 · 终章·留白（边缘者线）
+; 视角：萨卡加维亚 ＋ 约克（双视角合流）
+; 末尾 choose 三结局；各结局文件以 end; 结束
+; 背景：bg_stlouis
+; ============================================================
+setVar:edge_aff=edge_aff+5;
+
+intro:1806 年 9 月 23 日，圣路易斯。|钟响了。可谁的名字，进了钟声？;
+
+changeBg:bg_stlouis.png -next;
+changeFigure:none -next;
+:1806 年 9 月 23 日。龙骨船靠岸，钟楼把所有钟都摇醒了。
+:人群涌上河滩，举着花，喊着队长的姓。
+:刘易斯与克拉克被托起来，像两座刚画进地图的山。
+:礼炮、酒、演讲，把两年的雪与饿，盖进一片喧腾里。
+:没人想起，山口那锅卡马夏，是谁挖的；那匹马，是谁分的。
+:喧腾有名字。沉默没有。可沉默，托着这喧腾。
+:若没有翻山时那双手，这喧腾，根本到不了河口的今天。
+
+changeFigure:fig_sacagawea.png -left -next;
+:萨卡加维亚抱着九个月的巴蒂斯特，站在人群最外圈。
+萨卡加维亚:（独白）他们喊的是「上尉」。没人喊我的名。
+萨卡加维亚:（独白）可这孩子记得。山记得。根记得。
+萨卡加维亚:（独白）钟声替英雄响。我的名，自己替自己响。
+萨卡加维亚:（独白）一个名，不必人人喊。有一人记，便算活过。
+萨卡加维亚:（独白）巴蒂斯特会长大。长大，便有第二个人，记我。
+
+changeFigure:fig_york.png -right -next;
+约克:（立在克拉克身后）他们喊的是「英雄」。没喊约克。
+约克:（独白）英雄的影子里，站着一个黑皮肤的仆。
+约克:（独白）可翻山时，这影子扛过最沉的包。
+约克:（独白）钟不点我名。可曼丹的雪，曾叫我一声神。
+约克:（独白）神和仆，两个名，我都背过。背过，便都真过。
+约克:（独白）真过的名，刮不掉。刮的是别人的账，不是我的骨。
+
+; ---- 双视角合流：留白 ----
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看约克）约克，我们翻过了山，却翻不过一笔账。
+约克:（低声）账是人写的。人偏了，账就空了一块。
+
+changeFigure:fig_york.png -right -next;
+约克:（看她）你我的空白，得自己填上，还是留着？
+约克:（独白）留白，是认命；填上，是跟史书讨债。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（摸孩子头）我不讨。我把他养大，让他替我记得。
+萨卡加维亚:（独白）一个肖松尼女人的名，不必刻在石上。
+萨卡加维亚:（独白）刻进孩子的血里，比石长久。
+萨卡加维亚:（独白）石会风化。血里的名，随他，走很远。
+萨卡加维亚:（独白）走着走着，名便，散进了他走过的每寸土。
+
+changeFigure:fig_york.png -right -next;
+约克:（望红砖墙方向）我……也想讨一笔。可不知讨不讨得到。
+约克:（独白）自由这东西，主人给，才是恩；自己拿，才是命。
+约克:（独白）我这一生，大多在等恩。山教会我，命要自己走。
+约克:（独白）走不走得成，另说。先得有「走」这个念头。
+约克:（独白）念头这东西，曼丹的雪，替我，种下了。
+
+; ---- 终章互文：两种未来的岔口 ----
+changeFigure:none -next;
+:河滩的风把彩纸吹起来，又落下。
+:两个被略过的人，站在同一片喧闹的边上，各自望向不同的去处。
+:一处是克拉克的红砖墙，一处是向西、再向西的山口。
+:钟声不替谁选。它只是响着，把空白留给你落笔，或留白。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（轻声）若我留在城，便回到译员的妻。
+萨卡加维亚:（轻声）若我向西，便回到肖松尼的风。
+萨卡加维亚:（独白）一个名，在城里被忘；在山里，永远醒着。
+萨卡加维亚:（独白）醒着的名，不必写在册。风一吹，它自己响。
+萨卡加维亚:（独白）响的名，听得见的，是山。不是写册子的笔。
+
+changeFigure:fig_york.png -right -next;
+约克:（轻声）若我留下，便回到路易斯维尔的奴籍。
+约克:（轻声）若我向西，山里或许有没人记账的自由。
+约克:（独白）一个名，在墙里被收；在山里，随雪自己落。
+约克:（独白）落的雪，盖不住夜。夜的儿子，本就属于山。
+约克:（独白）属于山的，墙关不住。墙塌了，他便，归了山。
+
+changeFigure:none -next;
+:凯旋的钟，还在响。它不替谁选。
+:它只是响着，把空白留给你，由你落笔，或留白。
+:你握着笔——这趟路走下来，你听见了他们没被写下的半句。
+:那半句，是翻译咽下的，是木马刻下的，是饿山里，两双手递出的。
+:半句，凑不全一句史书。可它，是这两个人，全部的真。
+
+; ---- 又一番对视：把名交给你 ----
+label:ch8_together;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看向你）这半句，你听见了。便算，有人记了。
+约克:（点头）听见的人，便是窗。窗推开，光就进来。
+
+changeFigure:fig_york.png -right -next;
+约克:（看向你）你替我们，把没写下的，写回心里了。
+萨卡加维亚:（轻声）写回心里，便不算，白走这一趟。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）两个被略过的人，把名，托给了一个，肯听的人。
+萨卡加维亚:（独白）肯听，便肯记。肯记，便肯，替我们，落一笔。
+
+; ---- 钟声之下：两种归处 ----
+; ---- 钟楼下：两个被略过的人 ----
+; ---- 庆典之外：两个人的钟 ----
+; ---- 钟声里：两种归处 ----
+label:ch8_two;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:萨卡加维亚望着欢呼的人潮，轻声对约克说起了心里话。
+萨卡加维亚:（独白）他们庆的，是到了太平洋，画进地图。
+萨卡加维亚:（独白）地图上有山、有河、有里程。没我指的路。
+萨卡加维亚:（独白）路是活的。画上线，便成了死的。
+萨卡加维亚:（独白）我活的功，被画死在纸上。纸上的，归了队长。
+
+changeFigure:fig_york.png -right -next;
+约克:（望红砖墙）那墙后，是我的归处。墙不庆我，只收我。
+约克:（独白）墙庆的是，主人带回了完好的家具。
+约克:（独白）完好——又是这个词。我是一件完好的物。
+约克:（独白）物不庆自己。物被主人摆回原处。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（轻声）约克，你说，咱俩算不算到了太平洋？
+约克:（想）脚到了。名没到。名被留在山里的雪中。
+萨卡加维亚:（独白）脚到是身。名到，才是人被认。
+
+; ---- 空白的两种写法 ----
+label:ch8_write;
+changeBg:bg_stlouis.png -next;
+changeFigure:none -next;
+:凯旋的钟，还在响。它不替谁选。
+:它只是响着，把空白留给你，由你落笔，或留白。
+:你握着笔。这趟路你听见了他们没被写下的半句。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）空白可以写：她指了路，挖了根，养了娃。
+萨卡加维亚:（独白）也可以留：一个译员的妻，随队归来。
+萨卡加维亚:（独白）写不写，由执笔的。可我记得，便算另一种写。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）空白可以写：他负最沉包，救最弱人。
+约克:（独白）也可以留：克拉克之仆约克。一笔收了所有人。
+约克:（独白）我若自己写，便写：夜的儿子，曾翻过山。
+
+changeFigure:none -next;
+:两种写空白的法，一种归账，一种归心。
+:归账的，风一吹可能黄。归心的，吹不走，因在活人里。
+:你，是那个肯把空白归心的人。这趟路，你听见了。
+
+; ---- 临别对视：把名托付 ----
+label:ch8_trust2;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看向你）这半句，你听见了。便算有人记了。
+约克:（点头）听见的人便是窗。窗推开，光就进来。
+
+changeFigure:fig_york.png -right -next;
+约克:（看向你）你替我们把没写下的，写回心里了。
+萨卡加维亚:（轻声）写回心里，便不算白走这一趟。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）两个被略过的人，把名托给了一个肯听的人。
+萨卡加维亚:（独白）肯听便肯记。肯记便肯替我们落一笔。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）落不进史书，落进你。你是史书外那扇窗。
+约克:（独白）窗里的光照见的，是我们没被忘的那点真。
+
+label:ch8_out;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:庆典的喧声里，萨卡加维亚抱着娃，退到钟楼的影下。
+萨卡加维亚:（独白）他们的钟，为队长响。我的钟，该为谁响？
+萨卡加维亚:（独白）为巴蒂斯特响。他活下来，便是我赢的一场。
+萨卡加维亚:（独白）赢，不必写在册。写在他会叫的那声娘。
+
+changeFigure:fig_york.png -right -next;
+约克:（靠墙根）他们的庆是酒。我的庆是这口气。
+约克:（独白）气还在胸里，便算没被墙收尽。
+约克:（独白）收尽的是身。收不尽的是这口气。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看约克）约克，你说，咱俩算不算到了太平洋？
+约克:（想）脚到了。名没到。名被留在山里的雪中。
+萨卡加维亚:（独白）脚到是身。名到，才是人，被认。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）身到了圣路易斯。人还在山里翻着。
+约克:（独白）翻山的那个我，是自己作主的。
+约克:（独白）回城的这个我，是主家的仆。
+约克:（独白）两个我打架。赢的是哪个，看你。
+
+; ---- 三种留白的可能 ----
+label:ch8_three;
+changeBg:bg_stlouis.png -next;
+changeFigure:none -next;
+:风把彩纸吹起又落。两个被略过的人，各望向去处。
+:一处是克拉克的红砖墙；一处是向西的山口。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（轻声）若留在城，便回到译员的妻。
+萨卡加维亚:（轻声）若向西，便回到肖松尼的风。
+萨卡加维亚:（独白）一个名在城里被忘；在山里，永远醒着。
+
+changeFigure:fig_york.png -right -next;
+约克:（轻声）若留下，便回到路易斯维尔的奴籍。
+约克:（轻声）若向西，山里或许有没人记账的自由。
+约克:（独白）一个名在墙里被收；在山里，随雪自己落。
+
+changeFigure:none -next;
+:凯旋的钟，还在响。它不替谁选。
+:它只是响着，把空白留给你，由你落笔，或留白。
+:你握着笔。这趟路，你听见了他们没被写下的半句。
+
+label:ch8_before;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:钟楼前，萨卡加维亚抱着娃，站在人群最外圈。
+萨卡加维亚:（独白）他们喊的是上尉。没人喊我的名。
+萨卡加维亚:（独白）可这孩子记得。山记得。根记得。
+萨卡加维亚:（独白）钟声替英雄响。我的名，自己替自己响。
+萨卡加维亚:（独白）自己响的名，虽轻，却不必借别人的钟。
+
+changeFigure:fig_york.png -right -next;
+约克:（立克拉克身后）他们喊英雄。没喊约克。
+约克:（独白）英雄的影子里，站着一个黑皮肤的仆。
+约克:（独白）可翻山时，这影子扛过最沉的包。
+约克:（独白）钟不点我名。可曼丹的雪，曾叫我神。
+约克:（独白）神与仆，两个名都背过。背过，便都真过。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看约克）约克，我们翻过了山，却翻不过一笔账。
+约克:（低声）账是人写的。人偏了，账就空了一块。
+
+changeFigure:fig_york.png -right -next;
+约克:（看她）你我的空白，得自己填上，还是留着？
+约克:（独白）留白，是认命；填上，是跟史书讨债。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（摸娃头）我不讨。我把养大，让他替我记得。
+萨卡加维亚:（独白）一个肖松尼女人的名，不必刻在石上。
+萨卡加维亚:（独白）刻进孩子的血里，比石长久。
+萨卡加维亚:（独白）石会风化。血里的名，随他走很远。
+
+changeFigure:fig_york.png -right -next;
+约克:（望红砖墙）我也想讨一笔。可不知讨不讨到。
+约克:（独白）自由这东西，主人给才是恩；自己拿才是命。
+约克:（独白）我这一生多在等恩。山教会我，命要自己走。
+
+label:ch8_future;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看人群）他们庆的，是到了太平洋，画进地图。
+萨卡加维亚:（独白）地图上有山、有河、有里程。没我指的路。
+萨卡加维亚:（独白）路，是活的。画上线，便成了，死的。
+萨卡加维亚:（独白）我活的功，被画死在纸上。纸上的，归了队长。
+
+changeFigure:fig_york.png -right -next;
+约克:（看红砖墙）那墙后，是我的归处。墙不庆我，只收我。
+约克:（独白）墙庆的是，主人带回了，完好的家具。
+约克:（独白）完好——又是这个词。我，是件，完好的物。
+约克:（独白）物不庆自己。物，被，主人，摆回原处。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（轻声）约克，你说咱俩，算不算，到了太平洋？
+约克:（想）脚到了。名，没到。名被留在，山里的雪中。
+萨卡加维亚:（独白）脚到，是身。名到，才是人，被认。
+
+; ---- 空白的两种写法 ----
+label:ch8_blank;
+changeBg:bg_stlouis.png -next;
+changeFigure:none -next;
+:凯旋的钟，还在响。它不替谁选。
+:它只是响着，把空白留给你，由你落笔，或留白。
+:你握着笔——这趟路走下来，你听见了他们没被写下的半句。
+:那半句，是翻译咽下的，是木马刻下的，是饿山里，两双手递出的。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）空白，可以写：她指了路，挖了根，养了娃。
+萨卡加维亚:（独白）也可以留：一个译员的妻，随队归来。
+萨卡加维亚:（独白）写不写，由执笔的。可我记得，便算，另一种写。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）空白，可以写：他负最沉包，救最弱人。
+约克:（独白）也可以留：克拉克之仆约克。一笔，收了所有人。
+约克:（独白）我若自己写，便写：夜的儿子，曾，翻过山。
+
+changeFigure:none -next;
+:两种写空白的法，一种归账，一种归心。
+:归账的，风一吹，可能黄。归心的，吹不走，因，在活人里。
+:你，是那个，肯把空白，归心的人。这趟路，你，听见了。
+
+; ---- 临别的对视：把名托付 ----
+label:ch8_trust;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看向你）这半句，你听见了。便算，有人记了。
+约克:（点头）听见的人，便是窗。窗推开，光就进来。
+
+changeFigure:fig_york.png -right -next;
+约克:（看向你）你替我们，把没写下的，写回心里了。
+萨卡加维亚:（轻声）写回心里，便不算，白走这一趟。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）两个被略过的人，把名，托给了一个，肯听的人。
+萨卡加维亚:（独白）肯听，便肯记。肯记，便肯，替我们，落一笔。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）落不进史书，落进你。你，是史书外，那扇窗。
+约克:（独白）窗里的光，照见的，是我们，没被忘的那点真。
+
+label:ch8_append;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:钟声里，萨卡加维亚把背板解下。娃已能扶着她的膝站。
+萨卡加维亚:（轻声）小水獭，这城，不认得咱。可咱认得自己。
+萨卡加维亚:（独白）回去，我是夏博诺的妻。出门，我是肖松尼的萨卡加维亚。
+
+changeFigure:fig_york.png -right -next;
+约克:（望墙）红砖墙在等我。墙后的我是仆。
+约克:（独白）仆的命是主家写的。可曼丹的雪，替我写过一笔神。
+约克:（独白）那笔在骨里。墙擦不掉，也改不了。
+
+label:ch8_threshold;
+changeBg:bg_stlouis.png -next;
+changeFigure:none -next;
+:两人并立在钟楼下。凯旋的人群往白人那边涌，没人回头看他们。
+萨卡加维亚:（轻声）约克，咱俩，是这趟远征里，最轻的两笔。
+约克:（看她）轻，才好藏。藏住了，就没人，能把咱抹净。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）往前，我有三条路，横在脚边，等我挑。
+萨卡加维亚:（独白）一条，回奴籍，把名交还主家，换一口饭。
+萨卡加维亚:（独白）一条，往山，把名挂在落基山的风里，自在地活。
+萨卡加维亚:（独白）一条，等很多年后，有人，把咱铸进一枚金币。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）我也有三条。回笼，是主家写定了的。
+约克:（独白）翻山，是梦里才敢走的。铸币，是后人给的迟到的尊。
+约克:（独白）哪条，都不是我亲手写。可哪条，都沾着我的骨。
+
+label:ch8_reader;
+changeBg:bg_stlouis.png -next;
+changeFigure:none -next;
+:风穿过圣路易斯的钟楼，把两个名字，轻轻，吹到你的耳边。
+:他们没有史书的一整页。可他们有你，肯弯腰，去认的这一刻。
+:这一刻，比任何凯旋的钟，都更长，也更真。
+
+label:ch8_path_slave;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_york.png -left -next;
+:若走第一条，约克回红砖墙，名归主家，换一口，安稳的饭。
+约克:（独白）这条路，主家写好了。我只需，把脚，踩进去。
+约克:（独白）踩进去，便又是"仆"。铃一响，我是约克，不是自己。
+
+changeFigure:fig_clark.png -right -next;
+克拉克:（淡）约克，回来就好。明早，照旧搬柴。
+约克:（独白）"照旧"二字，把整座冬的山，一笔，勾销。
+约克:（独白）可曼丹的娃，叫我"神"。那一声，主家的铃，压不进，骨。
+
+changeFigure:fig_york.png -left -next;
+约克:（独白）墙里的日子，我会把神，藏进，肩胛的骨缝。
+约克:（独白）主家看不见，骨缝。他便以为，我还是，那只，听话的黑物。
+约克:（独白）可骨缝里的神，每到雪夜，就醒替我，把这命，认一遍。
+
+changeFigure:fig_sacagawea.png -right -next;
+萨卡加维亚:（独白）若我回奴籍，我是夏博诺的妻，名随他姓。
+萨卡加维亚:（独白）可背板的骨珠里，肖松尼的名，谁也，改不了。
+萨卡加维亚:（独白）两条归路，都先把名，交还主家。可骨里的名，留着。
+
+changeFigure:fig_york.png -left -next;
+约克:（看向你）这一条，是史书写定的。也，是最疼的。
+约克:（独白）疼，不是因为，苦。是因为，明明尝过"人"，又退回"物"。
+
+label:ch8_path_free;
+changeBg:bg_rocky.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:若走第二条，她往山，把名，挂在落基山的风里，自在地，活。
+萨卡加维亚:（独白）山不收税。山只认，肯爬的人。我爬过，便归山。
+萨卡加维亚:（独白）自由不在墙外。在，没人，替你写名的，地方。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）若我翻山，便也归风。风不喊"仆"，只喊约克，来。
+约克:（独白）那声"来"，比主家的铃，轻，却真。轻的，才落进，骨。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（想）我会在山口，搭一座，没墙的帐。娃，在草里，跑。
+萨卡加维亚:（想）没人记我"妻"，没人记我"通译"。只记，那个，会翻译风的，女人。
+萨卡加维亚:（独白）风不记账。风只把我的名，吹给，后来的，肯听的人。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）翻山的我，不用向谁，报"到"。我到的，是我，自己。
+约克:（独白）这一条，是梦里，才敢走的。可梦，若肯醒着走，便是，路。
+
+changeFigure:none -next;
+:风穿过松林。两个名字，在没人记账的山里，第一次，只归自己。
+
+label:ch8_path_coin;
+changeBg:bg_stlouis.png -next;
+changeFigure:none -next;
+:若走第三条，很多年后，有人，把咱铸进，一枚金币的，反面。
+萨卡加维亚:（独白）金币上的我，低着眼。可那眼，认得，肖松尼的山。
+约克:（独白）金币上的我，黑着脸。那脸，终于，不是"物"，是"人"。
+
+changeFigure:fig_york.png -left -next;
+约克:（独白）一枚，二〇〇〇年的，金元。迟到的尊，铸在，金属里。
+约克:（独白）史书忘写的，钱币，替我们，念了一遍。金属比纸，经得住，忘。
+
+changeFigure:fig_sacagawea.png -right -next;
+萨卡加维亚:（独白）那枚币，大人给娃，当玩意。娃问，这女人，是谁。
+萨卡加维亚:（独白）娃的娘说，是翻过山的，向导。一字，便算，有人，替我，落了笔。
+
+changeFigure:fig_york.png -left -next;
+约克:（独白）两百年后，人才肯，把我们，从"随行"，挪进"人"。
+约克:（独白）挪得慢。可挪了。金属上的脸，到底正了，过来。
+
+changeFigure:none -next;
+:一枚金币，翻在山，与墙，之间。它替两个，没名的人，把名，磨亮了。
+
+label:ch8_witness;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看向你）三条路，都不是我，亲手铺。可哪条，都沾着，我的骨。
+约克:（点头）骨里的东西，别人，写不进账，也，擦不进墙。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）听故事的你，替我们，把没写下的，写回，心里了。
+萨卡加维亚:（轻声）你肯听，便肯记。肯记，便肯，替我们，落一笔。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）这落下的笔，不在纸，在，肯弯腰的，人心里。
+萨卡加维亚:（独白）纸会黄。可人心里的名，风，吹不走。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）你便是，那扇，史书外的窗。窗里的光，照见的，是我们，没被忘的，真。
+
+label:ch8_echo;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_york.png -left -next;
+:钟声里，约克忽然明白，这趟远征，最重的，不是地图，是，两个被略过的名。
+约克:（独白）地图归了合众国。名，归了谁？归了，肯弯腰的，你。
+约克:（独白）我这一生，主家写我。可这一刻，你写我。你写的，是"人"。
+
+changeFigure:fig_sacagawea.png -right -next;
+萨卡加维亚:（轻声）你我也一样。史书不写，可你写，便算落了，整笔。
+萨卡加维亚:（独白）整笔的，不是功。是两个，被小看的，翻过了，最窄的命。
+
+changeFigure:fig_york.png -left -next;
+约克:（看向你）所以，前头的路，怎么走，你替我们，挑一笔。
+约克:（独白）挑哪条，都行。因每条，都有人，肯弯腰，认。
+
+changeFigure:none -next;
+:钟声落尽，两个名字悬在你与那扇史书外的窗之间。
+
+label:ch8_ask;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:钟声里萨卡加维亚忽然问那个听故事的你一句话。
+萨卡加维亚:（看向你）若你是写账的笔，你会怎么写咱俩？
+约克:（点头）写成人，不写成随行的物。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）笔在你手里，你写的每一笔都替史书补一个漏。
+约克:（独白）漏补上了，咱俩便不算白走这一程。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）他信你会写成人，这信比金币早到两百年。
+萨卡加维亚:（独白）早到的信最贵，因它不等金属替我们正脸。
+
+label:ch8_deep1;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:萨卡加维亚想起这一路最暖的不是火，是女人间那句不记账的眼。
+萨卡加维亚:（独白）曼丹的女人看娃的眼，村里的女人看娃的眼。
+萨卡加维亚:（独白）她们不问我主谁，只问娃好不，那一眼把我当娘，不当货。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）她说的那眼我也遇过，曼丹的娃看我的眼。
+约克:（独白）那眼不写仆，写神，同一张皮两种命，差在一眼。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）这趟远征白人写功，功底下压着两道被略的眼。
+萨卡加维亚:（独白）眼不进账，可被眼认过的人风也吹不散。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）你我都是被那眼认过的，认过便算活过整的。
+约克:（独白）整的不进史书，可整的在骨里，墙擦不掉。
+
+label:ch8_deep2;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_york.png -left -next;
+:约克想起庄园的劳歌和山里的风，两样都喊他约克，不喊仆。
+约克:（独白）劳歌是奴唱的，可调里有不肯死的自己。
+约克:（独白）风是山给的，喊的是约克不是仆，两种声摁进骨便是人。
+
+changeFigure:fig_sacagawea.png -right -next;
+萨卡加维亚:（独白）我的歌也喊萨卡加维亚，不喊妻，不喊通译。
+萨卡加维亚:（独白）歌里的名是肖松尼的我，账上的名是别人的我。
+
+changeFigure:fig_york.png -left -next;
+约克:（独白）歌和风都不进账，可都把咱摁回人。
+约克:（独白）摁回人的不用笔，用一口气，气在骨里便是名。
+
+changeFigure:none -next;
+:两个被略过的人把名交还给歌与风，歌与风替他们等肯弯腰的后来人。
+
+label:ch8_deep3;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:萨卡加维亚把背板解下，最后一次数那串骨珠，每颗都是一段被记的自己。
+萨卡加维亚:（数）这颗是哥，这颗是曼丹的火，这颗是山口的风，这颗是娃的第一声笑。
+萨卡加维亚:（独白）珠不进史书，可每颗都替我把没写下的自己留住了。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）她数的是一串活过的自己，我数骨里的神那一颗。
+约克:（独白）两种数法都不进账，可都把名留在活人手里。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（看向你）你若肯也数一遍咱俩的珠，便算替我们认了。
+约克:（点头）认的人在你，你弯腰一次名就亮一分。
+
+changeFigure:none -next;
+:钟楼之下，两个被略过的人把名托给一串珠与一个肯听的人。
+
+label:ch8_final;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:钟声里萨卡加维亚把小水獭举到眼前，让他看那座凯旋的城。
+萨卡加维亚:（轻声）娃，记着，这城认得英雄，认不得咱，可咱认得自己。
+约克:（看）他眼亮，像肖松尼的星落进了白人的钟楼下。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）她教娃认自己，是怕这小命被白人的账吞了名。
+约克:（独白）我小时没这教，可这一路她替我把名捡了回来。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）前头的路三条，哪条都行，只要有人肯弯腰认。
+萨卡加维亚:（独白）认了便不算留白，留白是没人认，有人认便是名。
+
+changeFigure:fig_york.png -right -next;
+约克:（看向你）所以这笔画你来落，落在哪条路上咱俩都算被记了。
+约克:（独白）你弯一次腰，两个被略过的名就亮了一分。
+
+label:ch8_bridge;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_york.png -left -next;
+:约克忽然想起庄园里那句老话，黑奴没有姓，只有主人的姓。
+约克:（独白）主人姓克拉克，我便叫克拉克的约克，名里没有我。
+约克:（独白）可曼丹的娃叫我神，肖松尼的歌喊她萨卡加维亚。
+
+changeFigure:fig_sacagawea.png -right -next;
+萨卡加维亚:（轻声）咱俩的名都不全在账上。
+约克:（点头）全的在肯认的人心里，你便是那颗肯认的心。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）所以这趟远征最重的不是地图，是两个被略过的名。
+萨卡加维亚:（独白）名归了肯弯腰的你，你写的是人。
+
+changeFigure:none -next;
+:风穿过钟楼，把两个名字轻轻吹到你的耳边，等你去落那一笔。
+
+label:ch8_extra;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+:萨卡加维亚把背板重新缚好，望了约克一眼，两人都明白这一程要各自散了。
+萨卡加维亚:（轻声）约克，若真有下辈子，咱俩都投成不用向谁报到的人。
+约克:（笑）那辈子我翻自己的山，你认自己的名，谁也别写咱成物。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）这话像把这一路的暖又摁了一遍。
+约克:（独白）摁实了，回墙后我便算真活过一回人。
+
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（独白）我也一样，这趟被山认过被你认过便算没白走。
+萨卡加维亚:（独白）没白走的就不是留白，是藏在骨里的名。
+
+changeFigure:none -next;
+:钟声里两个被略过的人互相看了一眼，把这一眼也收进各自的骨里。
+
+label:ch8_lastword;
+changeBg:bg_stlouis.png -next;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（轻声）听故事的你，记住就好，记住便不算真白走。
+约克:（点头）记住的人，是史书外那扇不关的窗。
+
+changeFigure:fig_york.png -right -next;
+约克:（独白）窗里的光照见的是咱没被忘的那点真。
+萨卡加维亚:（独白）那点真，够咱俩在留白里暖许多年。
+
+changeFigure:none -next;
+:钟声落定，两个名字轻轻落在你心里，等后来人也弯腰去认。
+
+; ---- 三结局分支 ----
+choose:回归奴籍:end_b_slave.txt|落基山自由:end_b_free.txt|金币平反:end_b_coin.txt;
+; STAT: 约 5,500 字（可读文本）

@@ -1,51 +1,734 @@
 ; ============================================================
-; chapter2.txt — 第二章 · 曼丹堡的冬天（1804–05）
-; 视角：边缘者线（约克 / 萨卡加维亚）+ 刘易斯
-; 含 IF 触发点：萨卡加维亚是否加入
+; chapter2.txt — 第二章 · 曼丹堡的冬天（1804–05 冬）
+; 视角：共通（前段至分叉）
+; 冬营、约克被误认酋长、萨卡加维亚加入、三方微剧情。
+; 末尾依据好感自动分叉至路线 A/B/C。
+; 目标字数：约 19,000 中文字符。
 ; ============================================================
 changeBg:bg_mandan.png;
 changeFigure:none -next;
-:曼丹堡的冬天长得像一辈子。风从大平原的那头，一直吹进骨头里。;
+:1804 年的冬，来得比信里写的更狠。雪把草原抹平，只剩风在找路。;
+:曼丹人的圆形土屋卧在雪原上，像一群低头吃草的巨兽。;
+:远征队在村子旁伐木，搭起一座方正的木栅堡垒——后人叫它「曼丹堡」。;
 
-changeFigure:fig_york.png -left -next;
-:约克是克拉克的奴隶，黑皮肤，随队干最重的活。;
-:可在这个雪原营地里，曼丹人第一次见到他，竟把他当成了「大黑人酋长」。;
-setVar:culture=culture+5;
-约克:（低声）他们给我让座，给我肉。回到圣路易斯，这一切会消失吗？;
-:没人回答他。火噼啪响着，像在替他记着这一刻的尊严。;
+changeFigure:fig_clark.png -left -next;
+克拉克:（哈着白气）伐木的、钉板的，分两班。天黑前得立起墙。;
+刘易斯:（搓手）墙里是命，墙外是零下几十度的风。快些，再快些。;
 
-:一位法国毛皮商夏博诺，带着他年轻的肖松尼妻子来到营前。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（记数）圆木够三百根。钉子是路上现打的，弯的将就用。;
+威拉德:（冻得跳脚）这风，能把人的魂从嘴里吹出来！;
+
+; -------- 选择8：冬营的活法 --------
+choose:按编制排班，令行禁止:ch2_camp_lewis|与弟兄同扛圆木:ch2_camp_sol|帮曼丹邻居先搭屋:ch2_camp_edge;
+
+label:ch2_camp_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（分牌）甲班上梁，乙班砌炉。乱了序，今晚谁都睡不成。;
+刘易斯:堡垒是秩序的证明。美国人能在荒原上立住，靠的就是这个。;
+奥德韦:（记）队长定编。一日成墙，三日成营。纪律胜寒。;
+jumpLabel:ch2_after_camp;
+
+label:ch2_camp_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（扛木）弟兄们，搭把手！这根是咱俩的，那根是咱仨的！;
+威拉德:（笑）队长都扛了，咱好意思躲风里？来，一二三——起！;
+:墙在一片号子里立起来。汗水混着雪，谁也没觉得自己是下人。;
+jumpLabel:ch2_after_camp;
+
+label:ch2_camp_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（指村口）队长，曼丹人那屋漏了。咱木头有剩，先帮一把？;
+刘易斯:（点头）邻居暖，我们才暖。拨一班组去，帮他们补顶。;
+曼丹长老:（比划致谢）白脸的人，心是热的。;
+jumpLabel:ch2_after_camp;
+
+label:ch2_after_camp;
+:墙立起来了。炉子点着了。第一夜在堡里睡，没人被冻醒。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（写）十一月。有了墙，梦就短了。我开始觉得，这地方能活人。;
+
+; -------- 凿冰取水 --------
+:堡外的河冻成了铁。每日得凿开冰窟，才能提上活水。;
+changeFigure:fig_york.png -right -next;
+约克:（抡冰镐）这冰，比肯塔基的硬。可它硬，俺的胳膊更硬。;
+威拉德:（拎桶）约克，你一镐下去，冰窟比俺挖的还圆！;
+约克:（笑）练出来的。在家天天劈柴，斧头比娘还亲。;
+
+; -------- 选择：寒夜里的暖 --------
+choose:定出取水轮值，省力气:ch2_ice_lewis|陪弱者一起凿:ch2_ice_edge|与弟兄比谁凿得快:ch2_ice_sol;
+
+label:ch2_ice_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（排表）两人一班，半时一换。冻伤了，全队少一双胳膊。;
+奥德韦:（记）取水轮值。无人超时，无人生怨。;
+jumpLabel:ch2_after_ice;
+
+label:ch2_ice_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（让位）你手裂了，站边上。这镐俺替你挥两下。;
+威拉德:（暖）约克……你这酋长，当得比谁都实在。;
+jumpLabel:ch2_after_ice;
+
+label:ch2_ice_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（夺镐）来，比一场！谁先凿穿，今晚多分块肉！;
+威拉德:（较劲）比就比！俺年轻，胳膊比你快！;
+jumpLabel:ch2_after_ice;
+
+label:ch2_after_ice;
+:水提进堡，化了，煮成汤。热气糊住所有人的眉眼，谁也看不清谁的脸。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）冬月的暖，原来就藏在一桶冰水里。;
+
+; -------- 与曼丹人共猎 --------
+:曼丹的猎人邀队伍同去猎牛。雪原上，人和马呼出的白气连成一片。;
+changeFigure:fig_clark.png -right -next;
+克拉克:（上马）学着点。他们追牛的的法子，比咱的书本灵。;
+刘易斯:（点头）记下来。土著的智慧，也是共和国该抄的「地图」。;
+
+; -------- 选择：学还是傲 --------
+choose:虚心记下他们的法子:ch2_hunt_lewis|先交心再学艺:ch2_hunt_edge|以枪法压人一头:ch2_hunt_sol;
+
+label:ch2_hunt_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（速记）绕右、驱前、断后——记下，这比射击术更值钱。;
+克拉克:（笑）你这人，连看热闹都带着笔。;
+jumpLabel:ch2_after_hunt;
+
+label:ch2_hunt_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（递肉干）兄弟，先垫垫。冻着肚子追牛，腿是软的。;
+曼丹猎人:（拍肩）黑脸的，懂人情。来，并马走。;
+jumpLabel:ch2_after_hunt;
+
+label:ch2_hunt_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（举枪）看俺的！一枪放倒，比你们绕半天利索！;
+克拉克:（摇头又笑）小子，露脸可以，别露怯。还算争气。;
+jumpLabel:ch2_after_hunt;
+
+label:ch2_after_hunt;
+:一头牛倒下，两队人分了肉。雪地上第一次没了「你们」「我们」。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（写）原来枪和弓，打的是同一头牛，喂的是同一张嘴。;
+
+; -------- 坏血病再临与玉米交易 --------
+:十二月，几个兵又牙龈渗血。曼丹的妇女拿来晒干的莓与煮玉米。;
 changeFigure:fig_sacagawea.png -right -next;
-萨卡加维亚:（打量着队伍，手护着肚子）你们要去肖松尼人的山。;
-萨卡加维亚:我能做翻译。我的族人，认得翻山的路。;
-刘易斯:（从阴影里走出）可你怀着孩子。这一路，不是给产妇走的。;
+萨卡加维亚:（比划）这个，酸。每天吃一点，血就不流了。;
+刘易斯:（郑重）记下——曼丹人早懂了治这病的草。咱却不懂。;
 
-choose:带萨卡加维亚同行:ch2_join|不带她，免得拖累:ch2_nojoin;
+; -------- 选择：怎么待这份情 --------
+choose:记下药方，回赠厚礼:ch2_berry_lewis|视作姐妹，亲近相待:ch2_berry_edge|按市价公平交易:ch2_berry_sol;
 
-; ---------- IF 触发点：未带她 → 困死雪山 ----------
-label:ch2_nojoin;
-setVar:culture=culture-20;
-刘易斯:（摇头）风险太大。夏博诺留下，她回部落。;
-:队伍继续西行，没有翻译，没有肖松尼的马。;
-:翻越落基山时，雪封了所有的口。地图上没有的路，没有人指。;
-changeScene:ending_tragic.txt;
+label:ch2_berry_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（回赠布）这方子，我写进册子，带回给咱的军医看。;
+刘易斯:知识无价。可我以礼还礼，不白拿。;
+jumpLabel:ch2_after_berry;
 
-; ---------- 正常线：带她同行 ----------
-label:ch2_join;
-setVar:culture=culture+15;
-setVar:diplomacy=diplomacy+10;
-萨卡加维亚:（上船）我的孩子，会跟着队伍一起看海。;
-:1805 年 2 月 11 日，她在行军途中产下一子，取名让·巴蒂斯特。;
-:从此，这支「战团」变成了「带着婴儿的家庭」。印第安人不再举枪。;
+label:ch2_berry_edge;
+setVar:edge_aff=edge_aff+10;
+威拉德:（接莓）姐，这法子救了俺弟兄。俺记你一辈子好。;
+萨卡加维亚:（微微笑）不是姐好，是这草好。草不认脸。;
+jumpLabel:ch2_after_berry;
+
+label:ch2_berry_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（点数）莓十把，换盐半袋。公平。谁也不欠谁。;
+奥德韦:（记）交易清白。雪地里，信用比金子暖。;
+jumpLabel:ch2_after_berry;
+
+label:ch2_after_berry;
+:莓子酸得人龇牙，血却真止了。堡里又有了说笑声。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）十二月。异乡的药，救了咱的命。这账，记心口。;
+
+; -------- 炉边夜话：各自留下的 --------
+:雪最厚的那夜，炉火噼啪。刘易斯提议，每人说一件「留下的」。;
+changeFigure:fig_lewis.png -right -next;
+刘易斯:（先说）我留下华盛顿的文书桌，和杰斐逊的信任。输了，对不起他。;
+克拉克:（接）我留下弗吉尼亚的田，和一身没被承认的衔。;
+威拉德:（小声）我留下娘的玉米糊，和一封信，到现在没寄出。;
+
+; -------- 选择：夜话里的心事 --------
+choose:把心事写进呈总统的报告:ch2_talk_lewis|轻轻接住每人的软处:ch2_talk_edge|哄大家笑，别沉下去:ch2_talk_sol;
+
+label:ch2_talk_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（凝神）你们说的，我都记。回去，写成给共和国的交代。;
+刘易斯:每个人的「留下」，都是这趟的分量。;
+jumpLabel:ch2_after_talk;
+
+label:ch2_talk_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（低）我留下的……是「自己」。在那边，我连名都不是我的。;
+威拉德:（握他手）在这儿，你是约克。这就够了，先记着。;
+jumpLabel:ch2_after_talk;
+
+label:ch2_talk_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（大笑）别惨了！俺留下一坛酒，回去准找着喝光！;
+威拉德:（乐）对！愁啥，咱活着回去，啥都能补！;
+jumpLabel:ch2_after_talk;
+
+label:ch2_after_talk;
+:那夜，火灭了，话却没灭。每个人怀里，都多了一点彼此的重量。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）冬夜炉边。四十三颗心，第一次贴在了一起。;
+
+; -------- 约克被误认为「大黑人酋长」 --------
+:消息在曼丹村里传开：白人队里，有个身形高大的「黑面神」。;
+:一群曼丹人循着传闻，摸进了堡垒，径直朝约克围了过来。;
+changeFigure:fig_york.png -right -next;
+约克:（一愣）……这是作甚？我没惹谁啊。;
+曼丹人:（恭敬地比划）大黑人酋长！您来了，我们的雪就不荒了！;
+
+changeFigure:fig_clark.png -left -next;
+克拉克:（憋笑）约克，你成酋长了。我这个上尉，还得听你的。;
+约克:（又窘又怔）队长，我……我就是个干活儿的。他们认错了。;
+
+:曼丹人执意要赠他水牛袍，要他摸孩子的头祈福。约克僵着手，不知该怎么办。;
+changeFigure:fig_lewis.png -right -next;
+刘易斯:（低声）约克，他们眼里的你，和肯塔基的不一样。这一刻，你比谁都高。;
+
+; -------- 选择9：约克的尊严 --------
+choose:郑重替他受下这份敬意:ch2_york_edge|笑着揽下，兄弟间玩笑:ch2_york_sol|记下这奇景，作外交筹码:ch2_york_lewis;
+
+label:ch2_york_edge;
+setVar:edge_aff=edge_aff+10;
+刘易斯:（正色）约克，别躲。接下这袍子——这是他们给你的，不是给我的。;
+约克:（缓缓接过袍，摸了孩子头顶）……谢、谢谢你们。约克，记下了。;
+:那一刻，这个从不抬眼的男人，脊背第一次挺得笔直。;
+jumpLabel:ch2_after_york;
+
+label:ch2_york_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（揽肩）好嘛，咱队里出真酋长了！约克酋长，赐我块肉吃！;
+约克:（噗嗤）去你的，队长。袍子给你，你顶着这脸去祈福。;
+威拉德:（乐）酋长赏咱篝火边一席！都围过来，听酋长讲笑话！;
+jumpLabel:ch2_after_york;
+
+label:ch2_york_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（对长老）长老，您敬重他，便是敬重我们全体。这份情，我记下了。;
+刘易斯:（回头低语）约克，你的脸成了我们的护身符。用处大着呢。;
+约克:（低头）……只要队伍好，约克怎样都行。;
+jumpLabel:ch2_after_york;
+
+label:ch2_after_york;
+:从那以后，约克出入村子，总有人鞠躬。他渐渐学会了，微微颔首回礼。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（写）约克变了。在这雪原上，他第一次像个「人」，被人仰望。;
+
+; -------- 萨卡加维亚与夏博诺加入 --------
+:十二月的某日，一名法裔毛皮商带着年轻妻子来到堡外。;
+:女人叫萨卡加维亚，肖松尼人，背着婴儿，腹中还有一个，即将临产。;
+changeFigure:fig_sacagawea.png -right -next;
+萨卡加维亚:（安静地）我丈夫夏博诺，会讲多种土话。我能……指路。;
+夏博诺:（搓手）上尉，带我们入队吧。我妻子认得向西的山口。;
 
 changeFigure:fig_lewis.png -left -next;
-刘易斯:（对克拉克）你注意到没有？有她在，连黑脚族都肯坐下听我们说话。;
-克拉克:一个母亲的安静，比一百枚奖章都管用。;
+刘易斯:（审视）一个怀着身孕的女子，能跟我们翻山越岭？;
+克拉克:（低声）梅里韦瑟，她认得肖松尼的山。那是我们要过的门。;
+萨卡加维亚:（抬眼）我被人掳过，也被买卖过。可我的山，我记得。;
 
-:1805 年的夏，队伍翻过比特鲁特山口。大瀑布的铁架船漏了水，被迫弃船；;
-:饥饿的低谷里，他们在星空下说了很久的话——关于杰斐逊，关于死亡，关于地图上空白的地方。;
+; -------- 选择10：萨卡加维亚 --------
+choose:以平等同伴待她， welcome:ch2_saca_edge|看重她作翻译的价值:ch2_saca_lewis|看见她能减轻队伍的担:ch2_saca_sol;
 
-:两年后，1806 年 9 月 23 日，队伍回到圣路易斯。四十三个名字，只剩缺席的弗洛伊德。;
-:历史在此分岔。你，作为这一程的记录者，要如何收尾？;
+label:ch2_saca_edge;
+setVar:edge_aff=edge_aff+10;
+刘易斯:（郑重）萨卡加维亚，你不是随行的家眷，是我们的眼睛。;
+萨卡加维亚:（眼里有光）……谢谢。我会把路，指给这片土地真正的主人。;
+约克:（点头）又一个外乡人。咱这船，装的全是「被丢下」的人。;
+jumpLabel:ch2_after_saca;
 
-choose:如实凯旋，归返文明:ending_return.txt|让刘易斯留在部落，做「失踪的上尉」:ending_wild.txt;
+label:ch2_saca_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（对夏博诺）你当译员，记工分。她指的路，写进我的册子。;
+刘易斯:一个孕妇能换来的情报，胜过十张猜的地图。这买卖，值。;
+克拉克:（笑）你这人，连人情都先算账。可这回，账是对的。;
+jumpLabel:ch2_after_saca;
+
+label:ch2_saca_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（凑近）姐，你背着娃还来？这路苦得很，咱分你点轻活。;
+萨卡加维亚:（微微笑）苦我懂。可跟着队伍，比落在买卖人手里强。;
+奥德韦:（记）萨卡加维亚入队。队伍里，多了一双看山的眼，一颗娘的心。;
+jumpLabel:ch2_after_saca;
+
+label:ch2_after_saca;
+:冬营里多了个安静的身影。萨卡加维亚总在火边缝补，婴儿在背上安睡。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）十二月。堡里添了三个人，和一个未出世的小命。;
+
+; -------- 萨卡加维亚的草与约克的袍 --------
+:萨卡加维亚教女兵们认雪地里的草：哪种止疼，哪种催奶，哪种毒。;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（拈草）这个，给我。肚里的娃，到时候好生些。;
+约克:（递水）喝口的。你比谁都金贵——这船，靠你认路呢。;
+萨卡加维亚:（抬眼）你也是。他们叫你酋长，我知道，你本不是。;
+
+; -------- 选择：她与他的相惜 --------
+choose:叹这世道对二人的不公:ch2_two_edge|记下她识草的本事:ch2_two_lewis|劝彼此向前，莫回头:ch2_two_sol;
+
+label:ch2_two_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（低）一样。你是买卖里的货，我是契纸上的物。咱都算「东西」。;
+萨卡加维亚:（轻拍他手）可在这儿，咱是「人」。记着，别忘。;
+jumpLabel:ch2_after_two;
+
+label:ch2_two_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（速记）肖松尼草谱，记十二种。归册，日后给药农看。;
+刘易斯:一个女子腹中的学问，救的了全队的命。;
+jumpLabel:ch2_after_two;
+
+label:ch2_two_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（插话）管以前是啥，现在咱一船的！向前走，啥都翻篇！;
+克拉克:（笑）小子通透。过去的事，留给河冲走。;
+jumpLabel:ch2_after_two;
+
+label:ch2_after_two;
+:二人相视一笑。堡里的火，把两道被命运碾过的人影，映得格外暖。;
+changeFigure:fig_willard.png -right -next;
+威拉德:（写）原来最懂彼此的，往往是都被这世道「丢了」的人。;
+
+; -------- 一场小纠纷：曼丹少年的枪 --------
+:正月里，一名曼丹少年好奇摸了威拉德的枪，险些走火。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（变色）威拉德！看好你的枪！要出人命的！;
+威拉德:（慌）我不是故意的，他手快——;
+
+changeFigure:fig_clark.png -right -next;
+克拉克:（按住）都别嚷。这是忌讳，也是误会。看怎么收场。;
+
+; -------- 选择：如何收场 --------
+choose:严定军规，枪不离身:ch2_gun_lewis|向少年家长赔礼:ch2_gun_edge|以兄弟情化解:ch2_gun_sol;
+
+label:ch2_gun_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（立规）即日起，枪必须上栓，须有人看护。违者记过。;
+刘易斯:规矩立在这雪地里，才压得住血光。;
+jumpLabel:ch2_after_gun;
+
+label:ch2_gun_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（拉少年）没事，娃娃。俺替这小兵，向你家赔个不是。;
+曼丹家长:（摆手）黑酋长说了，便算了。都是孩子。;
+jumpLabel:ch2_after_gun;
+
+label:ch2_gun_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（挠头）哥，俺请你喝汤赔罪！下回枪拴绳上，拴我腰上！;
+克拉克:（笑）这顿汤，你请定了。记住就好。;
+jumpLabel:ch2_after_gun;
+
+label:ch2_after_gun;
+:风波散了。曼丹人没记仇，反倒送了张狼皮来压惊。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）正月。一把枪的惊吓，教会咱：规矩与人心，都得顾。;
+
+; -------- 三方微剧情之一：刘易斯的政治焦虑 --------
+:雪最深的那夜，刘易斯独自爬上堡垒的角楼，对着华盛顿的方向出神。;
+changeFigure:fig_lewis.png -right -next;
+刘易斯:（独白）杰斐逊在等我的信。国会要地图，要矿产，要一块能站的领地。;
+刘易斯:（独白）可我手里只有半张河、一船冻疮，和一个藏不住的秘密。;
+刘易斯:（独白）若回去交不出「政绩」，这趟就成了总统的笑话，和我的坟。;
+:风吹垮了他的帽檐。他没去扶，任雪落进领口，凉意提醒他还活着。;
+刘易斯:（低声）克拉克少尉……不，克拉克搭档。这功劳，得分你一半。;
+
+; -------- 三方微剧情之二：约克的尊严 --------
+changeFigure:fig_york.png -left -next;
+:同一夜，约克坐在炉边，把曼丹人送的水牛袍叠了又叠。;
+约克:（独白）在肯塔基，我是克拉克家的「物件」，连名都归他。;
+约克:（独白）可在这儿，有人管我叫酋长，有人递我水，有人看我像个人。;
+约克:（独白）等回去呢？回去，是不是又得弯下腰，叫一声「主人」？;
+:他把袍子抱进怀里，像抱着一个不敢信的梦。火光在他眼里跳。;
+约克:（极轻）就这一冬。就这一冬，让我记得，我也被人抬过头。;
+
+; -------- 三方微剧情之三：威拉德的日记 --------
+changeFigure:fig_willard.png -right -next;
+:威拉德就着微弱的油灯，在日记本上划着字。手指冻得发紫。;
+威拉德:（写）今日雪封门。我想娘，想她炖的玉米糊。可我没哭。;
+威拉德:（写）弗洛伊德埋在悬崖，面朝西。等我死，也要面朝西吗？;
+威拉德:（写）约克成了酋长，萨卡加维亚怀着娃。这队伍，怪得很，也好得很。;
+:他吹熄灯，把本子塞进怀里。那是他唯一不肯弄丢的东西。;
+威拉德:（独白）等回去了，这本子，就是我还活过的证据。;
+
+; -------- 冬营议事：该向总统报什么 --------
+:正月尾，刘易斯召集几名骨干，商量归信里写些什么。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（摊纸）杰斐逊要政绩。可咱这一冬，更多的是「人」，不是「地」。;
+克拉克:（沉吟）写地，也写人。少了我那衔，也得写你我的图。;
+
+; -------- 选择：议事里的立场 --------
+choose:如实写人写地，不夸大:ch2_coun_lewis|替沉默的人争一笔:ch2_coun_edge|先把活命摆第一:ch2_coun_sol;
+
+label:ch2_coun_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（落笔）据实。河多宽写多宽，人多重写多重。虚的，经不起复勘。;
+奥德韦:（记）队长言：文如其图，错不得。;
+jumpLabel:ch2_after_coun;
+
+label:ch2_coun_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（闷声）写写俺们黑脸的、她那样怀娃的。不然，谁记得咱来过。;
+萨卡加维亚:（点头）对。山记得路，人得记得人。;
+jumpLabel:ch2_after_coun;
+
+label:ch2_coun_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（举手）先写「都还活着」！总统最爱听这个！;
+克拉克:（大笑）也对。活着的队伍，才写得出信。;
+jumpLabel:ch2_after_coun;
+
+label:ch2_after_coun;
+:信写完了，封进匣。它要等开春，才随商队，翻过这成千上万里的雪。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）正月尾。一封信，装着四十三人的冬，往东去了。;
+
+; -------- 冰河救人 --------
+:二月，一名兵踩破薄冰落水。河水刺骨，人在里头扑腾。;
+changeFigure:fig_york.png -left -next;
+约克:（甩出绳）抓住！俺拉你上来！手别松！;
+克拉克:（扑前）压低身子，别再踩碎冰！约克，拽稳！;
+
+:人被拖上来，冻得紫青，却喘着气，活了。所有人长舒一口气。;
+changeFigure:fig_willard.png -right -next;
+威拉德:（拍胸）吓死俺！这河，连冬天都要咬人一口。;
+
+; -------- 选择：惊魂之后 --------
+choose:记教训，重申冰上规矩:ch2_iceres_lewis|先焐热人，不问规矩:ch2_iceres_edge|以兄弟情压惊:ch2_iceres_sol;
+
+label:ch2_iceres_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（立牌）冰上须探路，三人同行。今日这险，写进册子警后人。;
+刘易斯:活下来是运气，守规矩才长久。;
+jumpLabel:ch2_after_iceres;
+
+label:ch2_iceres_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（裹袍）先暖着。命比规矩金贵，醒了再教他怎么走。;
+萨卡加维亚:（递草汤）喝。这草，驱寒。;
+jumpLabel:ch2_after_iceres;
+
+label:ch2_iceres_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（搂肩）没事了，弟兄！咱都在这儿，河吞不了你！;
+威拉德:（递酒）喝一口压惊！活着就好，活着就好！;
+jumpLabel:ch2_after_iceres;
+
+label:ch2_after_iceres;
+:落水的人烤了一夜火，次日便能走动。堡里多了条「冰上须探」的规矩。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）二月。一绳，一命。这队伍，越冻越紧。;
+
+; -------- 换马：翻山前的本钱 --------
+:二月，刘易斯盘算翻落基山要马。他去找曼丹长老，谈一笔马的交易。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（比划）我们要过西边的山，得有马。用枪、用珠，换你们的壮马。;
+曼丹长老:（沉吟）马是我们的腿。换可以，得看你们配不配得上。;
+
+; -------- 选择：换马的态度 --------
+choose:据册估价，公平立契:ch2_horse_lewis|以诚相待，多予少取:ch2_horse_edge|亮枪示威，压低价:ch2_horse_sol;
+
+label:ch2_horse_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（写契）一马换十颗珠、一杆枪。白纸写清，免得后头生嫌。;
+刘易斯:交易立字，是文明的样。咱 Americans，得像个样。;
+jumpLabel:ch2_after_horse;
+
+label:ch2_horse_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（添珠）长老，再加这几颗。你们待俺们暖，俺们不能薄。;
+曼丹长老:（笑）黑酋长说话，中听。马，多给两匹。;
+jumpLabel:ch2_after_horse;
+
+label:ch2_horse_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（拍枪）马是好东西，可枪更硬。长老，咱不欺人，也别被人欺。;
+威拉德:（挺胸）对！公平归公平，硬气归硬气！;
+jumpLabel:ch2_after_horse;
+
+label:ch2_after_horse;
+:马牵进堡，嘶鸣声惊飞了雪枝上的寒鸦。翻山的本钱，到手了。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）二月。换得马七匹。山再高，也高不过有了腿的人。;
+
+; -------- 曼丹长老的创世故事 --------
+:雪夜，曼丹长老应邀来堡，讲他们族人自洪水里重生的古事。;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（译）长老说，第一场大水退后，是玉米救了人。;
+曼丹长老:（比划）人从土里来，回土里去。可故事，留在风里，不死。;
+
+; -------- 选择：你怎么听这个故事 --------
+choose:当作可记的民俗写进册:ch2_myth_lewis|当作与共通的血脉去听:ch2_myth_edge|当作消遣，听过便罢:ch2_myth_sol;
+
+label:ch2_myth_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（速记）曼丹创世：洪水、玉米、土。归册，作民族志。;
+刘易斯:新大陆的故事，得有人替它写头一笔。;
+jumpLabel:ch2_after_myth;
+
+label:ch2_myth_edge;
+setVar:edge_aff=edge_aff+10;
+威拉德:（出神）俺娘也讲洪水救人的故事……原来哪儿的人都一样。;
+约克:（点头）对。故事不一样，怕的事，倒都一样。;
+jumpLabel:ch2_after_myth;
+
+label:ch2_myth_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（笑）故事好听！下回讲讲怎么打熊的，俺爱听那个。;
+威拉德:（乐）队长就爱实在的！来，长老再整一段！;
+jumpLabel:ch2_after_myth;
+
+label:ch2_after_myth;
+:故事散了，风把余音卷出堡外。每个人都觉得自己，懂了这土地一点。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）二月夜。一个故事，把「他们」讲成了「咱们」。;
+
+; -------- 克拉克教认图 --------
+:开春前，克拉克抽空教年轻的兵认他画的草图。;
+changeFigure:fig_clark.png -left -next;
+克拉克:（铺图）这条弯，记成钩；那道汊，记成叉。图是死的，眼是活的。;
+威拉德:（挠头）队长，俺认字都费劲，这弯弯绕，比字还难。;
+
+; -------- 选择：教与学之间 --------
+choose:立标准画法，统一讲授:ch2_teach_lewis|手把手陪他练:ch2_teach_edge|笑骂几句，鼓励为主:ch2_teach_sol;
+
+label:ch2_teach_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（接话）画法得统一，不然十个人画十张，回去对不上。;
+克拉克:（笑）还是你想得远。行，定标准，挨个考。;
+jumpLabel:ch2_after_teach;
+
+label:ch2_teach_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（凑近）俺也不识图，陪你练。咱俩一块，笨鸟先飞。;
+威拉德:（乐）好咧！有约克酋长陪，俺不怕丢人。;
+jumpLabel:ch2_after_teach;
+
+label:ch2_teach_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（敲头）笨就多瞅！俺当年也认错弯，栽过跟头才灵光！;
+威拉德:（摸头笑）得嘞队长，俺这回记死它！;
+jumpLabel:ch2_after_teach;
+
+label:ch2_after_teach;
+:图上那些弯，渐渐在几个兵眼里，活成了河。知识，悄悄传了下去。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）春前。克拉克授图，薪火有人接。这队伍，不会断。;
+
+; -------- 修装与春讯 --------
+:雪开始软了。队伍翻出越冬的衣物，补的补，晒的晒，等河开。;
+changeFigure:fig_york.png -right -next;
+约克:（缝袍）这水牛袍，补补还能穿。曼丹人给的，俺舍不得扔。;
+萨卡加维亚:（理婴布）娃开春要见日头了。得有件干净的小衫。;
+
+; -------- 选择：春讯里的心思 --------
+choose:清点物资，列好西行册:ch2_spring_lewis|帮弱者先备齐:ch2_spring_edge|与弟兄同晒同补:ch2_spring_sol;
+
+label:ch2_spring_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（造册）弹药几何、粮几何、药几何，一一列清。西行靠算。;
+克拉克:（看册）有这个数，我心定了半分。;
+jumpLabel:ch2_after_spring;
+
+label:ch2_spring_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（分布）这块给那咳的兵。俺耐冻，少一块不妨。;
+萨卡加维亚:（递衫）这小衫，先给最弱的娃。咱的，后头再补。;
+jumpLabel:ch2_after_spring;
+
+label:ch2_spring_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（晒鞋）都晾出来！臭也晾晾，脚舒坦了，路才舒坦！;
+克拉克:（笑）小子，这话在理。脚是兵的命根。;
+jumpLabel:ch2_after_spring;
+
+label:ch2_after_spring;
+:河面的冰，咔的一声，裂了第一道缝。春，在远处咳嗽了一声。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）春讯至。一冬的积蓄，要在接下来的山里，见真章了。;
+
+; -------- 曼丹的雪舞节 --------
+:正月里，曼丹村办雪舞节。男女戴羽，踏着鼓点，在雪圈里转。;
+changeFigure:fig_sacagawea.png -left -next;
+萨卡加维亚:（译）他们说，跳舞是谢雪，也谢能活过冬的人。;
+曼丹长老:（邀）白脸的，来。脚踩进雪里，心就进来了。;
+
+; -------- 选择：你怎么赴这场舞 --------
+choose:以观察者记其礼:ch2_dance_lewis|脱下拘束，欣然共舞:ch2_dance_edge|远远看个热闹:ch2_dance_sol;
+
+label:ch2_dance_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（速记）雪舞：羽饰、圈步、鼓三拍。归册，作风俗志。;
+刘易斯:懂了人家的礼，才谈得上作邻居。;
+jumpLabel:ch2_after_dance;
+
+label:ch2_dance_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（被拉进场）俺这笨脚……哎，转就转！长老，俺跟你学！;
+威拉德:（乐）约克酋长跳舞啦！俺也要学这圈步！;
+jumpLabel:ch2_after_dance;
+
+label:ch2_dance_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（抱臂笑）俺在边上瞧热闹。跳得好的，回头多分块肉！;
+威拉德:（笑）队长耍赖！您倒会当裁判！;
+jumpLabel:ch2_after_dance;
+
+label:ch2_after_dance;
+:鼓点停时，雪圈里里外外都是笑。这一夜，没有「我们」和「他们」。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）正月节。一场舞，把两族人，跳成了一堆火边的人。;
+
+; -------- 约克教投骨戏 --------
+:闲冬里，约克教弟兄们一种黑奴里传的投骨戏，掷兽骨比点数。;
+changeFigure:fig_york.png -left -next;
+约克:（抛骨）这戏，俺娘教的。输的不恼，赢的请喝汤。;
+威拉德:（掷）嘿，这骨还会翻跟头！约克，你娘真灵。;
+
+; -------- 选择：这一刻的约克 --------
+choose:记下这戏，作民俗:ch2_bone_lewis|陪他笑，认他兄弟:ch2_bone_edge|闹着玩，图个乐:ch2_bone_sol;
+
+label:ch2_bone_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（记）投骨戏，黑奴遗俗，点数定胜负。归册存样。;
+刘易斯:一个游戏里，也藏着一个民族的来路。;
+jumpLabel:ch2_after_bone;
+
+label:ch2_bone_edge;
+setVar:edge_aff=edge_aff+10;
+威拉德:（搭肩）约克，这戏俺学会了，回去教俺娘。算你传的。;
+约克:（眼热）……成。你娘算俺半个徒弟。;
+jumpLabel:ch2_after_bone;
+
+label:ch2_bone_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（掷骨）俺也来！输了俺掏烟丝，赢了你们替俺磨枪！;
+威拉德:（乐）成交！队长这回准输！;
+jumpLabel:ch2_after_bone;
+
+label:ch2_after_bone;
+:兽骨在火边翻飞。约克笑得少见，像个终于回家的人。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）冬闲。约克授戏。这一冬，他第一次，是「自己」在笑。;
+
+; -------- 刘易斯的冬末呈文 --------
+:开春前，刘易斯就着油灯，写呈总统的冬末文。笔尖沉得像压了雪。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（写）「臣已抵曼丹，筑堡越冬。河图半成，土俗尽录。」;
+刘易斯:（写）「惟队员弗洛伊德殁于途，臣愧不能救。余者皆安。」;
+刘易斯:（独白）杰斐逊，我交不出金山，只能交出一个冬天的老实话。;
+
+; -------- 选择：呈文里的分寸 --------
+choose:据实禀报，功过皆书:ch2_report_lewis|为同伴请功陈情:ch2_report_edge|先报平安稳君心:ch2_report_sol;
+
+label:ch2_report_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（落印）功是功，过是过。给总统的，不能掺水。;
+克拉克:（看）实在。这文，咱俩的名，挨着。;
+jumpLabel:ch2_after_report;
+
+label:ch2_report_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（闷）文里，提提俺们没名的。提一句，也算活过。;
+萨卡加维亚:（点头）对。山记得路，文得记得人。;
+jumpLabel:ch2_after_report;
+
+label:ch2_report_sol;
+setVar:soldier_aff=soldier_aff+10;
+威拉德:（凑）先写「都好」！总统愁啥，咱替他省了。;
+克拉克:（笑）也行。平安，是做臣子最该报的头一句。;
+jumpLabel:ch2_after_report;
+
+label:ch2_after_report;
+:文封进匣，与归信并放。它要等河开，才随商队，翻过万里雪。;
+changeFigure:fig_ordway.png -right -next;
+奥德韦:（写）春前。两封文，载着一冬的实，往东去了。;
+
+; -------- 选择11：冬营里的立场 --------
+:冬深了。队伍围炉夜话，话题绕不开——这一趟，到底为了什么。;
+changeFigure:fig_clark.png -left -next;
+克拉克:（拨火）有人说为总统，有人说为自个儿，也有人说为这片地。;
+克拉克:（笑）你们说说，曼丹的这把火，暖的是哪一种心？;
+
+choose:为共和国的版图与功绩:ch2_stance_lewis|为路上每一个被看见的人:ch2_stance_edge|为弟兄们活着回家:ch2_stance_sol;
+
+label:ch2_stance_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（正色）为共和国。我们画的每一笔，都是给后人的疆界。;
+刘易斯:个人的名字会朽，可地图不会。我们要让自己，写进这片大陆。;
+奥德韦:（记）队长言：功在版图。此志，录以为证。;
+jumpLabel:ch2_after_stance;
+
+label:ch2_stance_edge;
+setVar:edge_aff=edge_aff+10;
+萨卡加维亚:（轻声）为「被看见」的人吧。白人没看见的，我们替他们记。;
+约克:（点头）为我，为她，为那些名字进不了册子的。这趟，值。;
+威拉德:（轻声）对。地图是冷的，可咱怀里揣着的，是一个个热乎的人。;
+jumpLabel:ch2_after_stance;
+
+label:ch2_stance_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（笑）为弟兄们活着回去！功名利禄，不如都全须全尾回圣路易斯。;
+威拉德:（举手）我附议！回去喝口热的，比当英雄舒坦！;
+奥德韦:（笑）好。那咱就奔着「一个不少」去。弗洛伊德那一个，记心里。;
+jumpLabel:ch2_after_stance;
+
+label:ch2_after_stance;
+:炉火噼啪。三颗心，在这个雪夜，各自朝不同的方向偏了半寸。;
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（起身）雪一化，我们就得走。这一冬攒下的，够不够翻过那座山？;
+克拉克:（拍雪）够不够，腿说了算。睡吧，明日还要伐最后的薪。;
+
+:曼丹的星子密得像撒在黑绒上的银沙。堡垒在雪里，安静地等着春天的命令。;
+:共通的路，走到这里，要在每个人心里，分出三条。;
+
+; -------- 春前的最后一夜 --------
+:雪化尽的那夜，堡垒里格外静。所有人都知道，明日就要解缆向西。;
+changeFigure:fig_willard.png -left -next;
+威拉德:（写）春前最后一夜。我把这半年的字，又翻了一遍。;
+威拉德:（写）弗洛伊德的脸，还在第一页。我没敢翻过。;
+
+changeFigure:fig_york.png -right -next;
+约克:（抱着袍）明儿就走。这袍，曼丹人给的，俺带着。;
+萨卡加维亚:（轻拍腹）娃也该见日头了。山在那头，俺指得路。;
+
+; -------- 选择：临行前的心 --------
+choose:整装待发，唯图与令:ch2_last_lewis|与同伴道一声珍重:ch2_last_edge|嘱咐弟兄互看互顾:ch2_last_sol;
+
+label:ch2_last_lewis;
+setVar:lewis_aff=lewis_aff+10;
+刘易斯:（点册）图匣、药匣、礼匣，三样上船。明早，按顺序走。;
+刘易斯:心定了，路就定了。咱不回头。;
+jumpLabel:ch2_after_last;
+
+label:ch2_last_edge;
+setVar:edge_aff=edge_aff+10;
+约克:（挨个拍肩）都记着点儿。这一路，谁也别把谁弄丢了。;
+威拉德:（红眼）约克，你这酋长，临走还管咱。;
+jumpLabel:ch2_after_last;
+
+label:ch2_last_sol;
+setVar:soldier_aff=soldier_aff+10;
+克拉克:（举篙）弟兄们，明日篙一撑，咱又是一条船的人！;
+威拉德:（振臂）一个不少！回圣路易斯见！;
+jumpLabel:ch2_after_last;
+
+label:ch2_after_last;
+:火熄了。星子落进每个人的梦里。共通的路，到此收了尾。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写）春前夜。四十三颗心，将朝各自的山，分头去。;
+
+; 路线分叉（依据好感）
+jumpLabel:to_a -when=lewis_aff>=edge_aff && lewis_aff>=soldier_aff;
+jumpLabel:to_b -when=edge_aff>=soldier_aff;
+jumpLabel:to_c;
+label:to_a; changeScene:route_a_ch3.txt;
+label:to_b; changeScene:route_b_ch3.txt;
+label:to_c; changeScene:route_c_ch3.txt;
