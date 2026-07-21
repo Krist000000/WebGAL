@@ -1,3 +1,8 @@
-setVar:heroine=WebGAL;
-setVar:engine=WebGAL;
-choose:简体中文:demo_zh_cn.txt|日本語:demo_ja.txt|English:demo_en.txt|Test:function_test.txt;
+; ============================================================
+; start.txt — 游戏入口
+; 游戏启动后首先运行此文件，请勿重命名或删除。
+; ============================================================
+bgm:s_Title.mp3 -volume=70;
+changeBg:bg_stlouis.png;
+intro:路易斯安那之路|1804–1806 · 刘易斯与克拉克远征|一条河，一支笔，与一个新生国家的西部想象;
+choose:启程:prologue.txt|关于本作:about.txt;

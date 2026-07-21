@@ -1,0 +1,52 @@
+; ============================================================
+; prologue.txt — 序章 · 圣路易斯 1804
+; 视角：刘易斯（领导者线）
+; ============================================================
+setVar:diplomacy=50;
+setVar:mapping=50;
+setVar:culture=50;
+setVar:loyalty=50;
+
+changeBg:bg_stlouis.png;
+changeFigure:none -next;
+:1804 年的春天，密苏里河在圣路易斯以西缓缓转弯。一支由四十余人组成的队伍，正在河岸集结。;
+:他们的名字，将要被写进一张刚刚翻了一倍的地图上。;
+
+changeFigure:fig_lewis.png -left -next;
+刘易斯:我叫梅里韦瑟·刘易斯，杰斐逊总统的私人秘书。;
+刘易斯:总统交给我一支笔、一只罗盘，和一个近乎荒唐的任务——找到通往太平洋的水道。;
+刘易斯:向西，越过密苏里河，越过那些白人从未来得及命名的山。;
+
+changeFigure:fig_jefferson.png -right -next;
+:一封来自华盛顿的信，在营火旁被拆开。;
+刘易斯:（读信）「……路易斯安那购地已成。我们与法国谈妥，领土向西翻了一倍。」;
+刘易斯:（读信）「价格说法不一，一千五百万，也有人说两千七百万。但数字不重要——土地才是永恒的。」;
+setTextbox:hide;
+changeFigure:fig_lewis.png -left -transform={"position":{"x":500,"y":0}} -next;
+setTextbox:on;
+刘易斯:（沉默了很久）……我们原本是去探路。现在，我们是去接管一片大陆。;
+
+changeFigure:fig_clark.png -right -next;
+克拉克:梅里韦瑟，别一个人扛。;
+克拉克:我是威廉·克拉克。测绘我懂，地图我画了一辈子。让我跟你一起去。;
+刘易斯:（握手）从今天起，我们是共同指挥。对外，我们都称「上尉」。;
+
+:可事实是——军衔档案里，克拉克只是一名少尉。真正的共享指挥，是陆军官僚绝不会承认的事。;
+
+choose:如实告诉队员们克拉克的真实军衔:prologue_honest|隐瞒军衔，以稳军心:prologue_hide;
+
+label:prologue_honest;
+setVar:culture=culture+10;
+刘易斯:弟兄们，有句话我要说在前面——克拉克是我的同僚，但官方只给了他少尉衔。;
+刘易斯:我选择不遮掩。我们要去的是未知，不是骗局。;
+jumpLabel:prologue_end;
+
+label:prologue_hide;
+setVar:loyalty=loyalty+10;
+刘易斯:（低声）对外，我们都是上尉。等回来的那天，再谈档案里那点墨水。;
+克拉克:（点头）一支队伍，不能有两个声音。;
+jumpLabel:prologue_end;
+
+label:prologue_end;
+:1804 年 5 月 14 日，龙骨船与平底船离港。四十三个名字，写进了出发的名单。;
+changeScene:chapter1.txt;

@@ -1,0 +1,58 @@
+; ============================================================
+; chapter1.txt — 第一章 · 逆流而上（1804 夏–秋）
+; 视角：士兵线（奥德韦 / 威拉德）+ 刘易斯
+; ============================================================
+changeBg:bg_missouri.png;
+changeFigure:none -next;
+:密苏里河并不温柔。它把船往回推，把人往泥里按。;
+
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（写日记）五月二十日。逆水行舟，一日不过十里。弟兄们的手都起了茧。;
+奥德韦:刘易斯队长每天蹲在岸边，往一个小本子上记植物的名字。他说那是给共和国的税。;
+
+changeFigure:fig_lewis.png -right -next;
+刘易斯:（抬头）奥德韦，把今天的河道记准。国会要的不是故事，是地图。;
+
+:八月的某一天，军需官弗洛伊德捂着肚子倒下了。;
+:阑尾炎。没有药，没有医生，只有河风吹了一整夜。;
+changeFigure:fig_ordway.png -left -next;
+奥德韦:（笔迹发抖）八月二十日。弗洛伊德走了。全队唯一的长眠者。;
+奥德韦:我们把他埋在悬崖上，面朝河流。他说过，想看着队伍往西去。;
+
+:河到了分岔口。两条水道，一条宽阔，一条隐蔽。克拉克的草图在这里画了个问号。;
+changeFigure:fig_clark.png -right -next;
+克拉克:测绘解谜来了——主河道看着稳，可上游的印第安人说过，支流才抄近路。;
+choose:走宽阔的主河道（稳妥，但绕远）:ch1_main|走隐蔽的支流（冒险，可能抄近）:ch1_branch;
+
+label:ch1_main;
+setVar:mapping=mapping+5;
+克拉克:（松口气）稳妥。绕点路，总比困死在浅滩强。;
+jumpLabel:ch1_after;
+
+label:ch1_branch;
+setVar:mapping=mapping+15;
+克拉克:（兴奋）抄近了！这处弯道，我要记进地图——日后叫它「克拉克岔口」。;
+jumpLabel:ch1_after;
+
+label:ch1_after;
+:九月的风里，第一次遇见苏族的人。他们骑在马上，远远地看着这支「带女人的队伍」。;
+
+changeFigure:fig_lewis.png -left -next;
+刘易斯:（低声）记住规矩——先送礼，再开口。和平奖章、长烟斗，一样不能少。;
+choose:按礼仪赠奖章与烟斗:ch1_dip|直接表明来意，省去礼节:ch1_blunt;
+
+label:ch1_dip;
+setVar:diplomacy=diplomacy+15;
+刘易斯:（递出奖章）这不是占领，是相识。;
+:苏族的老人接过烟斗，点了点头。河岸第一次有了笑意。;
+jumpLabel:ch1_end;
+
+label:ch1_blunt;
+setVar:diplomacy=diplomacy-10;
+刘易斯:（皱眉）……话是说明白了，可他们的马转头就走。;
+:威拉德在日记里写：有些门，不敲门是进不去的。;
+jumpLabel:ch1_end;
+
+label:ch1_end;
+:秋深了。队伍在曼丹堡的影子下，准备过冬。;
+changeScene:chapter2.txt;
