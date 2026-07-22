@@ -125,6 +125,8 @@ changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :残存的黑脚骑手，拨马便走。黑暗里，一声仓促的枪，朝追去的身影，响了。;
 :刘易斯正要阻人深追，忽觉臀后，像被烧红的棍，猛地，捅了一下。;
+unlockCg:game/cg/cg_06.jpg;
+changeBg:../cg/cg_06.jpg -next;
 
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（闷哼）呃——！;

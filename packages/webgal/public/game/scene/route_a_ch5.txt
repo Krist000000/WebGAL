@@ -30,6 +30,8 @@ changeBg:bg_pacific.png -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（呆）这……这就是海？比密苏里，阔上一万倍。;
 奥德韦:（抹眼）十一月七。抵太平洋。此生，无憾了。;
+unlockCg:game/cg/cg_07.jpg;
+changeBg:../cg/cg_07.jpg -next;
 萨卡加维亚:（抱婴望）水好大。它，是不是也怕，被谁买走？;
 
 changeFigure:fig_lewis.png -right -next;

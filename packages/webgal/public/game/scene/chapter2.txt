@@ -68,6 +68,8 @@ label:ch2_ice_edge;
 setVar:edge_aff=edge_aff+10;
 约克:（让位）你手裂了，站边上。这镐俺替你挥两下。;
 威拉德:（暖）约克……你这酋长，当得比谁都实在。;
+unlockCg:game/cg/cg_02.jpg;
+changeBg:../cg/cg_02.jpg -next;
 jumpLabel:ch2_after_ice;
 
 label:ch2_ice_sol;

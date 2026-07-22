@@ -37,6 +37,8 @@ changeFigure:fig_jefferson.png -right -next;
 刘易斯:（读信）「路易斯安那购地已成。我们与法国谈妥，领土向西翻了一倍。」;
 刘易斯:（读信）「价格说法不一，一千五百万，也有人说是两千七百万。」;
 刘易斯:（读信）「但数字不重要——土地才是永恒的。向西，是共和国的命运。」;
+unlockCg:game/cg/cg_01.jpg;
+changeBg:../cg/cg_01.jpg -next;
 :信纸在风里轻轻抖了一下，像是不敢相信自己的重量。;
 
 setTextbox:hide;

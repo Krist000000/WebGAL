@@ -438,6 +438,8 @@ changeFigure:fig_sacagawea.png -left -next;
 
 changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（独白）他看不到海。把眼托给我。
+unlockCg:game/cg/cg_07.jpg;
+changeBg:../cg/cg_07.jpg -next;
 萨卡加维亚:（独白）我看到的每一寸，都有他的一半。
 萨卡加维亚:（独白）走出山的我，是两个人：我和哥。
 

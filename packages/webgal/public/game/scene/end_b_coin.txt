@@ -42,6 +42,8 @@ changeFigure:fig_sacagawea.png -left -next;
 changeFigure:none -next;
 :这是彩蛋，也是平反。一个被抹去的名字，被铸回所有人的手心。;
 :1806 年那页留白，在二百年后，由一枚金币轻轻填满。;
+unlockCg:game/cg/cg_08.jpg;
+changeBg:../cg/cg_08.jpg -next;
 :钟声早已停了。可她的名，还在每一次交易里，被念出声。;
 
 end;

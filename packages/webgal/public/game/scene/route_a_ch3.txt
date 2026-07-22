@@ -135,6 +135,8 @@ changeFigure:fig_lewis.png -left -next;
 
 ; ------------------------------------------------------------
 ; 第四幕：弃船（CG-04 大瀑布弃船）
+unlockCg:game/cg/cg_04.jpg;
+changeBg:../cg/cg_04.jpg -next;
 ; ------------------------------------------------------------
 
 changeFigure:none -next;

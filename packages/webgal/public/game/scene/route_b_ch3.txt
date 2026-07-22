@@ -83,6 +83,8 @@ changeBg:bg_mandan.png -next;
 changeFigure:fig_sacagawea.png -left -next;
 :1805 年 2 月 11 日。黎明前最冷的一刻。
 :刘易斯的手很稳。第一声啼哭，被风雪堵在棚屋里。
+unlockCg:game/cg/cg_03.jpg;
+changeBg:../cg/cg_03.jpg -next;
 :那哭声不大，却把整个冬天，从萨卡加维亚的胸口推开了一寸。
 萨卡加维亚:（虚弱地笑）他哭了……他真的哭了。
 萨卡加维亚:（独白）这一声，比所有礼炮都响。他是为活，才哭的。
