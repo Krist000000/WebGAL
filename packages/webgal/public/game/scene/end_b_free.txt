@@ -15,6 +15,10 @@ changeFigure:fig_york.png -left -next;
 
 changeFigure:none -next;
 :他没有留在路易斯维尔。他朝西，朝那道他曾饿过的山口走。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :山里的人不记账。黑与白，在雪线底下都成了灰。;
 :约克在山口做起向导，领后来的行者，走过他熟悉的岭。;
 
@@ -29,6 +33,10 @@ changeFigure:fig_sacagawea.png -right -next;
 
 changeFigure:none -next;
 :两道曾被略过的身影，在无人记账的山口重逢。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一个自由了，一个回了根。雪替他们，补上了那页留白。;
 萨卡加维亚:（独白）原来空白，是要走到没人写册子的地方才满。;
 
@@ -38,6 +46,10 @@ changeFigure:fig_york.png -left -next;
 
 changeFigure:none -next;
 :这是一条 IF 的河。史上约克多半仍在奴籍，可山记得另一种可能。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :在落基山的风里，曾有个黑皮肤的向导，自由地活着。;
 :那声「大黑人酋长」，终于不再是雪做的梦。;
 

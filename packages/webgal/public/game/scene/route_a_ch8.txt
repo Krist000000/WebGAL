@@ -23,6 +23,10 @@ changeFigure:fig_clark.png -left -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :两人，并坐，火边，把，分兵，后，的，各，自，讲，了，半，夜。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :克拉克，讲，黄石，的，鱼，与，莓，萨卡加维亚，指，的，每，道，湾。;
 
 changeFigure:fig_clark.png -left -next;
@@ -47,6 +51,10 @@ changeFigure:fig_sacagawea.png -left -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :人，散，后，刘易斯，与，克，拉，克，独，处。两，半，命，终，于，并，排，坐。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他，把，北，境，那，夜，的，每，个，字，都，倒，给，了，身，边，这，个，人。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -71,6 +79,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :汇口，以，下，密苏里，河，熟，得，像，回，到，自，家，的，院。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :桨，轻，了。风，顺，了。连，日，子，都，像，被，凯，旋，的，手，推，着，走。;
 
 changeFigure:fig_york.png -left -next;
@@ -95,6 +107,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :一八零六年，九月，二十三日。龙骨船的，旧，影，驶，回，圣，路，易，斯。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :钟，楼，的，钟，不，知，愁，地，响。人，群，涌，上，河，岸，像，潮，认，得，自，己，的，浪。;
 
 changeFigure:fig_willard.png -left -next;
@@ -111,6 +127,10 @@ changeFigure:fig_clark.png -left -next;
 克拉克:（拍他）梅里韦瑟，笑。今，日，你，是，英，雄。;
 刘易斯:（笑，眼湿）英，雄，该，有，两，个。可，档，案，只，认，我，一，个。;
 克拉克:（笑）那，我，就，站，你，身，后。英，雄，的，影，子，也，是，影，子。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :钟，声，里，萨卡加维亚，抱，着，婴，儿，被，人，群，忽，略，在，角，落。;
 :约克，的，黑，肤，在，阳，光，下，反，着，光，却，仍，是，克，拉，克，的，附，影。;
@@ -151,6 +171,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :夜，庆，功，宴。酒，杯，碰，着，酒，杯。人，人，喊，刘，易，斯，上，尉，英，雄。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他，举，杯，却，看，见，角，落，里，那，两，个，被，故，事，漏，掉，的，身，影。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -180,6 +204,10 @@ changeFigure:fig_lewis.png -right -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :庆，宴，后，刘易斯，对，灯，写，最，后，一，份，报。笔，尖，在，「英，雄」二，字，上，悬。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他，想，起，北，境，的，血，，山，口，的，饿，，大，瀑，布，漏，的，船。这，些，都，不，进，凯，旋。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -209,6 +237,10 @@ changeFigure:fig_jefferson.png -right -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :庆，典，散，了。刘易斯，独，立，窗，前，看，密，苏，里，河，在，月，下，静，流。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一，边，是，华，盛，顿，的，召，唤，与，英，雄，的，叙，事。;
 :一，边，是，北，境，以，外，，那，片，他，已，半，身，陷，入，的，荒，与，静。;
 
@@ -234,6 +266,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :刘易斯，把，两，条，路，在，心，里，铺，开。一，条，通，华，盛，顿，的，灯，与，报。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一，条，通，北，境，以，外，的，荒，与，静。两，条，都，真。只，看，他，肯，把，自，己，交，给，哪，句。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -258,6 +294,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :庆，宴，散，尽。克，拉，克，留，下。两，人，对，坐。那，个，藏，了，两，年，的，秘，密，浮，上。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘，易，斯，头，一，回，，在，凯，旋，的，夜，里，把，少，尉，的，事，摊，开。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -282,6 +322,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :窗，外，月，照，密，苏，里。河，面，静，得，像，两，年，前，山，口，那，夜，的，星。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘，易，斯，望，着，水，面，的，月。那，月，不，认，英，雄，也，不，认，失，踪。只，认，一，个，人。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -306,6 +350,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :庆，功，宴，上，人，人，喊，刘，易，斯，上，尉，英，雄。他，举，杯，却，看，见，角，落。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :那，两，个，被，故，事，漏，掉，的，身，影，——萨，卡，加，维，亚，与，约，克，——在，光，外。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -330,6 +378,10 @@ changeFigure:fig_clark.png -left -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :庆，典，散，尽。刘，易，斯，独，立，窗，前。密，苏，里，在，月，下，静，流。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一，边，是，华，盛，顿，的，召，唤。一，边，是，北，境，以，外，的，荒，与，静。;
 
 changeFigure:fig_lewis.png -left -next;

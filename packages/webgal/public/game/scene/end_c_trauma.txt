@@ -27,6 +27,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeBg:bg_missouri.png -next;
 :威拉德在渡口搭了间木棚，一艘旧船，日复一日来回。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :过河的人换了一茬又一茬，他从不问去哪，只稳稳地划。;
 
 changeFigure:fig_willard.png -left -next;
@@ -35,6 +39,10 @@ changeFigure:fig_willard.png -left -next;
 
 changeFigure:none -next;
 :（旁白）有人问他，这趟远征那么凶，图啥。他只笑，不答。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :（旁白）夜里，他对着河写：那枪、那血、那星，都还在，只是静了。;
 
 changeFigure:fig_willard.png -left -next;
@@ -66,6 +74,10 @@ changeFigure:fig_willard.png -right -next;
 changeBg:bg_missouri.png -next;
 changeFigure:none -next;
 :多年后，渡口换了个后生，说前头的老摆渡人，故事讲不完。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦的册子，和威拉德的私册，并排躺在木棚的箱里。;
 
 changeFigure:fig_willard.png -left -next;
@@ -75,6 +87,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他没回镇，却回了家。这河，收下了他，也收下了我。;
 奥德韦:（写）名册上少不了一个名。可河记得，他一直在渡。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密苏里河静静流，把钟声、泥路、枪声与星，都渡到了对岸。;
 :一支笔在岸上记名，一支笔在河上渡人，都未曾真正离开。;

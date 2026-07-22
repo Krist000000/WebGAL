@@ -19,6 +19,10 @@ changeFigure:fig_sacagawea.png -left -next;
 
 changeFigure:none -next;
 :金币在无数人掌心流转。孩子用它买糖，旅人用它付路。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :每一次递出，都有人念一遍：萨卡加维亚。;
 :一个肖松尼女人的名，成了国家口袋里，会发声的金属。;
 
@@ -32,6 +36,10 @@ changeFigure:fig_sacagawea.png -left -next;
 
 changeFigure:none -next;
 :博物馆的灯下，金币静静卧在绒布上，侧脸朝着来客。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :解说牌写：萨卡加维亚，肖松尼翻译，远征队向导，母亲。;
 :那行被克拉克日志略去的字，终于被补在了最前头。;
 
@@ -41,6 +49,10 @@ changeFigure:fig_sacagawea.png -left -next;
 
 changeFigure:none -next;
 :这是彩蛋，也是平反。一个被抹去的名字，被铸回所有人的手心。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :1806 年那页留白，在二百年后，由一枚金币轻轻填满。;
 unlockCg:game/background/cg_08.jpg;
 changeBg:cg_08.jpg -next;

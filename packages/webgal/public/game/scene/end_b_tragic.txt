@@ -20,6 +20,10 @@ changeFigure:fig_york.png -left -next;
 
 changeFigure:none -next;
 :雪沟里，火熄了。最后一名队员蜷成团，不再起身。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :约克把仅剩的袍，盖在一个冻僵的年轻人身上。;
 约克:（独白）我翻过山，却翻不过「少一个人」这道算术。;
 
@@ -29,6 +33,10 @@ changeFigure:fig_york.png -left -next;
 
 changeFigure:none -next;
 :远征队的名册，在此处少了几行。史书只用半句带过：;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :「山口遇困，损数人。」不提名，不提饿，不提那双缺的手。;
 :留白，成了永远填不上的黑洞。;
 
@@ -39,6 +47,10 @@ changeFigure:fig_sacagawea.png -right -next;
 
 changeFigure:none -next;
 :这是 IF-1 的悲剧：一个被略过的人，救得了所有人；;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :略过她，便略掉了翻山的命门。;
 :雪山沉默地合上，把名字、根、与未说的半句话，一起埋了。;
 

@@ -27,6 +27,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeFigure:none -next;
 :火堆旁，奥德韦把威拉德那本私册摊开，捏着鹅管笔教他。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德的手粗大，握笔像握枪，横竖总写不直。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -45,6 +49,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）他教我写的第一个整句，是"娘，我活着"。;
 威拉德:（写）这六个字，比半本诗都重。我藏进箱底了。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第二日，奥德韦教他写"家"。威拉德写到一半，鼻酸。;
 
 changeFigure:fig_willard.png -left -next;
@@ -54,6 +62,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（笑）猪是后来加的。先认屋，再认里头的暖。;
 奥德韦:（写）他学得快，心到了，手就到了。这兵，有灵。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第三日，威拉德回写奥德韦的名，笔画歪，却认真。;
 
@@ -88,6 +100,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）拜把子太酸。咱就一册子换一册子，记着彼此。;
 奥德韦:（写）荒野里，肯替你守夜的，就是亲弟。不用仪式。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :又一夜，威拉德做噩梦，惊坐，奥德韦递水，拍他背。;
 
 changeFigure:fig_willard.png -left -next;
@@ -104,6 +120,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeBg:bg_rocky.png -next;
 :入夜，营里骚动。有人嚷，装威士忌的桶轻了。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯上尉点灯查账，少了一夸脱。酒味飘在科林斯嘴边。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -117,6 +137,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）科林斯是我老乡，平时爱逗乐，今儿蔫了。;
 威拉德:（写）我看他手抖，不知是醉，还是怕挨鞭子。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :威拉德替科林斯说情，奥德韦拦下，说军法是军法。;
 
@@ -134,6 +158,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeFigure:none -next;
 :次日清晨，队伍列成方。刘易斯主审，克拉克陪审，奥德韦唱名。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :科林斯立在中央，头垂着，靴尖碾着土。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -177,6 +205,10 @@ label:rc5_cont;
 changeFigure:fig_clark.png -left -next;
 克拉克:（拍奥德韦）你这军士，难当，却当得稳。;
 克拉克:（低）队伍是石头，规矩是灰。灰缝错了，石头就松。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :威拉德偷偷把半块饼塞给罚苦工的科林斯。;
 
@@ -225,6 +257,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）鞭声一下下，我闭眼。奥德韦立着，没躲没软。;
 威拉德:（写）这声，是规矩的声音。冷，可公。我记下了。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :罚罢，科林斯趴了半晌，威拉德递水，奥德韦扶他起。;
 
 changeFigure:fig_willard.png -left -next;
@@ -234,6 +270,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）威拉德扶他，我没拦。罚是公，扶是私，两清。;
 奥德韦:（写）这小子，把"硬"和"暖"分得很明。是个带兵的料。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜，营里破例点起两支火。有人哼起家乡的调，跑调。;
 
@@ -245,6 +285,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）夜。众和歌。科林斯破颜。队伍，未散。;
 奥德韦:（写）我忽然想，纪律不是把人捆死，是让人还能同歌。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德从衫上抽根线，缠在奥德韦的枪柄，算个结。;
 
 changeFigure:fig_willard.png -left -next;
@@ -254,6 +298,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（摸柄）傻小子。枪是公家的，你系私结，回头挨批。;
 奥德韦:（写）可我没解。公家的枪，今儿有了私人的结。值。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :又一日，威拉德把"奥德韦"三字，刻进自个儿枪托。;
 
@@ -280,6 +328,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（跟）奥德韦的步，踩叶无声。我学，踩得咔嚓。;
 威拉德:（写）他回头瞪我，没骂。那瞪，是"嘘"。我憋笑。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :鹿现身，威拉德举枪，手抖。奥德韦按他肩，三点一线。;
 
 changeFigure:fig_willard.png -right -next;
@@ -289,6 +341,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（记）威拉德首发中鹿。兵，算成了。;
 奥德韦:（写）他手抖，可心稳。打猎，打的是心，不是靶。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :拖鹿回营，威拉德主动分肉给病号与科林斯。;
 
@@ -300,6 +356,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他分肉给科林斯，大方。这兵，肚里有海。;
 奥德韦:（写）恨过，给块肉，就化。人是这样，荒野也这样。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜，烤鹿，油滴火里，噼啪。两人就着火，又写一页。;
 
 changeFigure:fig_willard.png -right -next;
@@ -309,6 +369,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他写"味"。日记原该有味。我学他，记火香。;
 奥德韦:（写）两本册，一本记事，一本记感。合着，才全。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :奥德韦又教一字——"山"。威拉德望着影，写。;
 
@@ -323,6 +387,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他说谢山。这小子，把路，当恩。我服。;
 奥德韦:（写）翻山那日，我盼他别怕。有这心，山也让。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :远山在望，雪线白得晃眼。威拉德忽生离愁，对林。;
 
@@ -349,6 +417,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他读册，眼湿。我写时没想他看，可该让他看。;
 奥德韦:（写）被人记着，是福。荒野里，这福，比肉贵。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德也递私册。奥德韦读，见满页星、河、与"奥德韦兄"。;
 
 changeFigure:fig_ordway.png -right -next;
@@ -358,6 +430,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）他读我册，没笑我酸。军士的泪，偷着，我见着。;
 威拉德:（写）两册互换那夜，我俩，算把魂，互相交了底。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :二人谈"家"。威拉德说，家是娘的饼；奥德韦说，家是木工刨花。;
 
@@ -369,6 +445,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）我说刨花，自个儿也软。当兵的，谁没个卷浪的娃时。;
 奥德韦:（写）威拉德听，像听自个儿的童。两家的娃，今儿并了。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :白日，两人打闹，威拉德把奥德韦的帽藏了，逗得营里笑。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -378,6 +458,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦吼帽，眼却弯。这军士，也有娃气。我偷乐。;
 威拉德:（写）荒野苦，可苦里，偷这点乐，人就活过来了。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :山口在望，雪风削脸。奥德韦嘱，翻山，粮更短，莫慌。;
 
@@ -404,6 +488,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）雪没膝，每步，像拔萝卜。可奥德韦在前，我跟;
 威拉德:（写）他说"肩并肩"。今儿真肩并肩，雪里，暖;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦踩虚，扭了踝，蹲地，额冒冷汗。威拉德抢前;
 
 changeFigure:fig_ordway.png -left -next;
@@ -422,6 +510,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）上尉笑我俩亲弟。可不是。这弟，荒野结的;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。这山，也肩并肩翻;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜，雪洞里挤。威拉德把仅有干饼，掰半，塞奥德韦;
 
 changeFigure:fig_willard.png -left -next;
@@ -436,6 +528,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）他接饼，眼热。军士的泪，偷着。我见着，当没见;
 威拉德:（写）这一塞一接，比万语真。荒野里，暖，是这么传的;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第三日，翻过垭口。西风扑面，竟带点湿——是另一面水气;
 unlockCg:game/background/evt_divide.jpg;
 changeBg:evt_divide.jpg -next;
@@ -447,6 +543,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）过垭口，风带湿。另一面，是太平洋的气;
 威拉德:（写）奥德韦说"人轻了"。我懂。轻的怕，重的，是咱俩;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :山风掠过松林，像谁在远处翻一本很大的书。;
 :一支笔替众人记名，一支笔替自己记心。;
@@ -467,6 +567,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）过垭口，西风带湿气。料太平洋近。;
 奥德韦:（写）翻过山，人轻了。轻的怕，重的，是威拉德。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :下行数日，林变密，水变绿。威拉德采野果，分众。;
 
 changeFigure:fig_willard.png -left -next;
@@ -476,6 +580,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他采果先给病号。这兵，肚里有海。;
 奥德韦:（写）恨过，给块果，就化。人是这样，荒野也这样。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜，二人合写一封给奥德韦娘，威拉德口，奥德韦笔。;
 
@@ -490,6 +598,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他口我笔，给俺娘。荒野里，两家，并一家。;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。这信，也是座桥。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :前头水声轰，似大瀑。奥德韦知，哥伦比亚在望。;
 
@@ -515,6 +627,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）水转绿，带咸。料太平洋近。归，在望。;
 奥德韦:（写）翻山过河，弟没少。这趟，算，赢了死一回。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德采野果，先给病号，再自吃。奥德韦笑他"学乖"。;
 
 changeFigure:fig_willard.png -left -next;
@@ -524,6 +640,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他采果先给病号。这兵，肚里有海。;
 奥德韦:（写）恨过，给块果，就化。人是这样，荒野也这样。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜，二人合写家信给奥德韦娘，威拉德口，奥德韦笔。;
 
@@ -538,6 +658,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他口我笔，给俺娘。荒野里，两家，并一家。;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。这信，也是座桥。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :山风掠过松林，像谁在远处翻一本很大的书。;
 

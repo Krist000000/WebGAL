@@ -27,6 +27,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:国会要的不是故事，是地图。把今天的河道记准，奥德韦。;
 刘易斯:（抬头望天）云往西走。风却往东顶。这河，生来就爱跟人拧着。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :头几日，河面还算宽。可桨手们的手，三天就起了茧。;
 :太阳把脊背晒脱了皮，河水又把盐渍逼回伤口里，杀得人直抽气。;
 :龙骨船的方帆兜不住逆风，大多数人只好下船，用篙撑、用纤拉。;
@@ -35,6 +39,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（卷着地图）梅里韦瑟，你看这弯道——河床在偷偷改道。;
 克拉克:我得每天重画。一张地图，画错了，后头的人就得死在错路上。;
 刘易斯:那就每天重画。共和国买下的，不只是土地，还有它的形状。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :傍晚靠岸扎营。火堆亮起来，有人哼起家乡的调子，跑了好几个音。;
 :河对岸的草原上，野牛群像黑色的云，慢慢地，慢慢地移动。;
@@ -72,6 +80,10 @@ jumpLabel:ch1_after_disc;
 
 label:ch1_after_disc;
 :那一夜，争执的人睡在火堆两边，谁也没再吭声。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :河声替他们把话都说完了。;
 
 ; -------- 约克登场：克拉克的影子 --------
@@ -83,6 +95,10 @@ changeFigure:fig_york.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（小声）奥德韦，约克……到底是弟兄，还是……;
 奥德韦:（低声）别问。在这条船上，他干的活比谁都多，却连名都归了克拉克。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :约克从不多话。他只在夜里，借着余火，把磨破的肩布重新缝好。;
 :有一次，威拉德撞见他在水边照自己的影，看了很久，又匆匆别开脸。;
@@ -148,6 +164,10 @@ jumpLabel:ch1_after_rank;
 
 label:ch1_after_rank;
 :七月的河面宽得像海。两岸的三角叶杨把影子投在水上，凉了半截暑气。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一只苍鹭从芦苇里惊起，翅膀扇出一片水花，落在克拉克的笔记本上。;
 
 ; -------- 草原与野牛 --------
@@ -156,6 +176,10 @@ changeFigure:fig_lewis.png -left -next;
 unlockCg:game/background/evt_hunt.jpg;
 changeBg:evt_hunt.jpg -next;
 克拉克:（眯眼）别惊了群。派两个人绕后，慢慢赶，一枪放倒领头的。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :枪响过后，一头壮牛倒在草里。队员们欢呼着围上去，刀光在夕阳里翻飞。;
 changeFigure:fig_ordway.png -right -next;
@@ -198,6 +222,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（喊）不好！转锚，靠岸！这浪能掀翻皮罗格！;
 刘易斯:（勒绳）撑篙的跟我下船，把船拽进背风的汊！快！;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一道闪电劈下来，照亮所有人惨白的脸。船身剧烈一晃，货箱滚作一团。;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（扑住日记）我的本子！没了它，队伍就瞎了眼！;
@@ -224,6 +252,10 @@ label:ch1_storm_sol;
 setVar:soldier_aff=soldier_aff+10;
 克拉克:（跳进浪里）弟兄们，跟我拽！纤绳不断，船就不断！;
 奥德韦:（攥绳）一、二、起！一、二、起！咱当兵的，命拴一根绳上！;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十来双手攥成一股，船竟真被拖进了背风的河汊。;
 jumpLabel:ch1_after_storm;
 
@@ -234,6 +266,10 @@ changeFigure:fig_lewis.png -right -next;
 克拉克:（拍肩）赢一次算一次。这河，记仇着呢。;
 
 ; -------- 与沿途村落交易 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :八月，船过一处村落。妇人们在岸边摆出玉米、瓜与晒干的莓。;
 changeFigure:fig_willard.png -left -next;
 威拉德:（咽口水）奥德韦，咱的盐，能换他们一筐瓜不？;
@@ -266,6 +302,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）八月。交易一场，瓜甜，盐咸，人心却各有各的算。;
 
 ; -------- 坏血病的影子 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :八月中，有个兵刷牙时牙龈出了血，久久不止。;
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（皱眉）是坏血病的苗头。缺青菜，缺鲜物。得想招。;
@@ -298,6 +338,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）原来活命，有时就靠一口苦水。;
 
 ; -------- 弗洛伊德病倒 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :八月的某一天，军需官弗洛伊德捂着肚子，弯下了腰。;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（变色）弗洛伊德！你怎么了，脸色白得像纸。;
@@ -306,6 +350,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（蹲下查看）是阑尾炎，肚里的炎症。没有药，没有医生，只有河风。;
 克拉克:（攥拳）烧点热水，用能找到的草敷上。撑住，弗洛伊德，撑住。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :那一夜，船停在不肯走的浅滩。弗洛伊德在舱里翻来覆去，汗水浸透了木板。;
 changeFigure:fig_willard.png -right -next;
@@ -338,16 +386,28 @@ jumpLabel:ch1_after_floyd;
 
 label:ch1_after_floyd;
 :八月二十日，天没亮，弗洛伊德走了。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :全队唯一的长眠者。没有药，没有医生，只有河风吹了一整夜。;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（笔迹发抖）八月二十日。弗洛伊德去了。我们把他埋在悬崖上。;
 奥德韦:面朝河流。他说过，想看着队伍，一直往西去。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :土还新的时候，所有人都摘了帽。风把帽檐吹得啪啪响，像谁在鼓掌送行。;
 changeFigure:fig_lewis.png -right -next;
 刘易斯:（低声）从今天起，这支队伍少了一个名字。剩下的，一个都不能少。;
 
 ; -------- 余波：家书与静默 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :弗洛伊德走后，船上好些天没人开玩笑。连威拉德都把歌咽回了肚子。;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）我给娘写封信，可这信，要明年才到得了家。;
@@ -359,6 +419,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（笑）那咱约好了。谁也不许先掉队。;
 
 ; -------- 逆流继续，秋意渐起 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :九月的风凉了。河岸的草黄了一截，又被风吹倒一截。;
 :龙骨船的日子，成了重复的劳作：撑篙、记录、扎营、守夜。;
 changeFigure:fig_clark.png -left -next;
@@ -370,11 +434,19 @@ changeFigure:fig_willard.png -right -next;
 奥德韦:（批）写得好。留着，回去给那些笑咱们疯了的人看。;
 
 ; -------- 首次苏族遭遇 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :九月的风里，第一次遇见苏族的人。他们骑在马上，远远看着这支队伍。;
 :为首的战士勒住马，目光落在船尾——那里，站着约克，也站着带枪的白人。;
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（低声）记住规矩——先送礼，再开口。和平奖章、长烟斗，一样不能少。;
 克拉克:（点头）别露怯，也别露凶。我们是客人，不是征服者。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :苏族的老人催马上前，用他们的话说了句什么。没人听得懂。;
 changeFigure:fig_ordway.png -right -next;
@@ -388,6 +460,10 @@ label:ch1_siou_lewis;
 setVar:lewis_aff=lewis_aff+10;
 刘易斯:（双手递出奖章）这不是占领，是相识。收下，便是朋友。;
 刘易斯:（奉上烟斗）烟斗过手，火气就散。我们只要借路向西。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :苏族老人接过奖章，看了很久，终于点了点头。河岸第一次有了笑意。;
 克拉克:（松口气）礼数到了，门就开了。;
 jumpLabel:ch1_after_siou;
@@ -414,6 +490,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）原来「别人」不是怪物。他们也有娘，也有怕的事。;
 
 ; -------- 第二位向导的争执 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十月初，一名随行的猎人主张抄近路，说认得一条干河谷。;
 changeFigure:fig_clark.png -right -next;
 克拉克:（皱眉）干河谷听着近，可秋天万一有暗流，船就搁死。;
@@ -446,6 +526,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）十月。一件小事，却让我觉出：这队伍，是人人的。;
 
 ; -------- 夜渔与守夜 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十月的夜里，刘易斯带人下网夜渔。河水凉得扎手，却肥着一河的鱼。;
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（提灯）轻声。鱼怕响，也怕慌。这一网，是明早的汤。;
@@ -479,10 +563,18 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）原来一口热汤，能把一船的累，都化开。;
 
 ; -------- 草原野火 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十月中，远处草原腾起一道火线，风卷着火，朝河岸扑来。;
 changeFigure:fig_clark.png -left -next;
 克拉克:（变色）野火！快把船推远，别让火星点了帆！;
 刘易斯:（指挥）挖隔离沟！湿泥泼上去，别让它咬到营地！;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :火舌舔过天边，把夜烧成血红。所有人忙成一团，泥浆溅了满身。;
 changeFigure:fig_ordway.png -right -next;
@@ -516,6 +608,10 @@ changeFigure:fig_lewis.png -left -next;
 克拉克:（喘）好在，命还在。命在，火就烧不到咱的根。;
 
 ; -------- 克拉克与地图的私语 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :火后那夜，克拉克独自在船头描图。月光把他的红发镀成银。;
 changeFigure:fig_clark.png -right -next;
 克拉克:（低声）梅里韦瑟，你说，回去后，这图署谁的名？;
@@ -547,6 +643,10 @@ label:ch1_after_sign;
 :船继续逆水。风里多了寒意，提醒所有人：冬天，就在前头等着。;
 
 ; -------- 河汊测绘抉择 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十月的河到了分岔口。两条水道，一条宽阔，一条藏在芦苇后头。;
 changeFigure:fig_clark.png -right -next;
 克拉克:（蹲地画草图）测绘解谜来了——主河道看着稳。;
@@ -588,6 +688,10 @@ changeFigure:fig_ordway.png -right -next;
 威拉德:（轻声）再往前，就是谁也没回来的地方了。我有点怕，也有点盼。;
 
 ; -------- 河湾的槭树与乡愁 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十月底，船拐进一道静湾。岸上几棵槭树红得像烧着的云。;
 changeFigure:fig_willard.png -left -next;
 威拉德:（跳上岸）奥德韦，这红叶子，像不像咱家乡那棵？;
@@ -625,10 +729,18 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:可没有一个人，说要掉头。这队伍，算是铁了。;
 
 ; -------- 浅滩搁船 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十月底，船底蹭上一道暗藏的沙洲，龙骨船猛地一顿，卡死了。;
 changeFigure:fig_clark.png -left -next;
 克拉克:（跳下水）都下来！推，一边挖沙一边推！潮要退了！;
 刘易斯:（卷裤）笨法子最管用。弟兄们，下水，别舍不得鞋！;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :冰冷的泥没过膝盖。所有人喊着号子，船却像生了根。;
 changeFigure:fig_ordway.png -right -next;
@@ -662,6 +774,10 @@ changeFigure:fig_lewis.png -left -next;
 克拉克:（笑）坎过了，就是路。咱过的坎，还少吗？;
 
 ; -------- 星夜与克拉克的地图 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :脱困那夜，天晴得透。银河像一条倒挂的密苏里，横在头顶。;
 changeFigure:fig_clark.png -right -next;
 克拉克:（指星）梅里韦瑟，你看那颗。我娘说，那是走夜路人的灯。;
@@ -694,10 +810,18 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）十月底。星下有约。这队伍，从此不只靠绳拴着。;
 
 ; -------- 河雾迷踪 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十月底的一场晨雾，把河吞得没了边。船在白里漂，分不清东西。;
 changeFigure:fig_clark.png -left -next;
 克拉克:（眯眼）辨不出岸。再走，怕要撞石头。得停下，等雾散。;
 刘易斯:（沉住气）慌不得。雾是河的呼吸，喘口气就过。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :有人在雾里哼起家乡的调，一个接一个，声浪把方向找了回来。;
 changeFigure:fig_ordway.png -right -next;
@@ -731,6 +855,10 @@ changeFigure:fig_lewis.png -left -next;
 威拉德:（写）雾一场，歌一曲。原来人聚着，就迷不了。;
 
 ; -------- 抵达前的最后选择：如何落地 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :靠岸前，刘易斯把队伍聚拢，商量怎么跟曼丹人「落地」。;
 choose:先送礼示好，慢慢相处:ch1_land_lewis|以实力立威，再谈交情:ch1_land_sol|让约克与萨卡加维亚先接触:ch1_land_edge;
 

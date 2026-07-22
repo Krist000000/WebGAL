@@ -27,6 +27,10 @@ changeFigure:fig_lewis.png -right -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :归，来，的，日，子，被，钟，声，与，酒，填，满。报，纸，登，刘，易，斯，上，尉，的，名。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :可，在，热，闹，的，缝，里，他，总，看，见，三，个，被，故，事，漏，掉，的，身，影。;
 
 changeFigure:fig_clark.png -left -next;
@@ -51,6 +55,10 @@ changeFigure:fig_york.png -left -next;
 changeFigure:none -next;
 changeBg:bg_stlouis.png -next;
 :多，年，以，后，那，张，图，挂，进，了，学，会，与，议，事，厅。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :看，图，的，人，，只，看，线，与，边。不，看，线，后，那，些，挨，过，饿，与，枪，的，人。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -62,6 +70,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（白发作陪）梅里韦瑟，老，了。可，那，夜，山，口，的，星，还，亮。;
 刘易斯:（笑）亮。两，个，老，头，，还，是，一，块，铜，牌，上，的，两，道，线。;
 克拉克:（拍肩）线，不，会，断。断，了，我，替，你，接。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :钟，楼，的，钟，又，响。这，一，回，不，为，凯，旋，为，一，个，把，人，放，在，地，图，前，的，人。;
 :密，苏，里，河，静，静，流。它，记，得，一，支，船，一，行，人，和，一，个，不，肯，独，吞，荣，耀，的，名。;

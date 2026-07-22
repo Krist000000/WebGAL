@@ -30,6 +30,10 @@ changeFigure:fig_clark.png -right -next;
 changeFigure:none -next;
 changeBg:bg_rocky.png -next;
 :他们没想到，山口会用饿，来欢迎这群带枪的人。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :雪线比老人说的低。草被前一支过路的部落啃光了。;
 :马饿得走不动，人把最后一点口粮，分给了最弱的牲口。;
 
@@ -55,6 +59,10 @@ changeFigure:fig_clark.png -right -next;
 changeFigure:none -next;
 changeBg:bg_rocky.png -next;
 :白天的山口，是另一副面孔。雪线退到头顶，风却更尖。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :马蹄踩进融雪的泥，拔出来要费半条命的劲。;
 :队伍拉成一条断断续续的线，像谁把一串念珠，撒在了山坡。;
 
@@ -79,6 +87,10 @@ changeFigure:fig_clark.png -right -next;
 
 changeFigure:none -next;
 :第三天，他们猎到一头瘦鹿。肉太少，油更金贵。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜里，刘易斯把最后一点蜡烛也化了，拌进粉里，分给大家。;
 
 changeFigure:fig_york.png -left -next;
@@ -104,6 +116,10 @@ changeFigure:fig_ordway.png -left -next;
 
 changeFigure:none -next;
 :曾有那么一段路，河水顺着人意往西，风也帮忙，像在鼓掌。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :那时刘易斯几乎忘了累，觉得整座大陆都在为他让路。;
 :可山口把那点得意，冻成了唇边一道裂开的血。;
 
@@ -117,6 +133,10 @@ changeFigure:fig_york.png -right -next;
 约克:（低）没人在乎黑不黑。只在乎你扛不扛得动马。;
 刘易斯:（望他）山是公平的。它只认力气，不认华盛顿的章。;
 约克:（难得一笑）那这山，比大半个人间，都像样的多。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :刘易斯把这句话记在心里。他想，回去后，人间未必肯学山的规矩。;
 
@@ -135,6 +155,10 @@ changeBg:evt_starrynight.jpg -next;
 changeFigure:none -next;
 changeBg:bg_rocky.png -next;
 :夜里，雪停了。云裂开一道缝，星河像被倒扣的河，哗地倾下。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯与克拉克并坐在一块还温着日头的石头上，谁都没先开口。;
 :风很轻，轻得像怕惊散这满天的、没人能测绘的光。;
 
@@ -199,6 +223,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）这三样，都落在我一个人肩上，还不许喊疼。;
 克拉克:（忽然）你方才，是不是，又喊了一声？;
 刘易斯:（怔，笑）……被你听去了。星星作证，我喊过。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :两个人对着星河，低低地笑了。笑里，没有上尉，没有少尉。;
 :只有两个，把半条命，押给同一张未知地图的，普通的人。;
@@ -267,6 +295,10 @@ label:ch4_after;
 changeFigure:none -next;
 changeBg:bg_rocky.png -next;
 :第四天破晓，他们站在了山脊。风从背后推，水，真的往西流了。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :队伍里有人笑，有人哭。哭的，是终于敢承认，差点没过来。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -281,6 +313,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeFigure:none -next;
 :山口在身后合拢，像一本读完了、却忘不掉的旧书。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯回头望了一眼。那片星，还悬在同样的夜里。;
 :只是这一次，他不再是独自一人，对着满天沉默的光。;
 
@@ -308,6 +344,10 @@ changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（指西）再走些日，水会咸。那是海的气味。;
 刘易斯:（望西）咸的。像汗，像泪，像这趟路，所有的咸。;
 萨卡加维亚:（笑）海不苦。海，只是大一点的，回家的河。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :山口在身后，终于合拢成一道淡青的痕。;
 :刘易斯回头，又望了一眼那片星。它还在，替他记着这夜。;
@@ -343,6 +383,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:none -next;
 changeBg:bg_rocky.png -next;
 :又，行，数，日，河，面，忽，然，变，宽，水，色，转，浑。萨，卡，加，维，亚，指，着，说，这，便，是，向，西，的，水。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘，易，斯，蹲，在，岸，边，看，了，很，久。两，年，前，他，在，圣，路，易，斯，想，的，「往，西，的，水」，今，日，在，眼，前。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -367,6 +411,10 @@ changeFigure:fig_sacagawea.png -left -next;
 changeFigure:none -next;
 changeBg:bg_rocky.png -next;
 :夜，刘，易，斯，独，对，火。山，口，的，星，已，远，可，那，夜，的，话，还，热。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他，想，到，回，去，后，故，事，会，怎，么，被，讲。想，到，约，克，的，奴，籍，，萨，卡，加，维，亚，的，脚，注。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -383,6 +431,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（记）西，流，水，在，望。Captain，夜，常，独，坐。其，忧，在，归，后，非，归，途。;
 威拉德:（凑）奥德韦，你，这，记，的，是，心，不，是，路。;
 奥德韦:（合簿）心，才，是，真，路。路，会，老。心，不。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :西，流，的，水，在，脚，下，奔。刘，易，斯，把，山，口，的，星，收，进，怀，，随，水，往，太，平，洋，去。;
 
@@ -417,6 +469,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:none -next;
 changeBg:bg_rocky.png -next;
 :夜，刘，易，斯，把，萨，卡，加，维，亚，叫，到，火，边。他，有，一，句，话，要，先，说。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :这，趟，路，她，是，向，导，也，是，良，心。他，怕，回，去，后，故，事，把，她，抹，成，脚，注。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -433,6 +489,10 @@ changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（笑）你，们，白，人，的，信，我，不，懂。可，我，信，你，们，的，眼。;
 刘易斯:（望火）眼，会，老。信，不。信，替，我，们，记，着，你。;
 萨卡加维亚:（轻）那，便，够。我，这，一，生，，有，两，个，上，尉，替，我，记。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :西，流，的，水，催，舟。刘，易，斯，把，对，她，的，诺，写，进，日，记。那，页，不，给，华，盛，顿。;
 
@@ -464,6 +524,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）翻，山，翻，的，不，止，路。是，把，一，个，人，翻，薄，了。;
 刘易斯:（独白）薄，了，才，装，得，下，这，么，多，人，的，命。;
 刘易斯:（独白）这，便，是，领，导。先，把，自，己，翻，薄，，再，扛，众，人。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :西，流，的，水，在，脚，下，奔。刘，易，斯，把，山，口，的，星，收，进，怀，随，水，去。;
 

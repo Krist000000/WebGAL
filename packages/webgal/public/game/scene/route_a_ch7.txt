@@ -24,6 +24,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :约莫子时，威拉德先醒——他听见，火边，有布，蹭过石的，细响。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :睁眼，便见几道黑影，正悄悄，挪向靠着树的步枪，与拴着的马。;
 
 changeFigure:fig_willard.png -left -next;
@@ -35,6 +39,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（按枪）上尉，下令。他们，要全端了，咱的退路。;
 刘易斯:（咬牙）拦，别先开枪！抢回来，就撤！;
 刘易斯:（独白）克拉克教的：亮奖章。可这会儿，奖章，早被踩进泥里。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :火光里，两族的人，忽然，绞成一团。枪杆，马缰，和呼吸，缠在一处。;
 
@@ -62,6 +70,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）两样，都，正当。可夜一黑，正当，便，撞，成了，火。;
 刘易斯:（独白）克拉克，你说的，亮奖章。今夜，奖章，亮不透，这层，黑。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :老者终于，摆手，似应，又似，敷衍。可他身后的，年轻人，没，退。;
 :十步的火，之间，那点，最后的，客气，像，被风，吹薄的，冰。;
 
@@ -84,6 +96,10 @@ changeFigure:fig_ordway.png -right -next;
 刘易斯:（拔刀）扑火！别让北境，连咱的退路，一起，烧没！;
 威拉德:（举枪托）退！再近，我不认，谁是，客了！;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一声闷响。一名黑脚战士，被菲尔德兄弟，刺中，倒在火边。;
 :又一声。另一名，在夺马时，被流弹，击中，不再动。;
 :两具身体，在湿沙上，慢慢，凉了。风，把火星，吹过他们，沉默的脸。;
@@ -100,6 +116,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :枪声停了。火边，只剩，风，和，四个白人，粗重的，喘。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :没人说话。那两道，凉下去的，身体，把，所有，词，都，压，哑了。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -124,6 +144,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :残存的黑脚骑手，拨马便走。黑暗里，一声仓促的枪，朝追去的身影，响了。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯正要阻人深追，忽觉臀后，像被烧红的棍，猛地，捅了一下。;
 unlockCg:game/background/cg_06.jpg;
 changeBg:cg_06.jpg -next;
@@ -151,6 +175,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :不敢久留。刘易斯咬布，叫人，草草，裹了伤，翻身上马。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :玛丽亚斯河在身后，黑得，像把今夜，一口，吞了，不吐。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -175,6 +203,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :马奔出十里，刘易斯身后，血，还是，洇湿了，鞍布。他，咬，不，出，声。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德，回头，几回，见他，背，绷，如，弓，却，硬，是，不，哼。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -204,6 +236,10 @@ changeFigure:fig_lewis.png -right -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :黎明前，队伍歇在背风处。刘易斯靠石，疼得，清醒得，近乎残忍。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :血换了布。他把那块，染了的布，叠好，像叠，一页，不该写的，信。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -255,6 +291,10 @@ label:ch7_after;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :天大亮，他们催马，往密苏里与黄石的汇口，去了。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯伏在鞍上，每颠一下，臀后的伤，便替那夜，又，问一句。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -266,6 +306,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（望前）上尉，烟！前头，有，咱自己的，火！;
 刘易斯:（望）……是威廉。他，没走。他，在，等。;
 威拉德:（笑，带泪）咱，没散。连北境，都没，把咱，拆。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密苏里的弯道，一道道，退后。汇口的火，越来越，近，像家，先伸来的，手。;
 :而圣路易斯，还在更东的边，钟楼，正，不知愁地，等，一支，两年未归的，笔。;
@@ -301,6 +345,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :中，午，歇，在，背，风，石，后。刘，易，斯，解，衣，看，伤。弹，孔，小，血，却，久。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他，突，然，笑，了。笑，这，处，的，荒，唐，与，必，然，搅，在，一，处。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -325,6 +373,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :第，三，日，前，方，出，现，一，缕，直，而，稳，的，烟。那，是，克，拉，克，的，火。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘，易，斯，直，了，直，腰。臀，的，伤，像，被，那，缕，烟，烫，了，一，下，又，松。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -336,6 +388,10 @@ changeFigure:fig_lewis.png -right -next;
 刘易斯:（独白）汇，口。两，半，命，重，逢。我，带，伤，带，债，回，来。;
 刘易斯:（独白）这，债，里，有，两，条，命，和，一，臀，血。可，也，有，一，整，张，图。;
 刘易斯:（独白）图，归，国，家。债，归，我。这，便，是，我，带，回，的，全，部。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密，苏，里，的，弯，道，一，道，道，退。汇，口，的，火，越，近，像，家，先，伸，来，的，手。;
 
@@ -370,6 +426,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :两，队，会，合。刘，易，斯，与，克，拉，克，并，坐，火，边。各，自，的，半，图，摊，开。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :两，张，纸，拼，上，的，那，道，缝，正，好。像，两，年，的，分，与，合，都，为，这，一，刻。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -386,6 +446,10 @@ changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（抱婴）你，们，又，凑，一，块。这，路，算，圆。;
 刘易斯:（望婴）孩，子，长。回，去，他，的，名，写，进，好，些，人，书。;
 萨卡加维亚:（笑）写，不，写，由，他。活，着，走，完，这，路，就，够。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密，苏，里，的，弯，道，退，尽。汇，口，的，火，终，于，连，成，一，团。两，半，命，重，逢。;
 
@@ -417,6 +481,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）陪，着，就，够。这，趟，路，最，贵，的，不，是，凯，旋。;
 刘易斯:（独白）是，危，险，里，有，人，陪，你，睁，眼，到，天，白。;
 刘易斯:（独白）这，份，陪，值，得，我，带，着，伤，也，往，前，走。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密，苏，里，河，在，身，后，转，身。刘，易，斯，把，北，境，的，夜，叠，进，怀，随，水，下。;
 

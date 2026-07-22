@@ -22,6 +22,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_mandan.png -next;
 :曼，丹，的，土，屋，还，在。冬，的，烟，囱，冒，着，熟，悉，的，白。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :长，老，认，出，了，他。不，叫，上，尉，叫，「回，来，的，白，弟」。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -46,6 +50,10 @@ changeFigure:fig_sacagawea.png -left -next;
 changeFigure:none -next;
 changeBg:bg_mandan.png -next;
 :华，盛，顿，等，不，到，刘，易，斯。报，纸，登，「上，尉，失，踪，于，西，部，荒，野」。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :可，在，曼，丹，的，火，边，有，个，白，人，正，教，孩，子，认，北，极，星。他，不，失，踪。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -70,12 +78,20 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_mandan.png -next;
 :年，复，一，年，曼，丹，的，孩，子，都，知，道，火，边，那，个，白，人，会，认，星。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他，没，把，图，挂，上，华，盛，顿，的，墙。却，把，图，种，进，了，荒，野，的，记，忆。;
 
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）英，雄，的，叙，事，少，了，我。可，真，的，路，多，了，个，活，人。;
 刘易斯:（独白）有，些，凯，旋，不，敲，钟。它，只，在，雪，夜，的，毡，房，里，静，静，暖。;
 刘易斯:（独白）我，选，了，这，种，暖。不，后，悔。半，句，不，后，悔。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密，苏，里，河，在，远，处，静，流。它，记，得，一，个，没，回，家，却，回，到，自，己，的，人。;
 :北，极，星，亮，着。像，两，年，前，山，口，那，夜，的，星。只，这，回，身，边，不，必，再，对，着，它，独，白。;

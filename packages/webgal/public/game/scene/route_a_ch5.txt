@@ -26,6 +26,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :一八零五年十一月七日，队伍翻过最后一处湿冷的松丘。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一片灰蓝、无垠、翻着白沫的水，猛地撞进所有人的眼里。;
 :那不是河，不是湖。那是他们用两年，换来的，世界的尽头。;
 
@@ -45,6 +49,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（拍他）梅里韦瑟，笑一笑。你梦了两年的景，到了。;
 刘易斯:（笑，眼湿）笑的。只是风大，把笑，吹成了别的东西。;
 克拉克:（望海）别的东西，也是真的。哭笑，海都收。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :有人在沙上跪下，有人把帽子抛起又接住。;
 :那面从圣路易斯带来的旗，终于插进太平洋的湿沙里。;
@@ -84,6 +92,10 @@ changeFigure:fig_sacagawea.png -right -next;
 
 changeFigure:none -next;
 :风太猛，营帐扎不稳。他们在河口两岸，争该在哪边过冬。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯做了一件，旁人想都不敢想的事——把话，交给所有人。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -118,6 +130,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :他们选了哥伦比亚河河口南侧，伐木，垒原木墙。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :堡名叫科拉特索普——给这片雨林里，好客的原住民。;
 :可十一月以后的雨，像要把人，从骨头里，泡软。;
 
@@ -148,6 +164,10 @@ changeFigure:fig_sacagawea.png -right -next;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :冬日的堡里，日子被雨切成一片片相同的灰。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :男人们编草席、补衣、晒永远晒不干的皮。约克教众人编绳结。;
 
 changeFigure:fig_york.png -left -next;
@@ -177,6 +197,10 @@ changeFigure:fig_lewis.png -right -next;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :冬夜，刘易斯对着海写总结。每一笔，都像在替未来摆姿势。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他写「通太平洋水道已证」，可心里清楚，那水道，九成是扛过去的。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -211,6 +235,10 @@ changeFigure:fig_lewis.png -right -next;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :某个雨停的午后，刘易斯摊信，写给杰斐逊。海在身后，无涯。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他写「水道已通」，笔尖却停在「如何通」三字上，迟迟落不下去。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -267,6 +295,10 @@ label:ch5_after;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :除夕夜，雨小了。众人围火，谁也没提「回去」二字。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :可每个人都知道，开春，这堡要空，这海要留在这年的记忆里。;
 
 changeFigure:fig_willard.png -left -next;
@@ -284,6 +316,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）是这一路，学会把人，放在地图前面的那颗心。;
 克拉克:（碰杯）心声说完了？完了，开春，咱往东，回家。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :海在堡外，翻着永不安静的白沫。像在替他们，预习告别。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -294,6 +330,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（碰杯）心，声，说，完，了？完，了，开，春，咱，往，东，回，家。;
 刘易斯:（点头）回，家。把，这，片，咸，的，水，和，漏，雨，的，堡，一，起，带，回，去。;
 克拉克:（笑）带，回，去，的，若，只，是，凯，旋，那，便，白，来，了。带，人，回，去。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :而东边，密苏里河正等着重逢——以及，一场谁也没料到的分兵。;
 
@@ -328,6 +368,10 @@ changeFigure:fig_sacagawea.png -left -next;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :雨，季，深，了。堡，里，接，连，有，人，咳。婴，儿，的，咳，最，让，人，揪。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘，易，斯，把，干，衣，都，让，给，萨，卡，加，维，亚，和，孩，子。自，己，裹，湿，毯，写，图。;
 
 changeFigure:fig_york.png -left -next;
@@ -352,6 +396,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :开，春，的，消，息，随，原，住，民，的，独，木，舟，带，来。该，走，了。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘，易，斯，把，科，拉，特，索，普，堡，的，门，钉，死。像，把，一，段，湿，冷，的，自，己，留，在，里。;
 
 changeFigure:fig_clark.png -left -next;
@@ -368,6 +416,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）太，平，洋，我，来，过，了。下，半，程，是，回，家。;
 刘易斯:（独白）回，家，的，路，比，来，时，轻。因，为，知，道，尽，头，有，人，等。;
 刘易斯:（独白）可，等，的，人，只，看，旗。不，看，旗，后，这，一，冬，的，咳，与，雨。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :东，边，的，密，苏，里，河，在，召。刘，易，斯，上，舟，最，后，望，一，眼，那，片，灰，蓝，的，无，尽。;
 
@@ -402,6 +454,10 @@ changeFigure:fig_clark.png -left -next;
 changeFigure:none -next;
 changeBg:bg_pacific.png -next;
 :最，后，一，夜，众，人，围，火。无，人，提，回，家。可，每，人，都，望，东。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘，易，斯，把，这，夜，的，火，光，记，在，心。它，是，这，趟，路，最，暖，的，句，号。;
 
 changeFigure:fig_willard.png -left -next;
@@ -418,6 +474,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）太，平，洋，我，来，了。可，真，正，要，回，去，的，不，是，身。;
 刘易斯:（独白）是，这，一，路，学，会，把，人，放，在，地，图，前，的，那，颗，心。;
 克拉克:（碰杯）心，声，说，完，了？完，了，开，春，咱，往，东，回，家。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :东，边，的，密，苏，里，河，在，召。刘，易，斯，上，舟，最，后，望，一，眼，那，片，灰，蓝。;
 
@@ -449,6 +509,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）太，平，洋，我，证，了。图，上，这，一，点，是，我，用，命，钉，的。;
 刘易斯:（独白）回，去，后，这，点，会，被，指，给，国，会。它，值，半，个，大，陆。;
 刘易斯:（独白）可，它，值，不，值，的，另，一，半，是，这，一，冬，的，人。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :东，边，的，密，苏，里，河，在，召。刘，易，斯，上，舟。海，在，身，后，成，了，一，道，灰，蓝，的，句，号。;
 

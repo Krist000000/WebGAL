@@ -33,6 +33,10 @@ changeFigure:fig_ordway.png -left -next;
 
 changeFigure:none -next;
 :弗洛伊德死后，队伍里多了一种安静。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :不是怕，是每个人都在心里，把自己的名对了一遍。;
 :奥德韦把那石堆写进日记，也写进了每晚的点名。;
 
@@ -51,6 +55,10 @@ changeFigure:fig_clark.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（正色）名册是队伍的脸。脸不能塌，人就不能散。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :又一夜，奥德韦把弗洛伊德最后的模样，细细补记。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -60,6 +68,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦提弗洛伊德，眼不红，可手抖。;
 威拉德:（写）男子的哀，是闷在里边，像酒封在桶里。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第三日，克拉克来查夜，见奥德韦就着灯补记死人的页。;
 
@@ -77,6 +89,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeBg:bg_missouri.png -next;
 :第三日晌午，威拉德在船上弯身系鞋带，忽然栽了下去。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他牙龈烂成了紫黑，膝盖肿得迈不开，冷汗糊了满脸。;
 
 changeFigure:fig_willard.png -left -next;
@@ -95,6 +111,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）威拉德躺下了。我又少了一杆能划的桨。;
 奥德韦:（写）可桨能再找，人要是没了，名册就空一格。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德昏睡，汗出如浆。奥德韦用破布替他擦，擦到天黑。;
 
 changeFigure:fig_willard.png -left -next;
@@ -104,6 +124,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（握他手）胡话。你回得去。信我替你写，人你也得写。;
 奥德韦:（写）他手凉得像河石。我攥紧了，怕它沉下去。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :同船的麦克也咳起来，奥德韦心里一沉，怕是连锁。;
 
@@ -121,6 +145,10 @@ changeFigure:fig_willard.png -right -next;
 
 changeFigure:none -next;
 :夜里，雨停了。月亮白得瘆人，照在威拉德青灰的脸上。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦抱膝坐在他身旁，把日记摊在膝头，就着月写。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -136,6 +164,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（读后沉默）这小子，写的比我想的透。;
 奥德韦:（写）我得把他带回去。不为名册，为他娘。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第二夜，威拉德烧得说胡话，认不出人。;
 
 changeFigure:fig_willard.png -left -next;
@@ -147,6 +179,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他烧糊涂，把我当娘，当爹，当 whole 镇。;
 奥德韦:（写）我一一应了。这一夜，我当了回他全家。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第三夜，烧退了些，威拉德睁眼，认出了人。;
 
 changeFigure:fig_willard.png -left -next;
@@ -156,6 +192,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）六号。威拉德能坐起，喝下半碗汤。;
 奥德韦:（写）弗洛伊德那个坑，我不想再添第二个。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第四夜，奥德韦起草了那封家信，念给半醒的威拉德听。;
 
@@ -173,6 +213,10 @@ changeFigure:fig_willard.png -right -next;
 
 changeBg:bg_missouri.png -next;
 :清晨，奥德韦翻开粮单。肉只剩小半桶，根也快见底。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他盯着手里那块留给自己的咸肉，又看向昏睡的威拉德。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -232,6 +276,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦探麦克那下，手抖。他怕，比我还怕。;
 威拉德:（写）可他偏不露。军士的怕，得藏在册子里。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :麦克出了汗，退了烧。奥德韦把那页"虚惊"补进日记。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -261,6 +309,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）配。你叫我一声哥，我就认。荒野认的，是心。;
 奥德韦:（写）这信，等到了镇，我替你递。你娘准哭，也准笑。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :克拉克来探病，见俩人一个念信一个写，立在旁边笑了。;
 
 changeFigure:fig_clark.png -left -next;
@@ -274,6 +326,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）克拉克上尉说册比图金贵。我偷乐。;
 威拉德:（写）奥德韦的字，是咱这趟，最沉的秤。我信。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜里，奥德韦又翻到弗洛伊德那页，对着月，默默念。;
 
@@ -300,6 +356,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他走全程，不喘。我悄悄尾后，怕他软倒。;
 奥德韦:（写）他没倒。这兵，从鬼门关，自己走回来了。傲。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :两人林里遇一窝雏鸟，掉出巢。威拉德捧起，放回枝。;
 
 changeFigure:fig_willard.png -left -next;
@@ -309,6 +369,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他放雏鸟，手稳，眼软。荒野教人，先教软。;
 奥德韦:（写）我当年也被人这样递过？不记得了。今儿记下了。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :归船，威拉德头回主动替奥德韦写点名，字迹歪却清。;
 
@@ -320,6 +384,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）威拉德代点名，字歪意清。准其轮值。;
 奥德韦:（写）教出来的兵，会替你扛。这比啥都值。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜里，奥德韦翻到弗洛伊德旧页，威拉德默立，不语。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -329,6 +397,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）他冲西念。西边是弗洛伊德躺的岸。;
 威拉德:（写）男子的念，不出声，可河听得见。我陪着，也念。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :前头水声闷如滚雷。奥德韦知，大瀑布不远，搬船的苦差至。;
 
@@ -363,6 +435,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）奥德韦改我字，像娘改我衣。补的是缺，暖的是心。;
 威拉德:（写）我藏这页。回镇，亲手递娘。她识不识字，都暖。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :晨，威拉德咳一声，吐点红。奥德韦心一紧，忙探。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -372,6 +448,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦那紧，我见着了。他怕，比我还怕。;
 威拉德:（写）可他偏不露。军士的怕，得藏在册里，不待人前。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :克拉克来，捎来克拉克支队的信：平安，萨卡加维亚安。;
 
@@ -386,6 +466,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）另一队也安。我想萨卡加维亚，那双深井的眼。;
 威拉德:（写）她救的人，里头像有我。这趟，人人救了人人。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜里，两人就着月，约定归后不散。奥德韦立誓。;
 
@@ -416,6 +500,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（笑）跑慢点！船板要让你踩穿。;
 奥德韦:（写）他跑，我笑。这笑，是弗洛伊德那坑，没添的证。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :二人并坐，为弗洛伊德，静默一刻。奥德韦念旧页;
 
 changeFigure:fig_ordway.png -left -next;
@@ -425,6 +513,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦念弗洛伊德，我默。死，被记着，就轻;
 威拉德:（写）我若哪天去，也愿他念。念，是活人能给的，最长;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :威拉德把家信折好，封蜡，郑重写"娘亲亲启"，交奥德韦;
 
@@ -448,6 +540,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）上尉也说奥德韦功。这军士，该被记。我记册尾;
 威拉德:（写）荒野教我：有人守，死就绕道。奥德韦，是那道;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :河还在流。雨洗过的天，蓝得叫人不敢大声说话。;
 :一支笔记下死，一支笔怕着死，又都盼着活。;
 :同一顶帆布下，两个人守着同一个不肯沉下去的弟兄。;
@@ -467,6 +563,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦仍盯我行。那盯，是绳，也是暖。;
 威拉德:（写）旁人嫌被盯，我惜。这盯，是有人，真怕我没。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一日，威拉德忽发热，奥德韦心一紧，忙探。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -476,6 +576,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦那紧，我见着了。他怕，比我还怕。;
 威拉德:（写）可他偏不露。军士的怕，得藏在册里，不待人前。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :克拉克来，捎另一队信：平安，萨卡加维亚安。;
 
@@ -490,6 +594,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）另一队也安。我想萨卡加维亚，那双深井的眼。;
 威拉德:（写）她救的人，里头像有我。这趟，人人救了人人。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜，二人立河边，约定归后不散。奥德韦立誓。;
 
@@ -519,6 +627,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他笑，我亦笑。守过的，最惜这笑。;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。笑，也算，填了点。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :二人下河洗浴，水凉，互相泼，像俩娃。营里侧目。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -528,6 +640,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦泼我，像俺爹泼我娃时。这军士，藏娃。;
 威拉德:（写）水凉，心热。荒野里，这点乐，人活过来。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :奥德韦教威拉德最后一字——"归"。威拉德望着远岸。;
 
@@ -542,6 +658,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他说谢肩。这肩，我愿扛一辈子。;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。前头路，肩并肩走。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :河还在流。雨洗过的天，蓝得叫人不敢大声说话。;
 

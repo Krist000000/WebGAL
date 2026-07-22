@@ -54,6 +54,10 @@ changeFigure:fig_york.png -right -next;
 
 changeBg:bg_missouri.png -next;
 :河面一下宽了起来。水黄得像掺了泥的奶。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :风从草甸子里钻出来，带着野葱和湿土的气味。;
 :我们这回不带曼丹人送的雪橇了，全靠双肩和木桨。;
 :船吃水深，每推一里，胳膊就多一道酸。;
@@ -68,6 +72,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:桨叶切开水，水就合拢，像从没被人碰过。;
 威拉德:我忽然懂了——这趟路，是跟遗忘打架。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦的日记是给所有人看的，字字工整，像在交账。;
 :威拉德的日记锁在箱底，只写给河，写给远方的人看。;
 :同一段水路，两个人记下的是两本不一样的书。;
@@ -78,11 +86,19 @@ changeFigure:fig_york.png -left -next;
 
 changeFigure:fig_sacagawea.png -right -next;
 萨卡加维亚:（指岸）那边有吃的。根子甜，叶子也能煮。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :她弯腰挖出一种白茎的草，说肖松尼人靠它活过春荒。;
 
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）那姑娘的手像地里的根，一碰就认得粮食。;
 威拉德:（写）我们带了一船火药，却不知脚边就是药。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第二日，船让一段倒木卡住，半截翘出水面。;
 :大伙跳下河，水齐腰，冰得牙关直打颤。;
@@ -95,6 +111,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）水咬着我的腰，像荒野在试我的软硬。;
 威拉德:（写）我没缩。奥德韦在前面扛，我跟着，就暖。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第三日起了风，雨斜着抽脸。帆兜不住，全靠死撑。;
 
 changeFigure:fig_clark.png -left -next;
@@ -103,6 +123,10 @@ changeFigure:fig_clark.png -left -next;
 
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（捂册）册子我贴胸口。它湿不了，人就不能散。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第四日，雨停，太阳晒帆。威拉德在浅滩捡到一窝鸟蛋。;
 
@@ -114,6 +138,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）十八号。晴。威拉德得蛋数枚，分众。;
 奥德韦:（写）这小子，自己饿着，先紧旁人。我另眼看他。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第五日，船底蹭到暗石，漏了。大伙轮流舀水到天黑。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -124,6 +152,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）我舀到手起泡，可看奥德韦也在舀，就值。;
 威拉德:（写）这船装的不止人，还有一股不肯沉的劲。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第六日，夜空划过一颗流星。全队都抬头，忘了桨。;
 
 changeFigure:fig_willard.png -left -next;
@@ -133,6 +165,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）星落那刻，我想弗洛伊德。你瞧见没，兄弟。;
 奥德韦:（写）我想，他变星了。石堆是身，星是他的眼。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第七日，一条水蛇盘在桨上，威拉德一把甩开，魂飞。;
 
@@ -162,6 +198,10 @@ changeFigure:fig_clark.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（立正）是。我按份发，多一口也不给，少一口也不行。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德分到他那一份，玉米饼硬得像石头，咸肉泛着灰。;
 :他掰了一角，嚼了半天，咽下去像吞一把沙子。;
 
@@ -169,12 +209,20 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）今天的饼，是石头味的诚实。;
 威拉德:（写）奥德韦说，诚实能顶饿。我信了一半。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜深了，火堆边有人摸出私藏的玉米粒，偷偷嚼。;
 :奥德韦睁着眼，假装没看见。他比谁都清楚粮在变少。;
 
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）我这双手，发的是命，也是秤。;
 奥德韦:（写）秤歪一寸，人心就歪一尺。我得稳住了。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第四日，两个桨手为半块饼红了脸，差点动拳。;
 
@@ -186,6 +234,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（沉）都给我坐好。饼按份，谁多拿，明儿没他的。;
 奥德韦:（写）我不是狠。是怕这伙人，从一口饼开始散。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第五日，雨停了，太阳出来晒帆。粮单上又划去一行。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -196,6 +248,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）豆子少了，汤稀得像照得见底的梦。;
 威拉德:（写）可梦再稀，喝下去，胃就老实了。奥德韦懂。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第七日，有兵偷偷多领，被奥德韦当场点破。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -205,6 +261,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦的眼睛，比河底的石头还冷。;
 威拉德:（写）可冷得公平。这冷，护着每一个人。我服。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第十日，克拉克夜里来查粮，见奥德韦就着冷饼写册。;
 
@@ -224,6 +284,10 @@ changeBg:bg_missouri.png -next;
 changeFigure:fig_york.png -left -next;
 :第二周，约克带了枪，钻进河湾的柳丛里。;
 约克:（伏低）嘘——那边有鹿的蹄印，新鲜的。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :枪响了一声，惊起一片水鸟。约克拖回一头母鹿。;
 
 changeFigure:fig_ordway.png -right -next;
@@ -234,16 +298,28 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）鹿血溅在雪地上，红得那么理直气壮。;
 威拉德:（写）活着，原来是要别的命来换的。我头回怕。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :前一日，威拉德也去试过枪，空手回，挂了只野兔。;
 
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）我放了一枪，兔跑了。奥德韦笑我，手抖。;
 威拉德:（写）他说，荒野不赏脸，只赏耐心。我记下了。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :肉一条条挂在木架上，风一吹，慢慢缩成深红的小辫。;
 
 changeFigure:fig_sacagawea.png -right -next;
 萨卡加维亚:（递碗）喝。疙瘩牙、流血的，都要喝这个。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :她说的"疙瘩牙"，是牙龈肿；"流血的"，是伤口老不合。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -253,6 +329,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）那汤酸得眯眼，可喝完，舌头竟有了劲。;
 威拉德:（写）一个被夺走的姑娘，反倒救了我们的血。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :又一日，威拉德跟着萨卡加维亚学认野菜。;
 
@@ -267,6 +347,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（记）威拉德学认草，记了三种。心细了。;
 奥德韦:（写）荒野逼人学。不学，就输给一口错吃的根。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :再一日，威拉德独自下了套，清晨捡到一只肥獭。;
 
@@ -284,6 +368,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeBg:bg_missouri.png -next;
 :走了半月，船上有人的步子慢了。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :先是小兵麦克，刷牙时吐出血沫，他以为是火气大。;
 :接着是桨手尼尔，膝盖肿得发亮，夜里翻不了身。;
 
@@ -295,6 +383,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）尼尔的腿像灌了水，一按一个坑。;
 威拉德:（写）我摸自己膝盖，竟也有点发软。怕。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第三个是桨手多伊尔，旧伤的刀口迟迟不收口。;
 
@@ -310,6 +402,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（迟疑）是。可挤了这份，旁的弟兄就得更紧。;
 刘易斯:（点头）紧一点，好过倒一个。你掂量着办。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦试煮松针茶，酸涩，病号皱眉，却都喝光了。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -319,6 +415,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）松针水苦得我想吐，可尼尔说，腿轻了点。;
 威拉德:（写）苦的，有时是真东西。甜的多半哄人。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :奥德韦合上粮单。他得做个主——这主，关乎每一个人。;
 
@@ -353,6 +453,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeBg:bg_missouri.png -next;
 :又行数日，河湾里泊着一族营帐，有人摇手，喊我们泊船。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :克拉克说，是阿里卡拉人，性子和，可也得防着三分。;
 
 changeFigure:fig_clark.png -left -next;
@@ -367,6 +471,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）一个阿里卡拉娃，拿石子换我的扣。我给了。;
 威拉德:（写）他笑出豁牙。荒野里的笑，跟镇上娃，一个样。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德用半句生硬的土话，比划着问瓜怎么种。;
 
 changeFigure:fig_willard.png -left -next;
@@ -376,6 +484,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）威拉德学土话，比学字快。荒野教人，先教嘴软。;
 奥德韦:（写）换来的瓜，甜得淌汁。病号啃两口，气色都亮。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :午后，天墨黑，雷砸在河面，雨鞭子似的抽下来。;
 
@@ -387,6 +499,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）雷光里，奥德韦的脸青白，可手稳，按住篷绳。;
 威拉德:（写）那一瞬，我信他胜过信岸。岸会塌，他不会。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :雨停，众人清出积水，点名，一个不少。奥德韦松口气。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -396,6 +512,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦点名那声，比雷后还静，比雷还重。;
 威拉德:（写）我忽然懂，名册不是纸，是三十一根命的绳。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜里，尼尔的腿又肿了些，奥德韦添了松针，守到天明。;
 
@@ -422,6 +542,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）廿八号。夜钓无获。粮又短。;
 奥德韦:（写）鱼不来，人不能慌。慌了，连静也钓不着。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第三日， ration 少了一袋，疑有人偷。营里起了低低的骂。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -436,6 +560,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）查实，是鼠啃袋，非人偷。我当众说明。;
 奥德韦:（写）冤了人，比丢粮更糟。真相出口，营里安了。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜，星满天。两人并坐船头，各写一页，谁也不扰谁。;
 
 changeFigure:fig_willard.png -left -next;
@@ -445,6 +573,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他写星，我写粮。一个浪漫，一个实在。;
 奥德韦:（写）可浪漫和实在，同乘一船，才叫队伍。我服。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :前头水声变了，闷如滚雷。奥德韦知，大瀑布不远了。;
 
@@ -483,6 +615,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）上尉说"换"。可威拉德不换，说"跟您，值"。;
 奥德韦:（写）这小子，肩嫩，心老。荒野挑人，挑的是心。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :日头毒，水壶见底。有人晃，栽进草，被拽起，继续。;
 
 changeFigure:fig_willard.png -left -next;
@@ -500,6 +636,10 @@ changeFigure:fig_york.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）约克扛最重。他说"值"。这字，从这人口里，重。;
 威拉德:（写）荒野里，人人有肩。肩挨肩，十八里，就短了。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第五日，末一段。船重新入水，众人瘫坐岸，笑出泪。;
 
@@ -538,6 +678,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（正）上尉放心。秤在，人齐，山让路。;
 奥德韦:（写）他笑我秤。这秤，称的是命，不是粮。我懂。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德立船头，望山，默念。奥德韦不远，写册。;
 
 changeFigure:fig_willard.png -right -next;
@@ -547,6 +691,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他望山默念。这兵，把路当恩。我服，也傲。;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。这山，肩并肩，翻。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密苏里河在月下泛着冷光，把两支桨的影子拉得很长。;
 :一支笔在左，记着所有人的名字；一支笔在右，只记心事。;
@@ -570,6 +718,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他舍不得野。我亦舍。可册在，野就不真走。;
 奥德韦:（写）下一程，是病是死，是生是归，交给河。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜，二人就船头，各写末篇野帐。星密得压肩。;
 
@@ -595,6 +747,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）最后野火。我盯火，像盯娘的灶。荒与家，一色。;
 威拉德:（写）奥德韦坐旁，不语。这坐，比万语，实在。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德把枪托的结，又紧了紧，像紧一段命。;
 
 changeFigure:fig_willard.png -right -next;
@@ -604,6 +760,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他紧结。那夜的选，他背着，不弃。;
 奥德韦:（写）背着的，不是愧，是认。认人，是兵最长的。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密苏里河在月下泛着冷光，把两支桨的影子拉得很长。;
 

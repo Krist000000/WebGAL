@@ -24,6 +24,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :刘易斯指着地图 northern 处，那道模糊的、谁也没勘过的界线。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :购地的北界，要由他们脚下的河，来替国家说话。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -53,6 +57,10 @@ changeFigure:fig_york.png -right -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :分兵前，刘易斯又给杰斐逊去信，解释这步险棋。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :笔尖在「分兵」二字上，悬了许久——这词，在军报里，近乎冒险。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -82,6 +90,10 @@ changeFigure:fig_lewis.png -right -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :分兵前夜，两人在火边，把没说尽的，一句句，交代给彼此。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :这回，不是山口的沉默。是明知，前方各有各的险。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -111,6 +123,10 @@ changeFigure:fig_sacagawea.png -right -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :翌晨，雾未散。两股队伍，在源头，各朝一方，转身。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯没有回头。他怕一回头，那股分兵的狠，就软了。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -121,6 +137,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:fig_clark.png -right -next;
 克拉克:（远处挥手）密苏里的弯道多。每道弯，我都替你，数着！;
 刘易斯:（也挥）数着！少一道，回来，我跟你算账！;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :雾把两人的手，各吞进一片白里。像这趟路，替他们，先演练离散。;
 
 changeFigure:fig_willard.png -left -next;
@@ -135,6 +155,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :刘易斯一队，沿玛丽亚斯北进。水比想象急，岸比想象荒。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :越往北，草越短，风越硬，像大地，在一点点，撤走它的温柔。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -159,6 +183,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :玛丽亚斯越往北，越不像河，像一条，被大地，遗忘的伤。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :岸无树，只有短草与风滚过的刺球。夜里的星，冷得，像冰渣。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -189,6 +217,10 @@ changeFigure:fig_lewis.png -right -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :与此同时，克拉克一队顺黄石而下。萨卡加维亚指认每一道湾。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :约克划桨，孩子在前头的襁褓里，第一次，见这么大的水。;
 
 changeFigure:fig_clark.png -left -next;
@@ -213,6 +245,10 @@ changeFigure:fig_sacagawea.png -left -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :两人在源头约好：各走各的，秋初，在密苏里与黄石汇口重逢。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :这约，是两根线，在未知的荒里，唯一打着的结。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -249,6 +285,10 @@ label:ch6_after;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :玛丽亚斯河北段，出现马蹄印。新的，深的，属于，不友好的骑手。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯收起奖章，按住腰间——不是枪，是先遣者，该有的警觉。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -268,6 +308,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :日落后，一队黑脚族骑手，循着烟，来了。为首的老者，下马，示和。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯亮出和平奖章，按克拉克的嘱，先亮牌，不亮枪。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -284,6 +328,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）奖章亮了，可亮不透，两族，隔了百年的，疑。;
 刘易斯:（独白）我来量河，他们来护猎场。两件事，本可，不相干。;
 刘易斯:（独白）可夜一黑，火一近，不相干的，便容易，拧成，一股绳。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :两堆火，一明一暗，隔着十步。风停了，连虫鸣，也识趣地，噤声。;
 :刘易斯望着自己的火，想起克拉克那头，是否也，这样，睁着眼。;
@@ -322,6 +370,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_missouri.png -next;
 :同，一，个，白，昼，克，拉，克，一，队，顺，黄，石，而，下。水，暖，风，软。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :萨，卡，加，维，亚，指，着，岸，边，的，莓，丛，笑。孩，子，第，一，回，尝，到，甜。;
 
 changeFigure:fig_clark.png -left -next;
@@ -346,6 +398,10 @@ changeFigure:fig_sacagawea.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :两，队，人，各，守，各，的，火。一，种，等，是，望，北，的，焦。一，种，等，是，望，东，的，暖。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘，易，斯，每，夜，把，克，拉，克，的，脸，在，火，里，描，一，遍。像，给，自，己，复，个，脉。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -362,6 +418,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（望天）这，北，境，的，星，比，山，口，的，冷。可，也，亮。;
 刘易斯:（望星）亮，就，好。亮，着，克，拉，克，那，头，也，看，得，见。;
 威拉德:（正）那，咱，俩，看，同，一，片。不，算，真，孤。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :北，境，的，风，里，夹，着，远，处，的，蹄，声。那，是，黑，脚，族，的，骑，手，正，循，着，烟，来。;
 
@@ -396,6 +456,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:none -next;
 changeBg:bg_blackfoot.png -next;
 :夜，刘，易，斯，给，克，拉，克，写，信。信，不，能，寄。他，却，写，得，认，真。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :写，着，写，着，他，笑。这，信，是，写，给，自，己，的。把，分，兵，的，话，说，全。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -412,6 +476,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（远）Captain，您，跟，自，个，说，啥，呢？笑，了。;
 刘易斯:（收信）跟，克，拉，克。他，在，山，那，头，听，得，见。;
 威拉德:（正）那，俺，也，信。这，信，比，真，寄，的，还，沉。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :北，境，的，风，里，蹄，声，近，了。刘，易，斯，按，住，腰，间。一，场，夜，的，碰，撞，在，即。;
 
@@ -443,6 +511,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）整，不，易。散，却，一，夜。我，选，了，散。便，扛，到，汇，口。;
 刘易斯:（独白）这，趟，路，教，我，的，最，后，一，课，：分，开，也，是，一，种，共。;
 刘易斯:（独白）两，半，各，走，各，的，险。可，心，还，在，同，一，张，图。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :北，境，的，风，里，蹄，声，更，近。刘，易，斯，按，住，腰，间。那，场，夜，的，碰，撞，终，于，来。;
 

@@ -28,6 +28,10 @@ changeFigure:fig_willard.png -right -next;
 
 changeFigure:none -next;
 :连走五日，草甸退成矮丘，水声从树里漏出来。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :马队踩出小径，刘易斯举着火把在前，我们压后。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -52,6 +56,10 @@ changeFigure:fig_ordway.png -right -next;
 
 changeFigure:none -next;
 :后半夜，黑暗里响起蹄声。八个黑脚族骑手围了上来。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他们不下马，只立在火光边，鹰羽在头上轻轻晃。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -64,6 +72,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）那个举枪的，眼睛像狼，盯的是我们的马。;
 威拉德:（写）我想起娘说的——来意不对的客，别留他到天亮。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :黑脚族战士举枪示意，不懂英语，只咧嘴，露出白牙。;
 
@@ -81,6 +93,10 @@ changeFigure:fig_willard.png -right -next;
 
 changeBg:bg_blackfoot.png -next;
 :双方假睡到后半夜。奥德韦听见 leather 摩擦的细响。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他眯眼，见一个黑影正解我们马缰，另一个摸向枪堆。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -89,6 +105,10 @@ changeFigure:fig_ordway.png -left -next;
 
 changeFigure:fig_lewis.png -right -next;
 刘易斯:（扑上）住手！枪是队伍的脸，马是弟兄的腿！;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :两人扭作一团。黑脚族抽刀，刘易斯闪身，枪声炸响——;
 
 changeFigure:none -next;
@@ -109,6 +129,10 @@ changeFigure:fig_willard.png -right -next;
 
 changeBg:bg_blackfoot.png -next;
 :混乱里，威拉德被奥德韦推到马后。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一个黑脚族战士翻身上马，正要冲出火圈，背对着他。;
 :威拉德的枪管，悄无声息地，顶上了那人的后背。;
 
@@ -123,6 +147,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）火光照着那人的辫子，黑得发亮。;
 威拉德:（写）我忽然看见，那辫子像我娘编的麻绳。我手软了。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :两个人的日记，此刻都停了笔。他们都在等威拉德的那根指头。;
 
@@ -155,6 +183,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）归途的河，今儿格外静。静得能听见心在跳。;
 奥德韦:（写）威拉德不再是娃了。这一夜，把他磨成了兵。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :赶了整日，刘易斯臀上的伤发了炎，烧得脸通红。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -164,6 +196,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）我替上尉换药，他攥拳，青筋暴起。;
 威拉德:（写）那一枪，打在臀，也打在他不肯认的疼里。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :夜里，威拉德又梦见那背对的辫子，惊醒。;
 
@@ -198,6 +234,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）上尉臀上的伤，是他活着的印。我替他记着。;
 奥德韦:（写）一队之长，血是招牌。招牌在，人心就不散。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :入夜，刘易斯烧得厉害，威拉德替他换药，手稳得出奇。;
 
 changeFigure:fig_willard.png -left -next;
@@ -211,6 +251,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）我忽然懂，枪下有人，手下也得有人。;
 威拉德:（写）杀与救，一线。奥德韦教我的，是这条线。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第三日，追兵的影真来了——三个黑脚族骑手，远远吊着。;
 
@@ -229,6 +273,10 @@ changeFigure:fig_lewis.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）上尉肯夸，稀罕。威拉德耳根红，低头写。;
 奥德韦:（写）这兵，从娃到兵，就在这几日，长成了。我傲。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :绕出黑脚族地界，队伍才敢生火。威拉德累极，靠着奥德韦睡。;
 
@@ -259,6 +307,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）上尉谢我。我耳热。可我谢的，是没扣那扳机。;
 威拉德:（写）若扣了，今儿谢不出口。不杀，比杀，难，也贵。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第三日，河湾里现出克拉克的旗。两支队，隔了月，重逢。;
 
 changeFigure:fig_clark.png -left -next;
@@ -273,6 +325,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）见克拉克旗，我喉头热。分兵那夜的怕，落地了。;
 威拉德:（写）奥德韦也笑。这军士，笑比雷稀，可真。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :重逢夜，两堆火并一堆。奥德韦与威拉德各写一页。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -282,6 +338,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）合队那夜，奥德韦递我饼，没说啥。可那饼，重。;
 威拉德:（写）荒野里，沉默的递，比万语真。我记这饼。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :刘易斯与克拉克并肩立，望西。奥德韦远远看着，写。;
 
@@ -316,6 +376,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）上尉说"一对"。我摸枪，没扣的那下，也是疤。;
 威拉德:（写）肉的疤在外，心的疤在内。两样，都教人长大。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦把黑脚族那夜，工整记进册，连威拉德的"未扣"也记。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -326,6 +390,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）他写"择生"。这词，替我卸了半块愧。;
 威拉德:（写）若写"怯"，我记一辈子。他写"择"，我记一辈子暖。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜里，威拉德做噩梦，又见那背对的辫子，惊醒，奥德韦拍背。;
 
 changeFigure:fig_willard.png -left -next;
@@ -335,6 +403,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他惊醒，我拍。拍到平，才搁笔。老法子，管用。;
 奥德韦:（写）当哥的，不就是说"我在"，再拍几下么。一遍遍。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :第三日，刘易斯伤全愈，能骑马，不瘸。全队松口气。;
 
@@ -350,6 +422,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）上尉信我。我把这信，压进枪托的结里。;
 威拉德:（写）荒野给的，是怕；奥德韦给的，是胆；上尉给的，是认。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :营里闲话，有人问威拉德，那夜咋没开枪。他答得轻。;
 
 changeFigure:fig_willard.png -left -next;
@@ -359,6 +435,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他答得轻，却重。全队没笑，是服。规矩之外的理。;
 奥德韦:（写）这理，叫"人"。荒野教的最贵一字，是这。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :前头水面宽了，归意浓。奥德韦翻册，把黑脚族一夜，收尾。;
 
@@ -393,6 +473,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）约克怕归。我懂。荒野给的自由，镇要收。;
 奥德韦:（写）这账，我写在册尾。后人有眼，自会看见不公。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :岸上现一弃舟，朽木缠藤。威拉德认出，是早年的皮罗格。;
 
 changeFigure:fig_willard.png -left -next;
@@ -403,6 +487,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他见弃舟，想到"册不收"。这兵，懂留。;
 奥德韦:（写）荒野收痕，册收名。两样都收，人就不真散。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜里，二人并坐，各写一页，谁也不扰谁。星稀。;
 
 changeFigure:fig_willard.png -left -next;
@@ -412,6 +500,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他舍不得荒野的星。我亦舍。可册里，星永密。;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。这趟，星与人，都记。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :前头水声变闹，似有人烟。奥德韦知，文明，近了。;
 
@@ -426,6 +518,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）他怕回。我亦怕。可册在，怕也认得路。;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。前头镇，肩并肩进。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :火堆灭了，玛丽亚斯河在黑里闷声流。;
 :一支笔记下了伤亡的数目，一支笔记下了没扣的扳机。;
@@ -446,6 +542,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他摸结。那夜的选，他背着，不弃。;
 奥德韦:（写）背着的，不是愧，是认。认人，是兵最大的长。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :二人约，归后同住，月月通信。奥德韦立誓，威拉德应。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -463,6 +563,10 @@ changeFigure:fig_york.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）约克羡咱的誓。我记他"自由藏心"。;
 奥德韦:（写）这账，写册尾。后人有眼，看得见不公。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :前头水声杂人烟。奥德韦知，文明，近了。心忽生怯。;
 
@@ -492,6 +596,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他说怕家。我亦怕。可册在，怕也认得路。;
 奥德韦:（写）弗洛伊德那坑，咱绕过了。前头镇，肩并肩进。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :约克立船尾，望着岸，不语。奥德韦默默立他旁。;
 
 changeFigure:fig_york.png -left -next;
@@ -502,6 +610,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）约克无誓，有票。我记册尾"自由藏心"。;
 奥德韦:（写）这账，写册尾。后人有眼，看得见不公。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德摸枪托结，默念那夜的辫与择。奥德韦看，不扰。;
 
 changeFigure:fig_willard.png -left -next;
@@ -511,6 +623,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他默念，我不扰。守，有时是，不打扰。;
 奥德韦:（写）这兵，长成了。会自选，也会自念。我傲。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :火堆灭了，玛丽亚斯河在黑里闷声流。;
 

@@ -33,6 +33,10 @@ label:ch2_camp_sol;
 setVar:soldier_aff=soldier_aff+10;
 克拉克:（扛木）弟兄们，搭把手！这根是咱俩的，那根是咱仨的！;
 威拉德:（笑）队长都扛了，咱好意思躲风里？来，一二三——起！;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :墙在一片号子里立起来。汗水混着雪，谁也没觉得自己是下人。;
 jumpLabel:ch2_after_camp;
 
@@ -49,6 +53,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）十一月。有了墙，梦就短了。我开始觉得，这地方能活人。;
 
 ; -------- 凿冰取水 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :堡外的河冻成了铁。每日得凿开冰窟，才能提上活水。;
 changeFigure:fig_york.png -right -next;
 约克:（抡冰镐）这冰，比肯塔基的硬。可它硬，俺的胳膊更硬。;
@@ -84,6 +92,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）冬月的暖，原来就藏在一桶冰水里。;
 
 ; -------- 与曼丹人共猎 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :曼丹的猎人邀队伍同去猎牛。雪原上，人和马呼出的白气连成一片。;
 changeFigure:fig_clark.png -right -next;
 克拉克:（上马）学着点。他们追牛的的法子，比咱的书本灵。;
@@ -116,6 +128,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）原来枪和弓，打的是同一头牛，喂的是同一张嘴。;
 
 ; -------- 坏血病再临与玉米交易 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十二月，几个兵又牙龈渗血。曼丹的妇女拿来晒干的莓与煮玉米。;
 changeFigure:fig_sacagawea.png -right -next;
 萨卡加维亚:（比划）这个，酸。每天吃一点，血就不流了。;
@@ -148,6 +164,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）十二月。异乡的药，救了咱的命。这账，记心口。;
 
 ; -------- 炉边夜话：各自留下的 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :雪最厚的那夜，炉火噼啪。刘易斯提议，每人说一件「留下的」。;
 changeFigure:fig_lewis.png -right -next;
 刘易斯:（先说）我留下华盛顿的文书桌，和杰斐逊的信任。输了，对不起他。;
@@ -181,6 +201,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）冬夜炉边。四十三颗心，第一次贴在了一起。;
 
 ; -------- 约克被误认为「大黑人酋长」 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :消息在曼丹村里传开：白人队里，有个身形高大的「黑面神」。;
 :一群曼丹人循着传闻，摸进了堡垒，径直朝约克围了过来。;
 changeFigure:fig_york.png -right -next;
@@ -190,6 +214,10 @@ changeFigure:fig_york.png -right -next;
 changeFigure:fig_clark.png -left -next;
 克拉克:（憋笑）约克，你成酋长了。我这个上尉，还得听你的。;
 约克:（又窘又怔）队长，我……我就是个干活儿的。他们认错了。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :曼丹人执意要赠他水牛袍，要他摸孩子的头祈福。约克僵着手，不知该怎么办。;
 changeFigure:fig_lewis.png -right -next;
@@ -202,6 +230,10 @@ label:ch2_york_edge;
 setVar:edge_aff=edge_aff+10;
 刘易斯:（正色）约克，别躲。接下这袍子——这是他们给你的，不是给我的。;
 约克:（缓缓接过袍，摸了孩子头顶）……谢、谢谢你们。约克，记下了。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :那一刻，这个从不抬眼的男人，脊背第一次挺得笔直。;
 jumpLabel:ch2_after_york;
 
@@ -225,6 +257,10 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）约克变了。在这雪原上，他第一次像个「人」，被人仰望。;
 
 ; -------- 萨卡加维亚与夏博诺加入 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :十二月的某日，一名法裔毛皮商带着年轻妻子来到堡外。;
 :女人叫萨卡加维亚，肖松尼人，背着婴儿，腹中还有一个，即将临产。;
 unlockCg:game/background/evt_shoshone.jpg;
@@ -268,6 +304,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）十二月。堡里添了三个人，和一个未出世的小命。;
 
 ; -------- 萨卡加维亚的草与约克的袍 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :萨卡加维亚教女兵们认雪地里的草：哪种止疼，哪种催奶，哪种毒。;
 changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（拈草）这个，给我。肚里的娃，到时候好生些。;
@@ -301,6 +341,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）原来最懂彼此的，往往是都被这世道「丢了」的人。;
 
 ; -------- 一场小纠纷：曼丹少年的枪 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :正月里，一名曼丹少年好奇摸了威拉德的枪，险些走火。;
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（变色）威拉德！看好你的枪！要出人命的！;
@@ -336,11 +380,19 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）正月。一把枪的惊吓，教会咱：规矩与人心，都得顾。;
 
 ; -------- 三方微剧情之一：刘易斯的政治焦虑 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :雪最深的那夜，刘易斯独自爬上堡垒的角楼，对着华盛顿的方向出神。;
 changeFigure:fig_lewis.png -right -next;
 刘易斯:（独白）杰斐逊在等我的信。国会要地图，要矿产，要一块能站的领地。;
 刘易斯:（独白）可我手里只有半张河、一船冻疮，和一个藏不住的秘密。;
 刘易斯:（独白）若回去交不出「政绩」，这趟就成了总统的笑话，和我的坟。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :风吹垮了他的帽檐。他没去扶，任雪落进领口，凉意提醒他还活着。;
 刘易斯:（低声）克拉克少尉……不，克拉克搭档。这功劳，得分你一半。;
 
@@ -350,6 +402,10 @@ changeFigure:fig_york.png -left -next;
 约克:（独白）在肯塔基，我是克拉克家的「物件」，连名都归他。;
 约克:（独白）可在这儿，有人管我叫酋长，有人递我水，有人看我像个人。;
 约克:（独白）等回去呢？回去，是不是又得弯下腰，叫一声「主人」？;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他把袍子抱进怀里，像抱着一个不敢信的梦。火光在他眼里跳。;
 约克:（极轻）就这一冬。就这一冬，让我记得，我也被人抬过头。;
 
@@ -359,6 +415,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）今日雪封门。我想娘，想她炖的玉米糊。可我没哭。;
 威拉德:（写）弗洛伊德埋在悬崖，面朝西。等我死，也要面朝西吗？;
 威拉德:（写）约克成了酋长，萨卡加维亚怀着娃。这队伍，怪得很，也好得很。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他吹熄灯，把本子塞进怀里。那是他唯一不肯弄丢的东西。;
 威拉德:（独白）等回去了，这本子，就是我还活过的证据。;
 
@@ -397,10 +457,18 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）正月尾。一封信，装着四十三人的冬，往东去了。;
 
 ; -------- 冰河救人 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :二月，一名兵踩破薄冰落水。河水刺骨，人在里头扑腾。;
 changeFigure:fig_york.png -left -next;
 约克:（甩出绳）抓住！俺拉你上来！手别松！;
 克拉克:（扑前）压低身子，别再踩碎冰！约克，拽稳！;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :人被拖上来，冻得紫青，却喘着气，活了。所有人长舒一口气。;
 changeFigure:fig_willard.png -right -next;
@@ -433,6 +501,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）二月。一绳，一命。这队伍，越冻越紧。;
 
 ; -------- 换马：翻山前的本钱 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :二月，刘易斯盘算翻落基山要马。他去找曼丹长老，谈一笔马的交易。;
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（比划）我们要过西边的山，得有马。用枪、用珠，换你们的壮马。;
@@ -465,6 +537,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）二月。换得马七匹。山再高，也高不过有了腿的人。;
 
 ; -------- 曼丹长老的创世故事 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :雪夜，曼丹长老应邀来堡，讲他们族人自洪水里重生的古事。;
 changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（译）长老说，第一场大水退后，是玉米救了人。;
@@ -499,6 +575,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）二月夜。一个故事，把「他们」讲成了「咱们」。;
 
 ; -------- 克拉克教认图 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :开春前，克拉克抽空教年轻的兵认他画的草图。;
 changeFigure:fig_clark.png -left -next;
 克拉克:（铺图）这条弯，记成钩；那道汊，记成叉。图是死的，眼是活的。;
@@ -531,6 +611,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）春前。克拉克授图，薪火有人接。这队伍，不会断。;
 
 ; -------- 修装与春讯 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :雪开始软了。队伍翻出越冬的衣物，补的补，晒的晒，等河开。;
 changeFigure:fig_york.png -right -next;
 约克:（缝袍）这水牛袍，补补还能穿。曼丹人给的，俺舍不得扔。;
@@ -563,6 +647,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（写）春讯至。一冬的积蓄，要在接下来的山里，见真章了。;
 
 ; -------- 曼丹的雪舞节 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :正月里，曼丹村办雪舞节。男女戴羽，踏着鼓点，在雪圈里转。;
 changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（译）他们说，跳舞是谢雪，也谢能活过冬的人。;
@@ -595,6 +683,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）正月节。一场舞，把两族人，跳成了一堆火边的人。;
 
 ; -------- 约克教投骨戏 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :闲冬里，约克教弟兄们一种黑奴里传的投骨戏，掷兽骨比点数。;
 changeFigure:fig_york.png -left -next;
 约克:（抛骨）这戏，俺娘教的。输的不恼，赢的请喝汤。;
@@ -627,6 +719,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）冬闲。约克授戏。这一冬，他第一次，是「自己」在笑。;
 
 ; -------- 刘易斯的冬末呈文 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :开春前，刘易斯就着油灯，写呈总统的冬末文。笔尖沉得像压了雪。;
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（写）「臣已抵曼丹，筑堡越冬。河图半成，土俗尽录。」;
@@ -660,6 +756,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）春前。两封文，载着一冬的实，往东去了。;
 
 ; -------- 选择11：冬营里的立场 --------
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :冬深了。队伍围炉夜话，话题绕不开——这一趟，到底为了什么。;
 changeFigure:fig_clark.png -left -next;
 克拉克:（拨火）有人说为总统，有人说为自个儿，也有人说为这片地。;
@@ -693,6 +793,10 @@ label:ch2_after_stance;
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（起身）雪一化，我们就得走。这一冬攒下的，够不够翻过那座山？;
 克拉克:（拍雪）够不够，腿说了算。睡吧，明日还要伐最后的薪。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :曼丹的星子密得像撒在黑绒上的银沙。堡垒在雪里，安静地等着春天的命令。;
 :共通的路，走到这里，要在每个人心里，分出三条。;

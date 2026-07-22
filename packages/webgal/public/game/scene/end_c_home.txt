@@ -51,6 +51,10 @@ changeFigure:fig_york.png -left -next;
 changeBg:bg_stlouis.png -next;
 changeFigure:none -next;
 :多年以后，奥德韦的册子被人翻出，与刘易斯的日记并排。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :史家说，这军士的字，比许多上尉都清楚地记下了这条路。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -60,6 +64,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）我也不是英雄。我只是一个，认真活过的兵。;
 威拉德:（写）若你读到这，请知：河那头，真有山，真有星。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :密苏里河静静流，把钟声、泥路与两本日记，都收进了水声。;
 :一支笔交了名册，一支笔留了心事，都平安落回了土里。;

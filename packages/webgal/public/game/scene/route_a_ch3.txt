@@ -26,6 +26,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:铁架子船。铁做的骨架，蒙上生皮，不漏水，又轻。;
 刘易斯:到了水边，一装就成一条船。十八英里，不在话下。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :克拉克没说话。他见过刘易斯在笔记本上画的那张图——;
 :骨架像鱼刺，皮像鱼腹，精巧得近乎狂妄，也近乎天真。;
 :他见过太多刘易斯的「算过」，最后都成了河边叹息。;
@@ -34,6 +38,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:若它漏了，这十八英里就白扛，还赔上人心。;
 刘易斯:（自信）漏不了。水压撑着皮，只会越撑越紧。;
 克拉克:（摇头）你信水压，我信木头。木头从不骗人。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :可这回，刘易斯信的，是先于木头的——是一封信。;
 
@@ -74,6 +82,10 @@ changeBg:evt_portage.jpg -next;
 changeFigure:none -next;
 changeBg:bg_greatfalls.png -next;
 :他们把龙骨船拆成零件，又从木箱里抬出那副铁骨架。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :铁管一节节接起，像把一条冬眠的蛇唤醒，冰冷的鳞贴着手。;
 :六月的日头毒，队员的背脊上都结了白白的盐霜。;
 
@@ -92,6 +104,10 @@ changeFigure:fig_york.png -left -next;
 刘易斯:（望他）约克，放下歇口气。不是每副重担都归你。;
 约克:（摇头）扛得动。我扛过的，比这铁架子久得多。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯没再劝。他知道自己欠这支队伍一句解释——;
 :为什么偏要造一条没人见过的船，去赌一段本可绕的路。;
 
@@ -105,10 +121,18 @@ changeFigure:fig_lewis.png -left -next;
 
 changeFigure:none -next;
 :第七天，铁架船蒙好了生皮，被缓缓推下浅水湾。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯蹲在船边，用松脂一道道抹缝，像在哄一个不肯睡的孩子。;
 
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（喃喃）撑住。就这一次，替我撑住。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :船浮起来了。前三十秒，它真的浮着，稳得像长在水上。;
 :然后水从缝里钻进来——先是一线，再是一片，再是一掌深。;
@@ -118,6 +142,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（蹲下伸手）梅里韦瑟。它在喝水。一口一口地喝。;
 刘易斯:（手按船帮）再抹一遍。松脂没干透，再抹一遍就成。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :第二遍。第三遍。水还是涨到了所有人的脚踝。;
 :岸边的浪轻轻拍船，像在笑这副骄傲了七天的铁骨。;
 
@@ -125,6 +153,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（声音发紧）本地的树不出好脂。棉白杨的汁——;
 克拉克:（按住他肩）棉白杨的汁，粘不住大瀑布的水。;
 刘易斯:（手停半空）……我知道。我只是，不肯先认。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :刘易斯第一次在克拉克面前，不知道下一句该说什么。;
 :那双总是算无遗策的手，悬在湿透的船帮上，空落落的。;
@@ -143,6 +175,10 @@ changeBg:cg_04.jpg -next;
 
 changeFigure:none -next;
 :他们把铁骨架拖上岸，生皮剥下，晾成一片片死白的布。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :那副曾让刘易斯眼睛发亮的铁，安静地锈在橘红的夕阳里。;
 :风穿过空铁管，发出一声细而长的、像叹息的哨音。;
 
@@ -159,6 +195,10 @@ changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（指林子）那边有枯柳。皮好剥，做舟轻，走得远。;
 刘易斯:（点头）好。带路。这次，听你的。;
 萨卡加维亚:（抱婴转身）水不听人的话。人得听水的。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :她抱着婴儿走向柳林。风把婴孩的襁褓吹得鼓起，;
 :像一面小小的、还没写上一个字的旗，轻轻飘着。;
@@ -181,6 +221,10 @@ changeFigure:fig_york.png -right -next;
 约克:（扛舟）这舟轻。比铁架子轻，比锁链轻万倍。;
 刘易斯:（望他）约克，回了圣路易斯，你最想做的头一件事？;
 约克:（顿）走一段，没人叫我「克拉克的」的路。就这一件。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :刘易斯没接话。他记下了——这趟路，不止他在扛看不见的锁。;
 
@@ -205,6 +249,10 @@ changeFigure:fig_willard.png -right -next;
 changeFigure:none -next;
 changeBg:bg_greatfalls.png -next;
 :某个无风的午后，刘易斯摊开信纸，蘸墨。瀑布在身后轰鸣。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他写给杰斐逊，却像写给一个，比总统更远的人——共和国本身。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -221,6 +269,10 @@ changeFigure:fig_lewis.png -left -next;
 刘易斯:（独白）诚实。可我藏了一行，永远写不进这信里——;
 刘易斯:（独白）克拉克与我，是共享指挥。档案却只认他是少尉。;
 刘易斯:（独白）这谎，是国家要的。我便替国家，背着它走。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :墨迹在信纸上洇开一小团，像瀑布溅起、又落回河里的水。;
 
@@ -261,6 +313,10 @@ label:ch3_after;
 changeFigure:none -next;
 changeBg:bg_greatfalls.png -next;
 :夜。瀑布的雷声退成远处缓慢的心跳。营火边只剩刘易斯一人。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他摊开测绘簿，罗盘在指间转。铜针固执地指向北，不肯偏半分。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -284,6 +340,10 @@ changeFigure:fig_clark.png -right -next;
 刘易斯:（独白）两半。可档案里，只有他一半是少尉。;
 刘易斯:（独白）这秘密，比铁架船漏得更久，也更疼。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :刘易斯没接话。可肩头某一处，悄悄松了一线，像卸了块石。;
 
 changeFigure:none -next;
@@ -299,6 +359,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（笑）钉稳了。明早，咱扛的，就不止舟，还有，这格，准。;
 刘易斯:（收簿）走吧。让大瀑布，看看，惹了，哪，路，人。;
 克拉克:（并肩）它，惹，的，是，两，个，肯，把，命，押，给，地，图，的，人。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :罗盘的指针还指着北。而北，终究是回家的方向。;
 
@@ -333,6 +397,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:none -next;
 changeBg:bg_greatfalls.png -next;
 :第，十，一，天，第，五，条，独，木，舟，刮，净，桐，油，被，推，下，水。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :它，比，铁，架，船，笨，却，比，它，诚，实，：吃，水，就，吃，水，不，撒，谎。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -357,6 +425,10 @@ changeFigure:fig_sacagawea.png -left -next;
 changeFigure:none -next;
 changeBg:bg_greatfalls.png -next;
 :独，木，舟，列，成，一，线，离，开，大，瀑，布。刘，易，斯，回，头，望，那，片，雾。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :他，知，道，这，一，程，的，狼，狈，，不，会，写，进，凯，旋，词。却，写，进，了，他，的，骨。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -368,6 +440,10 @@ changeFigure:fig_clark.png -right -next;
 克拉克:（并桨）梅里韦瑟，前，头，是，山。山，不，像，水，好，哄。;
 刘易斯:（笑）山，不，哄。可，山，给，肯，爬，的，人，，让，路。;
 克拉克:（点）那，咱，俩，就，做，肯，爬，的，那，两，个。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :瀑，布，的，雷，声，渐，远。密，苏，里，河，在，上，游，，等，着，一，道，更，冷，的，关。;
 
@@ -402,6 +478,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:none -next;
 changeBg:bg_greatfalls.png -next;
 :夜，营，火，旁，刘，易，斯，摊，图。白，天，量，的，每，一，格，，在，纸，上，连，成，一，道，歪，斜，的，线。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :那，线，不，直。可，它，是，真，的。他，头，一，回，，不，嫌，这，歪。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -418,6 +498,10 @@ changeFigure:fig_ordway.png -left -next;
 奥德韦:（记）七，月。上，游。Captain，图，成。其，线，虽，歪，然，处，处，有，据。;
 威拉德:（凑）奥德韦，你，这，「歪，有，据」，比，「直，无，错」，值。;
 奥德韦:（合簿）值。因，为，它，是，我，们，真，走，过，的，，不，是，想，象，的。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :大，瀑，布，的，教，训，，凝，在，这，张，歪，线，里。刘，易，斯，收，图，，望，向，北，方，更，冷，的，山。;
 
@@ -452,6 +536,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:none -next;
 changeBg:bg_greatfalls.png -next;
 :晨，雨，歇。队，伍，解，缆。刘，易，斯，立，舟，尾，望，大，瀑，布，最，后，一，眼。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :那，片，雾，里，藏，着，他，的，失，败，与，觉，醒。他，把，两，样，都，装，进，怀。;
 
 changeFigure:fig_lewis.png -left -next;
@@ -468,6 +556,10 @@ changeFigure:fig_sacagawea.png -left -next;
 萨卡加维亚:（抱婴）您，今，夜，睡，得，着，了。铁，的，事，过，了。;
 刘易斯:（点）过，了。可，它，教，的，我，带，走。这，比，睡，着，贵。;
 萨卡加维亚:（笑）您，记，着，就，够。山，那，边，的，人，等，您，的，图。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :瀑，布，的，雷，声，渐，远。密，苏，里，河，在，上，游，，等，着，一，道，更，冷，的，关。;
 

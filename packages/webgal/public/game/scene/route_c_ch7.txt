@@ -26,6 +26,10 @@ changeFigure:fig_willard.png -right -next;
 
 changeBg:bg_missouri.png -next;
 :第一缕炊烟出现在岸上，是拓荒者的小屋。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :接着是木栅，是教堂尖顶，是挂了旗的码头。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -73,6 +77,10 @@ changeFigure:fig_willard.png -right -next;
 
 changeBg:bg_stlouis.png -next;
 :离圣路易斯还有两日，岸上有了酒馆的灯。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦把册子翻到最后一页，竟不知写什么。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -129,6 +137,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）名册我交。名字一个不少，除弗洛伊德那一个。;
 奥德韦:（写）余下的，交给圣路易斯。余下的心，留给自己。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :河弯了一下，把营火、雪山、黑脚族的枪声，都甩在身后。;
 ; ------------------------------------------------------------
 ; 第五幕：文明的门口
@@ -153,6 +165,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）约克这话，扎心。咱带图回，他带空回。;
 奥德韦:（写）一样的路，两样的归。这账，我写在册，记一辈子。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :又过两日，镇外的教堂钟响，远远一波，撞进耳朵。;
 
 changeFigure:fig_willard.png -left -next;
@@ -170,6 +186,10 @@ changeFigure:fig_clark.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）上尉说得轻巧。可我知，有些冷，热饭也捂不热。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :镇口，一贩皮客拦船，嚷着问"可寻着通太平洋的水道"。;
 
 changeFigure:fig_willard.png -left -next;
@@ -179,6 +199,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）客问水道。上尉应"通了"。我记"通了，也丢了"。;
 奥德韦:（写）丢的，是那股"啥也不怕"的劲。回来，就怕了。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :威拉德望着岸上奔跑的孩子，忽然想起曼丹的娃。;
 
@@ -213,6 +237,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）约克这话，像针。咱穿袍，他连袍边都碰不到。;
 奥德韦:（写）这账，我写在册尾。后人有眼，自会看见不公。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :一报人挤来，嚷着要"惊险故事"，笔尖追着威拉德的脸。;
 
 changeFigure:fig_willard.png -left -next;
@@ -223,6 +251,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）报人要血。咱给不了。日记里的血，不卖钱。;
 奥德韦:（写）威拉德学会藏了。藏，是荒野教的自保。我懂。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜里，威拉德就着灯，写一封给娘，却写不下去。;
 
 changeFigure:fig_willard.png -left -next;
@@ -232,6 +264,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他搁笔。我替他想，娘要的，是"活着"二字。;
 奥德韦:（写）其余的，慢慢说。荒野给的，急不得，也删不得。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :奥德韦翻册，算这一路"带回"与"留下"的。;
 
@@ -258,6 +294,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他揉三张。我替他想，娘要的，是"活着"三字。;
 奥德韦:（写）余下的，慢说。荒野给的，急不得，也删不得。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦递来自个儿写家的一页，说，你娘要的，就这般。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -267,6 +307,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦教我写短。我写"儿安，秋归，带故事"。;
 威拉德:（写）这八字，比三张揉掉的，重。娘读，准笑，准哭。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :镇上集市开，两人去瞧。糖人、铁器、布，样样勾威拉德。;
 
@@ -278,6 +322,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他看糖人，不馋。荒野改了舌，也改了心。;
 奥德韦:（写）这改，是好。回镇不迷，才叫真回来。我欣慰。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :铁匠铺叮当，威拉德立住，想起爹。奥德韦 quietly 立旁。;
 
 changeFigure:fig_willard.png -left -next;
@@ -287,6 +335,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他听铁声落泪。我爹也是木工，刨声同此。;
 奥德韦:（写）两家的声，今儿在铁铺并了。我立，也鼻酸。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :报人又来，要"英雄照"。威拉德躲，奥德韦挡。;
 
@@ -298,6 +350,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦挡我。那挡，是墙。荒野里，他常是墙。;
 威拉德:（写）回镇，他还是墙。这墙，我靠得，也信得。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :夜里，奥德韦翻册，算"带回"与"留下"，写满一页。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -307,6 +363,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦算账。我算的，是"丢了啥"。丢的，是怕。;
 威拉德:（写）怕丢了，人倒空。可空里，装了河、星、与哥。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :克拉克来，说镇上已备庆功，问二人怕不怕被人当英雄。;
 
@@ -321,6 +381,10 @@ changeFigure:fig_ordway.png -right -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）上尉也怕英雄。原来怕的，不止我。心安了点。;
 威拉德:（写）回镇，我不当英雄。我当"威拉德，奥德韦的弟"。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :一支笔要交账，一支笔要留痕。两支笔，都怕被钟声盖过。;
 :可只要纸还在，那两年零四个月，就还没真正结束。;
@@ -339,6 +403,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（记）进镇口。人潮涌。威拉德缩，众笑。;
 奥德韦:（写）他缩，我懂。荒野养的魂，镇装不下。需时。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :奥德韦点名，三十一声，一声声，在镇里，却像隔了水。;
 
@@ -370,6 +438,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）她名轻，可她走的路，重过半张图。;
 奥德韦:（写）我册里，给她留整页。后人有眼，看得见。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德就灯，写一封给娘，却写不出"我变了"四字。;
 
 changeFigure:fig_willard.png -left -next;
@@ -379,6 +451,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他搁笔。我替他想，娘要的，是"活着"二字。;
 奥德韦:（写）其余的，慢说。荒野给的，急不得，也删不得。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :报人刊出"英雄远征"，把威拉德写成杀敌十人。;
 
@@ -390,6 +466,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）报人写杀敌十人。咱给不了。日记里的血，不卖。;
 奥德韦:（写）威拉德学藏了。藏，是荒野教的自保。我懂。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦翻册，算"带回"与"留下"。;
 
 changeFigure:fig_ordway.png -left -next;
@@ -399,6 +479,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦算账。我算"丢了啥"。丢的，是怕。;
 威拉德:（写）怕丢了，人倒空。可空里，装了河、星、与哥。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :一支笔要交账，一支笔要留痕。两支笔，都怕被钟声盖过。;
 ; ------------------------------------------------------------
@@ -416,6 +500,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦挡我。那挡，是墙。荒野里，他常是墙。;
 威拉德:（写）回镇，他还是墙。这墙，我靠得，也信得。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :威拉德走回旧居，门开着，娘不在——她走亲了。空屋。;
 
 changeFigure:fig_willard.png -left -next;
@@ -425,6 +513,10 @@ changeFigure:fig_willard.png -left -next;
 changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）他站空屋。我门外等。归，有时是，更空的空。;
 奥德韦:（写）荒野教会活，镇教人，空。这空，比死，沉。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :刘易斯独立廊下，望西。奥德韦远远写，记他孤;
 
@@ -436,6 +528,10 @@ changeFigure:fig_ordway.png -right -next;
 奥德韦:（写）上尉独立。他肩上的图，比谁都沉，也最孤。;
 奥德韦:（写）英雄是两个人的。可庆功，只一人举杯。我记。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :约克被唤去干活，回望一眼，没留。威拉德看他，鼻酸;
 
 changeFigure:fig_york.png -left -next;
@@ -446,6 +542,10 @@ changeFigure:fig_willard.png -right -next;
 威拉德:（写）约克回望。那回望，是自由的一眼。我记册。;
 威拉德:（写）奥德韦说"记册尾"。我也在册尾，给他留页。;
 
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :奥德韦翻册，算"带回"与"留下"，写满一页;
 
 changeFigure:fig_ordway.png -left -next;
@@ -455,6 +555,10 @@ changeFigure:fig_ordway.png -left -next;
 changeFigure:fig_willard.png -right -next;
 威拉德:（写）奥德韦算账。我算"丢了啥"。丢的，是怕。;
 威拉德:（写）怕丢了，人倒空。可空里，装了河、星、与哥。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :一支笔要交账，一支笔要留痕。两支笔，都怕被钟声盖过。;
 

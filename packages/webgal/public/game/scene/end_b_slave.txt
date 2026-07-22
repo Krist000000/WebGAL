@@ -19,6 +19,10 @@ changeFigure:fig_york.png -left -next;
 
 changeFigure:none -next;
 :克拉克后来确曾许他自由，去开货运。可事多反复。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :史料写：约克终其一生，大多仍在克拉克名下劳役。;
 :一个「大黑人酋长」，回到了肯塔基的厨房与田垄。;
 
@@ -29,6 +33,10 @@ changeFigure:fig_sacagawea.png -right -next;
 
 changeFigure:none -next;
 :约 1812 年，她病逝，年仅二十余岁。死因众说纷纭。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :她没回成肖松尼的山，也没等来自己的那一笔账。;
 :小巴蒂斯特被克拉克带走养育——这是她留下的唯一的名。;
 
@@ -42,6 +50,10 @@ changeFigure:fig_sacagawea.png -right -next;
 
 changeFigure:none -next;
 :历史照实写：约克归奴籍，萨卡加维亚早逝。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :这是 1806 年钟声背后，最安静、也最重的一笔。;
 :留白没有填上。它成了后来人，必须弯腰去看的空缺。;
 

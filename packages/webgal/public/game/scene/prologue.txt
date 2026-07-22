@@ -45,12 +45,20 @@ setTextbox:hide;
 changeFigure:fig_lewis.png -left -transform={"position":{"x":500,"y":0}} -next;
 setTextbox:on;
 刘易斯:（沉默了很久）我们原本是去探路。现在，是去接管一片大陆。;
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
+
 :河风穿过营地，把未燃尽的火星吹成细小的流星。;
 
 changeFigure:fig_clark.png -right -next;
 克拉克:梅里韦瑟，别一个人扛。;
 克拉克:我是威廉·克拉克。测绘我懂，地图我画了一辈子。带我一起去。;
 刘易斯:（握手）从今天起，我们是共同指挥。对外，我们都称「上尉」。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:none -next;
 
 :可档案里写的是另一回事——克拉克的军衔，只是一名少尉。;
 :真正的共享指挥，是陆军部的官僚绝不会承认的事。;
