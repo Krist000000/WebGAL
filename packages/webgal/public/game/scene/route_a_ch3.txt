@@ -67,6 +67,8 @@ changeFigure:fig_clark.png -right -next;
 
 ; ------------------------------------------------------------
 ; 第二幕：铁架的拼装与搬运
+unlockCg:game/background/evt_portage.jpg;
+changeBg:evt_portage.jpg -next;
 ; ------------------------------------------------------------
 
 changeFigure:none -next;
@@ -135,8 +137,8 @@ changeFigure:fig_lewis.png -left -next;
 
 ; ------------------------------------------------------------
 ; 第四幕：弃船（CG-04 大瀑布弃船）
-unlockCg:game/cg/cg_04.jpg;
-changeBg:../cg/cg_04.jpg -next;
+unlockCg:game/background/cg_04.jpg;
+changeBg:cg_04.jpg -next;
 ; ------------------------------------------------------------
 
 changeFigure:none -next;

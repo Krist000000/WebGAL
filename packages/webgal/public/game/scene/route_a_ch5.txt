@@ -9,6 +9,8 @@
 changeBg:bg_pacific.png -next;
 changeFigure:none -next;
 :哥伦比亚河越往西，水越宽，越咸，越不安分。;
+unlockCg:game/background/evt_columbia.jpg;
+changeBg:evt_columbia.jpg -next;
 :十一月的风，从海的方向推来，带着一股说不清的、腥而空的气味。;
 :队伍里有人吸了吸鼻子，说：那是大水的味道，也是家另一头的味道。;
 
@@ -30,8 +32,8 @@ changeBg:bg_pacific.png -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（呆）这……这就是海？比密苏里，阔上一万倍。;
 奥德韦:（抹眼）十一月七。抵太平洋。此生，无憾了。;
-unlockCg:game/cg/cg_07.jpg;
-changeBg:../cg/cg_07.jpg -next;
+unlockCg:game/background/cg_07.jpg;
+changeBg:cg_07.jpg -next;
 萨卡加维亚:（抱婴望）水好大。它，是不是也怕，被谁买走？;
 
 changeFigure:fig_lewis.png -right -next;

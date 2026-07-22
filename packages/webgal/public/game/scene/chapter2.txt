@@ -68,8 +68,8 @@ label:ch2_ice_edge;
 setVar:edge_aff=edge_aff+10;
 约克:（让位）你手裂了，站边上。这镐俺替你挥两下。;
 威拉德:（暖）约克……你这酋长，当得比谁都实在。;
-unlockCg:game/cg/cg_02.jpg;
-changeBg:../cg/cg_02.jpg -next;
+unlockCg:game/background/cg_02.jpg;
+changeBg:cg_02.jpg -next;
 jumpLabel:ch2_after_ice;
 
 label:ch2_ice_sol;
@@ -227,6 +227,8 @@ changeFigure:fig_willard.png -left -next;
 ; -------- 萨卡加维亚与夏博诺加入 --------
 :十二月的某日，一名法裔毛皮商带着年轻妻子来到堡外。;
 :女人叫萨卡加维亚，肖松尼人，背着婴儿，腹中还有一个，即将临产。;
+unlockCg:game/background/evt_shoshone.jpg;
+changeBg:evt_shoshone.jpg -next;
 changeFigure:fig_sacagawea.png -right -next;
 萨卡加维亚:（安静地）我丈夫夏博诺，会讲多种土话。我能……指路。;
 夏博诺:（搓手）上尉，带我们入队吧。我妻子认得向西的山口。;
@@ -367,6 +369,8 @@ changeFigure:fig_lewis.png -left -next;
 克拉克:（沉吟）写地，也写人。少了我那衔，也得写你我的图。;
 
 ; -------- 选择：议事里的立场 --------
+unlockCg:game/background/evt_council.jpg;
+changeBg:evt_council.jpg -next;
 choose:如实写人写地，不夸大:ch2_coun_lewis|替沉默的人争一笔:ch2_coun_edge|先把活命摆第一:ch2_coun_sol;
 
 label:ch2_coun_lewis;
@@ -484,6 +488,8 @@ jumpLabel:ch2_after_myth;
 label:ch2_myth_sol;
 setVar:soldier_aff=soldier_aff+10;
 克拉克:（笑）故事好听！下回讲讲怎么打熊的，俺爱听那个。;
+unlockCg:game/background/evt_grizzly.jpg;
+changeBg:evt_grizzly.jpg -next;
 威拉德:（乐）队长就爱实在的！来，长老再整一段！;
 jumpLabel:ch2_after_myth;
 

@@ -437,6 +437,8 @@ changeFigure:fig_willard.png -left -next;
 威拉德:（写）这一塞一接，比万语真。荒野里，暖，是这么传的;
 
 :第三日，翻过垭口。西风扑面，竟带点湿——是另一面水气;
+unlockCg:game/background/evt_divide.jpg;
+changeBg:evt_divide.jpg -next;
 
 changeFigure:fig_ordway.png -left -next;
 奥德韦:（记）过垭口。西风带湿气。料是另一面水近;
@@ -612,8 +614,8 @@ changeFigure:fig_willard.png -right -next;
 ; 第十九幕：河口的风
 changeBg:bg_pacific.png -next;
 :抵河口，风带咸。威拉德说，这就是西海的气味。;
-unlockCg:game/cg/cg_07.jpg;
-changeBg:../cg/cg_07.jpg -next;
+unlockCg:game/background/cg_07.jpg;
+changeBg:cg_07.jpg -next;
 changeFigure:fig_willard.png -left -next;
 威拉德:（写）风咸。这就是西海。我竟有点想家。;
 威拉德:（写）想家，不丢人。走了这么远，才配想。;

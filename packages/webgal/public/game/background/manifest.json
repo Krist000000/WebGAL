@@ -1,0 +1,30 @@
+{
+  "images": [
+    "bg_blackfoot.png",
+    "bg_greatfalls.png",
+    "bg_mandan.png",
+    "bg_missouri.png",
+    "bg_pacific.png",
+    "bg_rocky.png",
+    "bg_stlouis.png",
+    "cg_01.jpg",
+    "cg_02.jpg",
+    "cg_03.jpg",
+    "cg_04.jpg",
+    "cg_06.jpg",
+    "cg_07.jpg",
+    "cg_08.jpg",
+    "evt_buffalo.jpg",
+    "evt_columbia.jpg",
+    "evt_council.jpg",
+    "evt_divide.jpg",
+    "evt_grizzly.jpg",
+    "evt_hunt.jpg",
+    "evt_portage.jpg",
+    "evt_rapid.jpg",
+    "evt_reunion.jpg",
+    "evt_shoshone.jpg",
+    "evt_starrynight.jpg",
+    "evt_storm.jpg"
+  ]
+}

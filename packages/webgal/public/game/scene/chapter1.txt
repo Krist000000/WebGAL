@@ -9,6 +9,8 @@ changeFigure:none -next;
 :1804 年 5 月 14 日，圣路易斯的风里全是河水的腥气。;
 :龙骨船「探险号」缓缓离港。两艘皮罗格独木舟一左一右，像忠实的影子。;
 :密苏里河不温柔。它把船往回推，把人往泥里按。;
+unlockCg:game/background/evt_rapid.jpg;
+changeBg:evt_rapid.jpg -next;
 
 :码头上站满了人。妻子们攥着帕子，孩子追着船跑，被父亲一把抱起又放下。;
 changeFigure:fig_ordway.png -left -next;
@@ -36,6 +38,8 @@ changeFigure:fig_clark.png -right -next;
 
 :傍晚靠岸扎营。火堆亮起来，有人哼起家乡的调子，跑了好几个音。;
 :河对岸的草原上，野牛群像黑色的云，慢慢地，慢慢地移动。;
+unlockCg:game/background/evt_buffalo.jpg;
+changeBg:evt_buffalo.jpg -next;
 :没人说话。所有人都看呆了——这片荒原，比信里写的要大得多。;
 
 ; -------- 选择1：纪律与同伴（出发头一周） --------
@@ -149,6 +153,8 @@ label:ch1_after_rank;
 ; -------- 草原与野牛 --------
 changeFigure:fig_lewis.png -left -next;
 刘易斯:（举枪遥指）看那片黑云——野牛。今天的肉，有着落了。;
+unlockCg:game/background/evt_hunt.jpg;
+changeBg:evt_hunt.jpg -next;
 克拉克:（眯眼）别惊了群。派两个人绕后，慢慢赶，一枪放倒领头的。;
 
 :枪响过后，一头壮牛倒在草里。队员们欢呼着围上去，刀光在夕阳里翻飞。;
@@ -185,6 +191,8 @@ changeFigure:fig_willard.png -left -next;
 奥德韦:（批）写得好。留着，回去给那些笑咱们疯了的人看。;
 
 ; -------- 河上风暴 --------
+unlockCg:game/background/evt_storm.jpg;
+changeBg:evt_storm.jpg -next;
 :七月末，天边堆起黑云。风一下子野了，把河水掀成白沫。;
 changeFigure:fig_clark.png -right -next;
 克拉克:（喊）不好！转锚，靠岸！这浪能掀翻皮罗格！;

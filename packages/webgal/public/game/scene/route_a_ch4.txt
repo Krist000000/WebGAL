@@ -128,6 +128,8 @@ changeFigure:fig_sacagawea.png -left -next;
 
 ; ------------------------------------------------------------
 ; 第三幕：星空对话（反节奏）
+unlockCg:game/background/evt_starrynight.jpg;
+changeBg:evt_starrynight.jpg -next;
 ; ------------------------------------------------------------
 
 changeFigure:none -next;
@@ -207,6 +209,8 @@ changeFigure:fig_lewis.png -left -next;
 
 ; ------------------------------------------------------------
 ; 第三幕·续：肖松尼的重逢（路线互文）
+unlockCg:game/background/evt_reunion.jpg;
+changeBg:evt_reunion.jpg -next;
 ; ------------------------------------------------------------
 
 changeFigure:none -next;
