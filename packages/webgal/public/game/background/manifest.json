@@ -1,5 +1,5 @@
 {
-  "images": [
+  "background": [
     "bg_blackfoot.png",
     "bg_greatfalls.png",
     "bg_mandan.png",
@@ -26,5 +26,14 @@
     "evt_shoshone.jpg",
     "evt_starrynight.jpg",
     "evt_storm.jpg"
+  ],
+  "figure": [
+    "fig_clark.png",
+    "fig_jefferson.png",
+    "fig_lewis.png",
+    "fig_ordway.png",
+    "fig_sacagawea.png",
+    "fig_willard.png",
+    "fig_york.png"
   ]
 }

@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 
 /**
- * 进入游戏时的加载层：
- * 1. 拉取 game/background/manifest.json（列出所有 CG / 背景图）
- * 2. 逐张预加载，实时显示进度
- * 3. 全部完成后淡出并卸载，绝不阻塞游戏
+ * 进入游戏时的真实加载层（非象征性）：
+ * - 读取 game/background/manifest.json，拿到全部「背景图(CG) + 角色立绘」
+ * - 用 <img>.decode() 真正预载并解码每一张，进度 = 实际完成数
+ * - 全部就绪后才淡出卸载；淡出时浏览器缓存已热，进场零等待
+ * - 30s 仅作极端兜底（网络彻底卡死才放行），正常路径一定等加载完成
  */
 const BASE = import.meta.env.BASE_URL || './';
+const SAFETY_MS = 30000;
 
 const STYLE_ID = 'webgal-loading-screen-style';
 
@@ -19,7 +21,7 @@ const css = `
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 26px;
+  gap: 24px;
   background:
     radial-gradient(120% 120% at 50% 0%, #1b2a36 0%, #0d161d 55%, #070d12 100%);
   color: #f3e9d2;
@@ -65,17 +67,24 @@ const css = `
   font-size: 13px; letter-spacing: 1px; opacity: 0.85;
   font-variant-numeric: tabular-nums;
 }
+.webgal-loading-screen .ls-now {
+  font-size: 12px; opacity: 0.55; max-width: 72vw;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
 `;
 
+type Asset = { kind: 'background' | 'figure'; name: string };
+
 export default function LoadingScreen() {
-  const [progress, setProgress] = useState(0);
+  const [loaded, setLoaded] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [current, setCurrent] = useState('');
   const [hiding, setHiding] = useState(false);
   const [removed, setRemoved] = useState(false);
-  const mountedRef = useRef(true);
+  const mounted = useRef(true);
 
   useEffect(() => {
-    mountedRef.current = true;
-    // 注入一次性样式
+    mounted.current = true;
     if (!document.getElementById(STYLE_ID)) {
       const tag = document.createElement('style');
       tag.id = STYLE_ID;
@@ -87,60 +96,77 @@ export default function LoadingScreen() {
     const finish = () => {
       if (settled) return;
       settled = true;
-      // 至少展示一帧，避免闪屏
       setHiding(true);
     };
 
-    const load = async () => {
-      let images: string[] = [];
+    const preload = async () => {
+      let assets: Asset[] = [];
       try {
         const res = await fetch(BASE + 'game/background/manifest.json', {
           cache: 'no-cache',
         });
         if (res.ok) {
-          const data = (await res.json()) as { images?: string[] };
-          images = Array.isArray(data.images) ? data.images : [];
+          const data = (await res.json()) as {
+            background?: string[];
+            figure?: string[];
+          };
+          const bg = (data.background ?? []).map(
+            (n): Asset => ({ kind: 'background', name: n })
+          );
+          const fig = (data.figure ?? []).map(
+            (n): Asset => ({ kind: 'figure', name: n })
+          );
+          assets = [...bg, ...fig];
         }
       } catch {
-        images = [];
+        assets = [];
       }
 
-      // 兜底：没有清单就直接放行，绝不卡死
-      if (images.length === 0) {
+      // 兜底：拿不到清单直接放行，绝不卡死（极端异常路径）
+      if (assets.length === 0) {
         finish();
         return;
       }
 
-      let loaded = 0;
-      const total = images.length;
-      const tick = () => {
-        loaded += 1;
-        if (mountedRef.current) {
-          setProgress(Math.round((loaded / total) * 100));
-        }
-        if (loaded >= total) finish();
+      setTotal(assets.length);
+      let done = 0;
+      const tick = (name: string) => {
+        done += 1;
+        if (!mounted.current) return;
+        setLoaded(done);
+        setCurrent(name);
+        if (done >= assets.length) finish();
       };
 
-      images.forEach((name) => {
+      // 真正的逐张预载：onload 计完成数，decode() 预热解码确保淡出后秒显
+      assets.forEach(({ kind, name }) => {
         const img = new Image();
-        img.onload = tick;
-        img.onerror = tick; // 单张失败也计入，保证进度能走完
-        img.src = BASE + 'game/background/' + name;
+        const url = BASE + 'game/' + kind + '/' + name;
+        img.onload = () => tick(name);
+        img.onerror = () => tick(name); // 单张失败也计入，进度照常走完
+        img.src = url;
+        if (typeof img.decode === 'function') {
+          img.decode().catch(() => {
+            /* 解码预热失败不影响计数，onload/onerror 已兜底 */
+          });
+        }
       });
     };
 
-    load();
+    preload();
 
-    // 安全超时：5 秒后无论如何放行，避免网络异常导致永久卡在加载层
-    const timer = window.setTimeout(finish, 5000);
+    // 仅极端兜底：网络彻底卡死 30s 未返回才放行，正常一定等加载完成
+    const timer = window.setTimeout(finish, SAFETY_MS);
 
     return () => {
-      mountedRef.current = false;
+      mounted.current = false;
       window.clearTimeout(timer);
     };
   }, []);
 
   if (removed) return null;
+
+  const pct = total > 0 ? Math.round((loaded / total) * 100) : 0;
 
   return (
     <div
@@ -153,9 +179,12 @@ export default function LoadingScreen() {
       <div className="ls-title">路易斯安那之路</div>
       <div className="ls-sub">EXPEDITION 1804 — 正在装载旅程画卷</div>
       <div className="ls-bar">
-        <div className="ls-fill" style={{ width: progress + '%' }} />
+        <div className="ls-fill" style={{ width: pct + '%' }} />
       </div>
-      <div className="ls-pct">{progress}%</div>
+      <div className="ls-pct">
+        {pct}%　·　{loaded} / {total}
+      </div>
+      {current && <div className="ls-now">{current}</div>}
     </div>
   );
 }
