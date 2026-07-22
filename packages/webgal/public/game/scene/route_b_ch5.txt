@@ -44,15 +44,15 @@ changeFigure:fig_sacagawea.png -left -next;
 ; ---- 萨卡加维亚独白：母语呼唤山 ----
 setTextbox:hide;
 changeFigure:none -next;
-:（肖松尼语）*Kwah-see, kwah-see, numa bi-a;*
+:（肖松尼语）*Kwah-see, kwah-see, numa bi-a\;*
 :（译）山啊山啊，你的孩子回来了。
-:（肖松尼语）*So-so-go, we-tuk;*
+:（肖松尼语）*So-so-go, we-tuk\;*
 :（译）肖松尼，醒来。
-:（肖松尼语）*Na-na, so-ko, piam;*
+:（肖松尼语）*Na-na, so-ko, piam\;*
 :（译）母亲，我回来了，看。
-:（肖松尼语）*A-gai-de, we-tuk, so-so-go;*
+:（肖松尼语）*A-gai-de, we-tuk, so-so-go\;*
 :（译）饿了么，醒来，肖松尼。
-:（肖松尼语）*Kwah-see, numa bi-a, piam;*
+:（肖松尼语）*Kwah-see, numa bi-a, piam\;*
 :（译）山啊，你的孩子回来了，看。
 setTextbox:on;
 
@@ -376,7 +376,7 @@ label:ch5_sing;
 changeBg:bg_rocky.png -next;
 changeFigure:fig_sacagawea.png -left -next;
 :翻山前夜，她抱着娃，对山，唱了最后一首肖松尼的调。
-萨卡加维亚:（轻声唱）*Kwah-see, numa bi-a, piam;*
+萨卡加维亚:（轻声唱）*Kwah-see, numa bi-a, piam\;*
 萨卡加维亚:（译）山啊，你的孩子回来了，看。
 萨卡加维亚:（独白）唱给山听，也唱给娘听。娘在风里，该听见。
 

@@ -110,15 +110,15 @@ changeFigure:none -next;
 ; ---- 萨卡加维亚独白：母语与摇篮曲 ----
 setTextbox:hide;
 changeFigure:none -next;
-:（肖松尼语）*Haa wee-shte, numa ta-i;*
+:（肖松尼语）*Haa wee-shte, numa ta-i\;*
 :（译）睡吧，我的孩子，妈妈在。
-:（肖松尼语）*Te-wap, te-wap, ca-na-ga;*
+:（肖松尼语）*Te-wap, te-wap, ca-na-ga\;*
 :（译）风停了，风停了，别怕。
-:（肖松尼语）*A-gai-de, we-tuk, so-so-go;*
+:（肖松尼语）*A-gai-de, we-tuk, so-so-go\;*
 :（译）饿了么，醒来，肖松尼。
-:（肖松尼语）*Na-na, so-ko, piam;*
+:（肖松尼语）*Na-na, so-ko, piam\;*
 :（译）母亲，我回来了，看。
-:（肖松尼语）*Kwah-see, numa bi-a;*
+:（肖松尼语）*Kwah-see, numa bi-a\;*
 :（译）山啊，你的孩子回来了。
 setTextbox:on;
 

@@ -58,13 +58,13 @@ changeFigure:fig_york.png -left -next;
 ; ---- 约克独白：劳动歌谣 ----
 setTextbox:hide;
 changeFigure:none -next;
-:（劳动歌谣）*O, deep river, my home is across the way;*
+:（劳动歌谣）*O, deep river, my home is across the way\;*
 :（译）深河啊，我家在对岸。趁天光未亮，渡我过去。
-:（劳动歌谣）*Massa sleep, the river wide, I walk where the willow hide;*
+:（劳动歌谣）*Massa sleep, the river wide, I walk where the willow hide\;*
 :（译）主人睡了，河很宽，我走柳树藏身的岸。
-:（劳动歌谣）*If I reach the other shore, I am a man, not a thing no more;*
+:（劳动歌谣）*If I reach the other shore, I am a man, not a thing no more\;*
 :（译）若渡到对岸，我便是一个人，不再是件东西。
-:（劳动歌谣）*But the river got no shore for the black, only the black got the shore;*
+:（劳动歌谣）*But the river got no shore for the black, only the black got the shore\;*
 :（译）可河没有岸给黑人，是黑人自己，成了岸。
 setTextbox:on;
 

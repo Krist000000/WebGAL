@@ -121,15 +121,15 @@ changeFigure:none -next;
 ; ---- 双视角独白：梦与母语 ----
 setTextbox:hide;
 changeFigure:none -next;
-:（肖松尼语）*A-gai, a-gai, pi-a wan;*
+:（肖松尼语）*A-gai, a-gai, pi-a wan\;*
 :（译）饿啊饿啊，山在笑。
-:（劳动歌谣）*Deep river, carry me, I am bone and wind;*
+:（劳动歌谣）*Deep river, carry me, I am bone and wind\;*
 :（译）深河啊渡我，我只剩下骨与风。
-:（肖松尼语）*Haa wee-shte, numa ta-i;*
+:（肖松尼语）*Haa wee-shte, numa ta-i\;*
 :（译）睡吧，我的孩子，妈妈在。
-:（劳动歌谣）*If I reach the other shore, I am a man no more;*
+:（劳动歌谣）*If I reach the other shore, I am a man no more\;*
 :（译）若渡到对岸，我便不再是件东西。
-:（肖松尼语）*A-gai-de, we-tuk, so-so-go;*
+:（肖松尼语）*A-gai-de, we-tuk, so-so-go\;*
 :（译）饿了么，醒来，肖松尼。
 setTextbox:on;
 
