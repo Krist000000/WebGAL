@@ -2,19 +2,25 @@
 
 @import 'Core/util/constants';
 
+/* 中文字体改为 CDN 加载（jsDelivr fontsource Noto Sans SC 简体子集），
+   避免打包 37MB 本地 TTF 触发 Cloudflare Pages 上传体积上限。
+   家族名保持不变，所有引用这些名的样式无需改动。 */
 @font-face {
   font-family: '资源圆体';
-  src: url('assets/fonts/ResourceHanRoundedCN-Regular.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc/files/noto-sans-sc-chinese-simplified-400-normal.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
   font-family: '思源宋体';
-  src: url('assets/fonts/SourceHanSerifCN-Regular.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc/files/noto-sans-sc-chinese-simplified-400-normal.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'WebgalUI';
-  src: url('assets/fonts/OPPOSans-R.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc/files/noto-sans-sc-chinese-simplified-400-normal.woff2') format('woff2');
+  font-display: swap;
 }
 
 a {
